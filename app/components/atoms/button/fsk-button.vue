@@ -10,7 +10,7 @@
             { 'button--background': background },
             { 'button--mirror': mirror },
             ]"
-        >
+    >
         <span
             v-if="$slots.default"
             class="button__content"
@@ -44,7 +44,7 @@ withDefaults(defineProps<Props>(), {
     type: 'primary',
 })
 
-type iconType =
+export type iconType =
     | 'arrow-right'
     | 'arrow-left'
     | 'arrow-up-right'
@@ -55,9 +55,9 @@ type iconType =
     | 'chevron-down'
     | 'external-link'
     | 'download'
-    | 'github'
-    | 'linkedin'
-    | 'twitter'
+    | 'brand-github-filled'
+    | 'brand-linkedin-filled'
+    | 'brand-x-filled'
     | 'facebook'
     | 'instagram'
     | 'coin-euro';
