@@ -4,13 +4,31 @@
     width: fit-content;
     text-transform: uppercase;
     cursor: pointer;
+    color: var(--color-black);
+    border: none;
 
     &:has(.button__icon) {
         gap: 4px;
     }
 
     &--background {
+        position: relative;
         background: var(--gradient);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #42B883;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: inherit;
+        }
+
+        &:hover::before,
+        &:focus::before {
+            opacity: 1;
+        }
     }
 
     &--mirror {
@@ -23,28 +41,29 @@
         z-index: 1;
         background: var(--gradient);
 
-        &:hover {
+        &:hover,
+        &:focus {
             .button__border {
-                background: var(--gradient);
+                opacity: 0;
             }
         }
     }
 
     &__border {
         position: absolute;
-        width: calc(100% - 2px);
-        height: calc(100% - 2px);
-        left: 1px;
-        top: 1px;
-        bottom: 0;
-        border-radius: 11px;
+        inset: 2px;
+        border-radius: 10px;
         background: var(--color-white);
-        z-index: -1;
-        transition: background 0.3s ease;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
     }
 
     &--type-secondary {
-        &:hover {
+        margin: 0 auto;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }
@@ -54,6 +73,7 @@
         font-family: 'Casanova', sans-serif;
         font-size: 1.5rem;
         font-weight: 400;
+        z-index: 1;
     }
 
     &__icon {
