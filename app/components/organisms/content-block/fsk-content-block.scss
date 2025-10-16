@@ -1,0 +1,36 @@
+.content-block {
+    padding: 0 10px;
+    margin: 10px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: 90px 50px;
+        gap: 135px;
+
+        &--no-text {
+            padding: 74px 50px;
+            justify-content: space-between;
+
+            .content-block__container {
+                flex: unset;
+            }
+        }
+    }
+
+    &__container {
+        flex: 1;
+
+        &:first-of-type {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__button-group {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+}
