@@ -1,0 +1,35 @@
+.language-selector {
+    position: relative;
+    display: flex;
+    padding: 26px 24px;
+    gap: 10px;
+    cursor: pointer;
+
+    &__list {
+        list-style: none;
+
+        &-item {
+            font-family: 'Casanova', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        &-drop {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            padding: 10px;
+            bottom: -195px;
+            left: 0;
+            gap: 10px;
+            border-radius: 12px;
+            list-style: none;
+            background: var(--color-neutral-200);
+
+            .language-selector__list-item {
+                padding: 26px 32px;
+                background: var(--color-neutral-100);
+            }
+        }
+    }
+}

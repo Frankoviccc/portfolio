@@ -1,0 +1,75 @@
+.indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 32px;
+    flex-grow: 1;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__pulsing {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+
+        &-1 {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--gradient);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        &-2 {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #42B883;
+            opacity: 0;
+            border-radius: 50%;
+            animation: pulse 2s ease-out infinite 1s;
+        }
+
+        &-3 {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: #42B883;
+            opacity: 0;
+            border-radius: 50%;
+            animation: pulse 2s ease-out infinite;
+        }
+    }
+
+    &__pulsing-inner {
+        position: absolute;
+        background: var(--gradient);
+        border-radius: 50%;
+    }
+
+    &__logo-link {
+        display: flex;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
