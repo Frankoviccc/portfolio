@@ -2,14 +2,21 @@
     <div class="page-header">
         <div class="page-header__container bento">
             <div class="page-header__content">
-                <h1 class="page-header__title">
-                    <span class="u-heading-2">{{ title }}</span>
-                    {{ subTitle }}
-                </h1>
+                <div>
+                    <h1 class="page-header__title">
+                        <span class="page-header__title-sub">
+                            {{ title }}
+                        </span>
 
-                <p>
-                    {{ text }}
-                </p>
+                        <span class="page-header__title-main">
+                            {{ subTitle }}
+                        </span>
+                    </h1>
+
+                    <p>
+                        {{ text }}
+                    </p>
+                </div>
 
                 <ul class="page-header__items">
                     <li
@@ -19,6 +26,7 @@
                     >
                         <component
                             :is="item.icon"
+                            class="page-header__item-icon"
                         />
 
                         <span class="u-paragraph">
@@ -41,15 +49,11 @@
             </div>
         </div>
         <div class="page-header__container bento">
-            <picture>
-                <source type="image/avif" srcset="@/assets/images/tokyo.webp">
-                <source type="image/webp" srcset="@/assets/images/tokyo.webp">
-                <img
-                    src="@/assets/images/tokyo.webp"
-                    alt="Photo Frank in Ginza, Tokyo"
-                    class="page-header__image"
-                >
-            </picture>
+            <NuxtPicture
+                src="tokyo.webp"
+                class="page-header__image"
+                alt="Photo Frank in Ginza, Tokyo"
+            />
         </div>
     </div>
 </template>
