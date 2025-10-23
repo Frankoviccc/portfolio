@@ -10,12 +10,18 @@
                 <div class="indicator__pulsing-3" />
             </div>
 
-            <FskButton
-                :is="NuxtLink"
-                icon="arrow-up-right"
-                type="secondary"
-            >
+            <NuxtLink class="indicator__button">
                 {{ text }}
+
+                <Icon
+                    class="indicator__button-icon"
+                    name="tabler:arrow-up-right"
+                />
+            </NuxtLink>
+            <FskButton
+
+            >
+
             </FskButton>
         </div>
     </div>
