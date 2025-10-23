@@ -6,7 +6,7 @@
         :background="background"
         class="button"
         :class="[
-            type ? `button--type-${type}` : null,
+            type ? `button-type--${type}` : null,
             { 'button--background': background },
             { 'button--mirror': mirror },
             ]"
@@ -23,7 +23,7 @@
         <Icon
             v-if="icon"
             :name="`tabler:${icon}`"
-            size="28"
+            :size="iconSize"
             class="button__icon"
         />
     </component>
@@ -35,13 +35,16 @@ interface Props {
     is?: 'button' | typeof NuxtLink;
     to?: string;
     icon?: iconType;
+    iconSize?: string;
     type?: 'primary' | 'secondary';
     background?: boolean;
     mirror?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
+    is: NuxtLink,
     type: 'primary',
+    iconSize: '28',
 })
 
 export type iconType =
