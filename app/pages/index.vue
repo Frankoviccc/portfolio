@@ -4,7 +4,6 @@
     </h1>
 
     <FskButton
-        :is="NuxtLink"
         type="primary"
         :background="true"
     >

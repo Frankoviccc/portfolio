@@ -1,6 +1,7 @@
 .button {
     position: relative;
     display: flex;
+    align-items: center;
     width: fit-content;
     text-transform: uppercase;
     cursor: pointer;
@@ -35,7 +36,7 @@
         flex-direction: row-reverse;
     }
 
-    &--type-primary {
+    &-type--primary {
         padding: 26px 32px;
         border-radius: 12px;
         z-index: 1;
@@ -45,6 +46,15 @@
         &:focus {
             .button__border {
                 opacity: 0;
+            }
+        }
+
+        .button__content {
+            font-size: 1.125rem;
+            font-weight: 400;
+
+            @media (width > 1200px) {
+                font-size: 1.5rem;
             }
         }
     }
@@ -58,13 +68,20 @@
         pointer-events: none;
     }
 
-    &--type-secondary {
-        margin: 0 auto;
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
+    &-type--secondary {
+        &:hover {
             text-decoration: underline;
+        }
+
+        .button__content {
+            font-size: 1.25rem;
+            line-height: 2.5rem;
+            font-weight: 400;
+
+            @media (width > 1200px) {
+                font-size: 1.5rem;
+                line-height: 1;
+            }
         }
     }
 
