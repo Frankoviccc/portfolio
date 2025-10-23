@@ -2,11 +2,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
+    padding: 16px;
     gap: 10px;
+
+    @media (width > 768px) {
+        padding: 32px;
+    }
+
+    @media (width > 1200px) {
+        padding: 40px 20px;
+    }
+
+    @media (width > 1600px) {
+        padding: 50px 20px;
+    }
 
     &__label {
         color: #00DC82;
+        text-align: center;
     }
 
     &__metrics {
@@ -51,6 +64,11 @@
             );
             animation: shimmer 1.5s infinite;
         }
+    }
+
+    &__metric {
+        width: 100%;
+        max-width: 120px;
     }
 }
 
