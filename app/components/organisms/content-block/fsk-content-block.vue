@@ -24,7 +24,6 @@
                 >
                     <FskButton
                         v-for="(item, index) in buttonGroup"
-                        :is="NuxtLink"
                         :key="index"
                         :to="item.link"
                         :icon="item.icon"
@@ -36,7 +35,6 @@
 
                 <div v-else>
                     <FskButton
-                        :is="NuxtLink"
                         :to="link"
                         :icon="'arrow-up-right'"
                         :background="true"
@@ -58,7 +56,7 @@ interface Props {
     text?: string;
     link?: string;
     label?: string;
-    buttonGroup?: { icon: iconType; label: string; link: string; background: boolean; is: 'button' | typeof NuxtLink; }[];
+    buttonGroup?: { icon: iconType; label: string; link: string; background: boolean }[];
 }
 
 defineProps<Props>();
