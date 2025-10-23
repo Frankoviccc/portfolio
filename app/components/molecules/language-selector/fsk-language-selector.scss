@@ -1,12 +1,42 @@
 .language-selector {
     position: relative;
-    display: flex;
-    padding: 26px 24px;
+    display: none;
+    padding: 15px;
     gap: 10px;
     cursor: pointer;
 
+    @media (width > 400px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (width > 1200px) {
+        padding: 10px 24px;
+    }
+
+    &--in-dropdown {
+        display: none;
+
+        @media (width <= 400px) {
+            display: flex;
+            align-items: center;
+            min-height: 80px;
+            padding: 16px;
+        }
+    }
+
     &__list {
+        display: none;
         list-style: none;
+
+        @media (width <= 400px) {
+            display: flex;
+        }
+
+        @media (width > 1200px) {
+            display: flex;
+        }
 
         &-item {
             font-family: 'Casanova', sans-serif;
