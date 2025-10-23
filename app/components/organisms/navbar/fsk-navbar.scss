@@ -1,67 +1,81 @@
 .navbar {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    max-width: 1920px;
     padding: 10px 10px 0 10px;
     margin-bottom: 10px;
-    gap: 10px;
+    gap: 6px;
+
+    @media (width > 768px) {
+        gap: 8px;
+    }
+
+    @media (width > 1200px) {
+        gap: 10px;
+    }
 
     &__logo {
-        max-width: 80px;
-        width: 100%;
+        padding: 5px;
+
+        &-link {
+            display: flex;
+        }
     }
 
     &__menu {
-        display: flex;
-        flex-wrap: wrap;
-        flex-grow: 1;
+        display: none;
         gap: 10px;
         align-items: center;
 
+        @media (width >= 1600px) {
+            display: flex;
+        }
+
         &-item {
-            padding: 26px 32px;
-            flex-grow: 1;
-        }
-    }
+            padding: 16px;
 
-    &__mode {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 17.5px 24px;
-        cursor: pointer;
-
-        &-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            width: 85px;
-            height: 45px;
-            border: 1px solid var(--border);
-            border-radius: 100px;
-            background: var(--color-white);
-        }
-
-        &-icon-container {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
-            left: 5px;
-            border-radius: 50%;
-            z-index: 1;
-            background: var(--color-black);
-            transition: transform 0.3s ease;
-
-            &--dark {
-                transform: translateX(calc(100%));
+            @media (width > 1200px) {
+                padding: 27px 32px;
             }
         }
 
         &-icon {
-            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+
+            @media (width >= 1600px) {
+                display: none;
+            }
+        }
+
+        &-mobile {
+            position: absolute;
+            top: 76px;
+            width: calc(100% - 20px);
+            min-height: 100vh;
+
+            @media (width > 768px) {
+                top: 78px;
+            }
+
+            @media (width > 1200px) {
+                top: 98px;
+            }
+
+            @media (width >= 1600px) {
+                display: none;
+            }
+
+            &-navigation {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                @media (width > 768px) {
+                    gap: 8px;
+                }
+            }
         }
     }
 }

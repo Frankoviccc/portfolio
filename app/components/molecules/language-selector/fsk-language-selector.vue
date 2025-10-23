@@ -2,6 +2,7 @@
     <div
         ref="languageSelector"
         class="language-selector bento"
+        :class="inDropdown ? 'language-selector--in-dropdown' : ''"
         @click="toggleList"
     >
         <Icon
@@ -9,6 +10,7 @@
             name="tabler:world"
             size="28"
         />
+
         <ul class="language-selector__list">
             <li class="language-selector__list-item">
                 <FskButton
@@ -49,13 +51,12 @@ import FskButton from "~/components/atoms/button/fsk-button.vue";
 
 const switchLocalePath = useSwitchLocalePath();
 
-type locale = 'nl' | 'en';
-
 interface Props {
-    languages: { label: string; code: locale }[];
+    languages: { label: string; code: "nl" | "en" }[];
+    inDropdown?: boolean;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 
 const currentIndex = ref(0);
 const isOpen = ref(false)
@@ -67,8 +68,6 @@ function toggleList() {
 
 function handleClick(index: number) {
     currentIndex.value = index
-    console.log(currentIndex.value)
-    console.log(props.languages)
 }
 
 watch(() => isOpen.value, (isOpen) => {
