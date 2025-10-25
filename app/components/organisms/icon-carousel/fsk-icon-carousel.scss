@@ -6,10 +6,10 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding: 16px 50px;
+        padding: 16px;
         gap: 16px;
 
-        @media (width > 1200px) {
+        @media (width > 1024px) {
             padding: 35px 50px;
             gap: 20px;
         }
@@ -23,14 +23,22 @@
     &__track {
         display: flex;
         flex-direction: column;
-        max-width: 350px;
+        max-width: 250px;
         width: 100%;
         margin: 0 auto;
         gap: 16px;
         overflow: hidden;
 
+        @media (width > 768px) {
+            max-width: 350px;
+        }
+
+        @media (width > 1024px) {
+            max-width: 400px;
+        }
+
         @media (width > 1600px) {
-            max-width: 490px;
+            max-width: 550px;
             gap: 30px;
         }
     }
@@ -55,6 +63,11 @@
             border-radius: 12px;
             border: 1px solid var(--border);
             background: var(--color-neutral-200);
+
+            @media (width > 1024px) {
+                width: 75px;
+                height: 75px;
+            }
 
             @media (width > 1600px) {
                 width: 100px;
