@@ -1,6 +1,7 @@
 .icon-carousel {
     width: 100%;
     text-align: center;
+    overflow: hidden;
 
     &__inner {
         display: flex;
@@ -23,22 +24,22 @@
     &__track {
         display: flex;
         flex-direction: column;
-        max-width: 250px;
+        max-width: 100%;
         width: 100%;
         margin: 0 auto;
         gap: 16px;
         overflow: hidden;
 
-        @media (width > 768px) {
-            max-width: 350px;
-        }
-
-        @media (width > 1024px) {
+        @media (width > 500px) {
             max-width: 400px;
         }
 
+        @media (width > 1024px) {
+            max-width: 450px;
+        }
+
         @media (width > 1600px) {
-            max-width: 550px;
+            max-width: 650px;
             gap: 30px;
         }
     }
