@@ -6,11 +6,11 @@
         :background="background"
         class="button"
         :class="[
-            type ? `button--type-${type}` : null,
+            type ? `button-type--${type}` : null,
             { 'button--background': background },
             { 'button--mirror': mirror },
             ]"
-        >
+    >
         <span
             v-if="$slots.default"
             class="button__content"
@@ -23,7 +23,7 @@
         <Icon
             v-if="icon"
             :name="`tabler:${icon}`"
-            size="28"
+            :size="iconSize"
             class="button__icon"
         />
     </component>
@@ -35,16 +35,19 @@ interface Props {
     is?: 'button' | typeof NuxtLink;
     to?: string;
     icon?: iconType;
+    iconSize?: string;
     type?: 'primary' | 'secondary';
     background?: boolean;
     mirror?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
+    is: NuxtLink,
     type: 'primary',
+    iconSize: '28',
 })
 
-type iconType =
+export type iconType =
     | 'arrow-right'
     | 'arrow-left'
     | 'arrow-up-right'
@@ -55,9 +58,9 @@ type iconType =
     | 'chevron-down'
     | 'external-link'
     | 'download'
-    | 'github'
-    | 'linkedin'
-    | 'twitter'
+    | 'brand-github-filled'
+    | 'brand-linkedin-filled'
+    | 'brand-x-filled'
     | 'facebook'
     | 'instagram'
     | 'coin-euro';
