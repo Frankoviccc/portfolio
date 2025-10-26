@@ -1,0 +1,23 @@
+.counter-collection {
+    padding: 0 10px;
+    margin: 10px 0;
+    overflow: hidden;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+
+        @media (width > 768px) {
+            gap: 8px;
+        }
+
+        @media (width > 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (width > 1200px) {
+            gap: 10px;
+        }
+    }
+}

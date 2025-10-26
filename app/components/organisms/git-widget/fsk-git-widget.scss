@@ -1,0 +1,169 @@
+.widget {
+    max-width: 100%;
+    width: 100%;
+    padding: 16px;
+    overflow: hidden;
+
+    @media (width > 1024px) {
+        padding: 35px;
+    }
+
+    @media (width > 1600px) {
+        padding: 70px 68px;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+
+        @media (width > 768px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__contributions {
+        position: relative;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: #ffffff;
+    }
+
+    &__contributions-wrapper {
+        position: relative;
+        min-width: max-content;
+        padding: 10px 10px 18px;
+    }
+
+    &__table {
+        border-collapse: separate;
+        border-spacing: 3px;
+        width: auto;
+        min-width: max-content;
+    }
+
+    &__weekday-column-header,
+    &__table-head {
+        background: var(--color-white);
+    }
+
+    &__month-label {
+        font-size: 10px;
+        color: var(--color-black);
+        text-align: left;
+        padding: 5px 2px;
+        font-weight: normal;
+        vertical-align: bottom;
+        background: #ffffff;
+        white-space: nowrap;
+    }
+
+    &__weekday-label {
+        width: 35px;
+        min-width: 35px;
+        padding-right: 5px;
+        z-index: 5;
+        font-size: 10px;
+        text-align: right;
+        color: var(--color-black);
+        background: #ffffff;
+    }
+
+    &__day-cell {
+        padding: 0;
+        width: 10px;
+        height: 10px;
+    }
+
+    &__day {
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:not(.day-empty):hover {
+            outline: 2px solid rgba(27, 31, 36, 0.15);
+            outline-offset: 1px;
+        }
+
+        @media (width > 1024px) {
+            width: 12.5px;
+            height: 12.5px;
+        }
+
+        @media (width > 1600px) {
+            width: 15px;
+            height: 15px;
+        }
+
+    }
+
+    &__day-empty {
+        cursor: default;
+        border: 1px dashed #d1d5da;
+        background-color: transparent !important;
+    }
+
+    &__legend {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 11px;
+        color: #57606a;
+        justify-content: flex-end;
+        margin-top: 10px;
+
+        &-day {
+            &:first-of-type {
+                background: var(--color-neutral-200);
+            }
+
+            &:nth-of-type(2) {
+                background: #9be9a8;
+            }
+
+            &:nth-of-type(3) {
+                background: #40c463;
+            }
+
+            &:nth-of-type(4) {
+                background: #30a14e;
+            }
+
+            &:nth-of-type(5) {
+                background: #216e39;
+            }
+        }
+    }
+
+    &__legend-colors {
+        display: flex;
+        gap: 3px;
+    }
+
+    &__legend-day {
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--color-neutral-200);
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}

@@ -1,0 +1,105 @@
+.icon-carousel {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 16px;
+        gap: 16px;
+
+        @media (width > 1024px) {
+            padding: 35px 50px;
+            gap: 20px;
+        }
+
+        @media (width > 1600px) {
+            padding: 70px 68px;
+            gap: 30px;
+        }
+    }
+
+    &__track {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        gap: 16px;
+        overflow: hidden;
+
+        @media (width > 500px) {
+            max-width: 400px;
+        }
+
+        @media (width > 1024px) {
+            max-width: 450px;
+        }
+
+        @media (width > 1600px) {
+            max-width: 650px;
+            gap: 30px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+
+        @media (width > 1600px) {
+            gap: 30px;
+        }
+
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--color-neutral-200);
+
+            @media (width > 1024px) {
+                width: 75px;
+                height: 75px;
+            }
+
+            @media (width > 1600px) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        &--animate {
+            animation: scrolling 19.6s linear infinite;
+        }
+
+        &--reverse {
+            animation: scrolling 19.6s linear infinite reverse;
+        }
+    }
+}
+
+@keyframes scrolling {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes scrolling-reverse {
+    from {
+        transform: translateX(-100%)
+    }
+    to {
+        transform: translateX(0)
+    }
+}
