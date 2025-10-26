@@ -1,9 +1,33 @@
 body {
+    font-family: 'Manrope', sans-serif;
     color: var(--color-black);
 }
 
-p {
-    font-family: 'Manrope', sans-serif;
+h1, .u-heading-1 {
+    font-family: 'Casanova', sans-serif;
+    font-size: 5rem;
+    line-height: 5.5rem;
+}
+
+h2, .u-heading-2 {
+    font-family: 'Casanova', sans-serif;
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+
+h3, .u-heading-3 {
+    font-family: 'Casanova', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+p, .u-paragraph {
     font-size: 1.125rem;
     line-height: 1.75rem;
+}
+
+.u-tiny-text {
+    font-size: 0.875rem;
+    line-height: 1.33rem;
+    opacity: 0.6;
 }

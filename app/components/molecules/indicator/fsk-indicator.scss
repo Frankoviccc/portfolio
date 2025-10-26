@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 32px;
+    padding: 16px;
     flex-grow: 1;
 
     &__container {
@@ -16,26 +16,41 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
+
+        @media (width > 1200px) {
+            width: 40px;
+            height: 40px;
+        }
 
         &-1 {
             position: absolute;
-            width: 10px;
-            height: 10px;
+            width: 7.5px;
+            height: 7.5px;
             background: var(--gradient);
             border-radius: 50%;
             z-index: 2;
+
+            @media (width > 1200px) {
+                width: 15px;
+                height: 15px;
+            }
         }
 
         &-2 {
             position: absolute;
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             background: #42B883;
             opacity: 0;
             border-radius: 50%;
             animation: pulse 2s ease-out infinite 1s;
+
+            @media (width > 1200px) {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         &-3 {
@@ -57,6 +72,32 @@
 
     &__logo-link {
         display: flex;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-family: "Casanova", sans-serif;
+        font-size: 0.875rem;
+        font-weight: 400;
+
+        @media (width > 1200px) {
+            font-size: 1.5rem;
+        }
+
+        &-icon {
+            display: none;
+
+            @media (width > 350px) {
+                display: block;
+                font-size: 1.25rem;
+            }
+
+            @media (width > 1200px) {
+                font-size: 1.75rem;
+            }
+        }
     }
 }
 

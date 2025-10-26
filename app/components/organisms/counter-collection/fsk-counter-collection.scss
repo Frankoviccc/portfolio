@@ -1,77 +1,23 @@
 .counter-collection {
     padding: 0 10px;
     margin: 10px 0;
+    overflow: hidden;
 
     &__inner {
-        display: flex;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
 
-        > * {
-            flex: 1;
-        }
-    }
-
-    &__pull {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        cursor: pointer;
-
-        &--pulled {
-            .counter-collection__lever {
-                transform: rotate(45deg);
-            }
-        }
-    }
-
-    &__lever {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        z-index: 2;
-        transform-origin: center bottom;
-        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-        &-knob {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: radial-gradient(
-                            circle at 35% 35%,
-                            #4a4a4a,
-                            #2a2a2a 45%,
-                            #1a1a1a 80%,
-                            #000000
-            );
+        @media (width > 768px) {
+            gap: 8px;
         }
 
-        &-stick {
-            width: 8px;
-            height: 60px;
-            background: var(--gradient);
-            border-radius: 0 0 4px 4px;
+        @media (width > 1024px) {
+            grid-template-columns: repeat(4, 1fr);
         }
-    }
 
-    &__base {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: -15px;
-        z-index: 1;
-
-        &-pivot {
-            width: 60px;
-            height: 30px;
-            background: radial-gradient(circle at 40% 40%, #e8e8e8, #B3B3B3);
-            border-radius: 4px;
-            box-shadow:
-                    0 2px 8px rgba(0, 0, 0, 0.2),
-                    inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+        @media (width > 1200px) {
+            gap: 10px;
         }
     }
 }
