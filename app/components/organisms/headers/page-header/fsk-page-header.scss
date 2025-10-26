@@ -53,9 +53,7 @@
     }
 
     &__container {
-        @media (width > 1024px) {
-            width: 50%;
-        }
+        width: 50%;
     }
 
     &__container:first-of-type {

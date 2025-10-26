@@ -97,6 +97,14 @@ interface Props {
 }
 
 defineProps<Props>();
+
+watch(navbarIsOpen, (newValue) => {
+    if (document.body.style.overflow === 'hidden') {
+        document.body.style.overflow = 'unset';
+    } else {
+        document.body.style.overflow = 'hidden'
+    }
+})
 </script>
 
 <style lang="scss" scoped>

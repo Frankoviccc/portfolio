@@ -1,0 +1,124 @@
+.experience {
+    width: 100%;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        gap: 30px;
+
+        @media (width > 1600px) {
+            padding: 70px 50px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        list-style: none;
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            gap: 30px;
+            border-radius: 12px;
+            background: var(--color-neutral-200);
+
+            @media (width < 900px) {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            &-header {
+                display: flex;
+
+                @media (width < 425px) {
+                    gap: 10px;
+                    flex-direction: column;
+                }
+
+                @media (width > 1200px) {
+                    align-items: center;
+                }
+            }
+
+            &-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                padding: 15px;
+                border-radius: 4px;
+                background: var(--color-white);
+
+                @media (width >= 425px) {
+                    margin-right: 15px;
+                }
+
+                @media (width > 1200px) {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+
+            &-name {
+                font-size: 1rem;
+                font-weight: bold;
+
+                @media (width > 1200px) {
+                    font-size: 1.25rem;
+                }
+            }
+
+            &-title {
+                font-size: 0.75rem;
+
+                @media (width > 1200px) {
+                    font-size: 1rem;
+                }
+            }
+
+            &-date {
+                opacity: 0.6;
+                font-size: 0.75rem;
+
+                @media (width > 1200px) {
+                    font-size: 1rem;
+                }
+
+                &::before {
+                    content: '|';
+                    margin: 0 5px;
+                }
+            }
+
+            &-tasks {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 10px;
+                list-style: none;
+
+
+                @media (width > 900px) {
+                    gap: 15px;
+                    justify-content: flex-end;
+                }
+            }
+
+            &-task {
+                padding: 8px 15px;
+                border-radius: 6px;
+                font-size: 0.813rem;
+                background: var(--color-white);
+
+                @media (width > 1200px) {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+}

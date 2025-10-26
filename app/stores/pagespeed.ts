@@ -14,7 +14,7 @@ export const usePagespeedStore = defineStore('pagespeed', () => {
         try {
             const response = await $fetch('/api/pagespeed', {
                 params: {
-                    url: 'https://formulier.bestealarmsystemen.nl'
+                    url: 'https://barcatrips.com'
                 }
             })
 
