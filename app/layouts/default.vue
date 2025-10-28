@@ -33,7 +33,7 @@
     <div class="page-grid">
         <FskIconCarousel
             title="Stack i use"
-            :items="iconCaroussel"
+            :items="iconCarousselOne"
         />
 
         <FskGitWidget />
@@ -64,6 +64,7 @@
 
         <FskIconCarousel
             title="Industries served"
+            :center-track="true"
             :items="iconCaroussel"
         />
     </div>
@@ -99,6 +100,13 @@ import FskGitWidget from "~/components/organisms/git-widget/fsk-git-widget.vue";
 import FskStepCollection from "~/components/organisms/step-collection/fsk-step-collection.vue";
 import FskCardCollection from "~/components/organisms/card-collection/fsk-card-collection.vue";
 
+import Cart from '@/assets/icons/cart.svg'
+import Estate from '@/assets/icons/estate.svg'
+import Finance from '@/assets/icons/finance.svg'
+import Health from '@/assets/icons/healthcare.svg'
+import Marketing from '@/assets/icons/marketing.svg'
+import Travel from '@/assets/icons/travel.svg'
+
 const pageHeader = {
     title: 'Frontend',
     subtitle: 'Developer',
@@ -127,6 +135,21 @@ const contentBlock = {
 }
 
 const iconCaroussel = [
+    { icon: Cart },
+    { icon: Estate },
+    { icon: Finance },
+    { icon: Health },
+    { icon: Marketing },
+    { icon: Travel },
+    { icon: Cart },
+    { icon: Estate },
+    { icon: Finance },
+    { icon: Health },
+    { icon: Marketing },
+    { icon: Travel },
+]
+
+const iconCarousselOne = [
     { icon: Vue },
     { icon: Nuxt },
     { icon: Javascript },

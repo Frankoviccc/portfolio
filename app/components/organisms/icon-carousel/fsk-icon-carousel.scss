@@ -7,16 +7,14 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding: 16px;
+        padding: var(--padding);
         gap: 16px;
 
         @media (width > 1024px) {
-            padding: 35px 50px;
             gap: 20px;
         }
 
         @media (width > 1600px) {
-            padding: 70px 68px;
             gap: 30px;
         }
     }
@@ -29,6 +27,11 @@
         margin: 0 auto;
         gap: 16px;
         overflow: hidden;
+
+        &--center {
+            height: 100%;
+            justify-content: center;
+        }
 
         @media (width > 500px) {
             max-width: 400px;

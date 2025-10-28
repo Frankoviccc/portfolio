@@ -5,7 +5,10 @@
                 {{ title }}
             </h2>
 
-            <div class="icon-carousel__track">
+            <div
+                class="icon-carousel__track"
+                :class="centerTrack ? 'icon-carousel__track--center' : ''"
+            >
                 <ul
                     v-if="items.length > 7"
                     v-for="(list, index) in doubleItems"
@@ -47,6 +50,7 @@
 import type { Component } from 'vue';
 interface Props {
     title: string;
+    centerTrack?: boolean;
     items: { icon: Component | string }[];
 }
 
