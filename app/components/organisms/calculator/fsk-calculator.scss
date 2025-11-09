@@ -1,0 +1,91 @@
+.calculator {
+    padding: var(--padding);
+    margin: var(--spacing);
+    background: var(--color-white);
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+
+        @media (width > 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .calculator__button {
+                width: 100%;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        padding: 21px 20px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            opacity: 0.2;
+            border-radius: 10px;
+            background: var(--gradient);
+            pointer-events: none;
+        }
+
+        &-tag {
+            position: relative;
+            color: var(--color-black);
+            font-size: 1rem;
+            z-index: 1;
+
+            @media (width > 768px) {
+                font-size: 1.125rem;
+            }
+        }
+
+        &-value {
+            font-size: 1.125rem;
+            font-weight: 600;
+            font-family: 'Casanova', sans-serif;
+
+            @media (width > 768px) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &__button {
+        height: fit-content;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 16px;
+
+        @media (width > 768px) {
+            flex-direction: row;
+
+            .calculator__button {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -103,17 +103,14 @@ const weeks = computed(() => {
     if (apiWeeks.length > 0) {
         // Pak eerste week van kalenderjaar
         const firstWeek = apiWeeks[0]
-        console.log(firstWeek, 'first week')
         // Pak eerste dag die true is
         const firstDay = firstWeek?.contributionDays.find(day => day)
-        console.log(firstDay, 'first day')
 
         if (firstDay) {
             // Pak de datum van eerste dag
             const firstDate = new Date(firstDay.date)
             // Pak de index van de eerste dag, zondag zou 0 zijn
             const dayOfWeek = firstDate.getDay()
-            console.log(dayOfWeek, 'day of week')
 
             // Als de eerste dag niet zondag is, voeg lege dagen toe aan het begin
             if (dayOfWeek > 0) {

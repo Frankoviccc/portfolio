@@ -69,6 +69,14 @@
         />
     </div>
 
+    <FskCalculator
+        title="Price calculator"
+        text="Want a quick project estimate?"
+        :project-options="projectOptions"
+        :design-options="designOptions"
+        :timeline-options="timelineOptions"
+    />
+
     <div>
         <slot />
     </div>
@@ -106,6 +114,29 @@ import Finance from '@/assets/icons/finance.svg'
 import Health from '@/assets/icons/healthcare.svg'
 import Marketing from '@/assets/icons/marketing.svg'
 import Travel from '@/assets/icons/travel.svg'
+import FskInputField from "~/components/atoms/input-field/fsk-input-field.vue";
+import FskCalculator from "~/components/organisms/calculator/fsk-calculator.vue";
+
+const projectOptions = [
+    { value: '', label: 'Project Type' },
+    { value: 'landing-page', label: 'Landing Page', minNumberOfPages: 1 },
+    { value: 'corporate-website', label: 'Corporate Website', minNumberOfPages: 5 },
+    { value: 'web-app', label: 'Web App', minNumberOfPages: 5 },
+    { value: 'e-commerce', label: 'E-commerce', minNumberOfPages: 5 },
+]
+
+const designOptions = [
+    { value: '', label: 'Design Availability' },
+    { value: 'yes', label: 'I have ready designs' },
+    { value: 'no', label: 'I need design and development' },
+]
+
+const timelineOptions = [
+    { value: '', label: 'Timeline' },
+    { value: 'urgent', label: 'Less than 1 month' },
+    { value: 'fast', label: '1-2 months' },
+    { value: 'flexible', label: 'FLexible' },
+]
 
 const pageHeader = {
     title: 'Frontend',

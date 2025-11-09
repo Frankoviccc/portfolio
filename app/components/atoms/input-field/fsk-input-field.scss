@@ -1,0 +1,108 @@
+.input-field {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: var(--color-black);
+    appearance: none;
+    cursor: pointer;
+    background: var(--color-neutral-200);
+
+    &--list-open:not(.input-field--empty) {
+        margin-bottom: calc(var(--options-list-height) + 16px);
+    }
+
+    &--checkbox {
+        .input-field__list-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &--error {
+        border: 1px solid red;
+    }
+
+    &--empty {
+        cursor: not-allowed;
+    }
+
+    &__selected {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 21px 20px;
+
+        @media (width > 1600px) {
+            padding: 30px 20px;
+        }
+    }
+
+    &__checkbox {
+        &[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+    }
+
+    &__input {
+        background: none;
+        border: none;
+        width: 100%;
+        min-height: 60px;
+        padding: 21px 20px;
+        font-size: 0.875rem;
+        color: var(--color-black);
+        font-family: "Manrope", "Manrope Fallback: Arial", sans-serif;
+
+        @media (width > 1600px) {
+            min-height: 80px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            font-size: 0.875rem;
+            font-family: 'Manrope', sans-serif;
+            color: var(--color-black);
+        }
+    }
+
+    &__list {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 78px;
+        padding: 10px 20px;
+        gap: 16px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: var(--color-neutral-200);
+
+        @media (width > 1600px) {
+            top: 96px;
+        }
+
+        &-item {
+            padding: 16px 20px;
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid var(--border);
+            }
+        }
+    }
+
+    &__error-message {
+        color: red;
+        font-size: 0.75rem;
+    }
+
+    &__icon {
+        font-size: 1.25rem;
+    }
+}
