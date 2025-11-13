@@ -100,6 +100,7 @@ import type { Props, FormValues } from './fsk-calculator.types';
 import { defaultFormValues } from './fsk-calculator.types'
 
 defineProps<Props>();
+
 const values = ref<FormValues>(defaultFormValues);
 
 const formIsValid = ref(false);

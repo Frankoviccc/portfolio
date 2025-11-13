@@ -69,13 +69,20 @@
         />
     </div>
 
-    <FskCalculator
-        title="Price calculator"
-        text="Want a quick project estimate?"
-        :project-options="projectOptions"
-        :design-options="designOptions"
-        :timeline-options="timelineOptions"
-    />
+    <div class="page-grid">
+        <FskCalculator
+            title="Price calculator"
+            text="Want a quick project estimate?"
+            :project-options="projectOptions"
+            :design-options="designOptions"
+            :timeline-options="timelineOptions"
+        />
+
+        <FskFaqs
+            :title="faqs.title"
+            :items="faqs.items"
+        />
+    </div>
 
     <div>
         <slot />
@@ -114,8 +121,8 @@ import Finance from '@/assets/icons/finance.svg'
 import Health from '@/assets/icons/healthcare.svg'
 import Marketing from '@/assets/icons/marketing.svg'
 import Travel from '@/assets/icons/travel.svg'
-import FskInputField from "~/components/atoms/input-field/fsk-input-field.vue";
 import FskCalculator from "~/components/organisms/calculator/fsk-calculator.vue";
+import FskFaqs from "~/components/organisms/FAQs/fsk-faqs.vue";
 
 const projectOptions = [
     { value: '', label: 'Project Type' },
@@ -210,4 +217,16 @@ const steps = [
     { number: '02', title: 'Development', text: 'Then I build dynamic, responsive, and pixel-perfect pages — always keeping performance and security in mind.' },
     { number: '03', title: 'Delivery & Support', text: 'Finally, I deliver clean, well-documented code and remain available for ongoing support and improvements.' }
 ]
+
+const faqs = {
+    title: 'F.A.Qs',
+    items: [
+        { title: 'How do we communicate during the project?', text: 'I’m focused mainly on development. But if you already have a design (Figma, Sketch, Adobe XD), I’ll bring it to life. If you need design support, I can also collaborate with designers from my network.' },
+        { title: 'How do we communicate during the project?', text: 'I’m focused mainly on development. But if you already have a design (Figma, Sketch, Adobe XD), I’ll bring it to life. If you need design support, I can also collaborate with designers from my network.' },
+        { title: 'How do we communicate during the project?', text: 'I’m focused mainly on development. But if you already have a design (Figma, Sketch, Adobe XD), I’ll bring it to life. If you need design support, I can also collaborate with designers from my network.' },
+        { title: 'How do we communicate during the project?', text: 'I’m focused mainly on development. But if you already have a design (Figma, Sketch, Adobe XD), I’ll bring it to life. If you need design support, I can also collaborate with designers from my network.' },
+        { title: 'How do we communicate during the project?', text: 'I’m focused mainly on development. But if you already have a design (Figma, Sketch, Adobe XD), I’ll bring it to life. If you need design support, I can also collaborate with designers from my network.' },
+        { title: 'How do we communicate during the project?', text: 'I’m focused mainly on development. But if you already have a design (Figma, Sketch, Adobe XD), I’ll bring it to life. If you need design support, I can also collaborate with designers from my network.' }
+    ]
+}
 </script>

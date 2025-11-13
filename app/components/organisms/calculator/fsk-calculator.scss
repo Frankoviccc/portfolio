@@ -1,7 +1,5 @@
 .calculator {
     padding: var(--padding);
-    margin: var(--spacing);
-    background: var(--color-white);
 
     &__form {
         display: flex;
@@ -16,6 +14,11 @@
             .calculator__button {
                 width: 100%;
             }
+        }
+
+        @media (width > 1600px) {
+            gap: 30px;
+            margin-bottom: 30px;
         }
     }
 

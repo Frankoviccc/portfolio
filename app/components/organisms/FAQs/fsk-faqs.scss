@@ -1,0 +1,21 @@
+.faqs {
+    padding: var(--padding) var(--padding) 0;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        padding-bottom: var(--padding);
+        gap: 20px;
+        list-style: none;
+        overflow: scroll;
+
+        @media (width > 1024px) {
+            max-height: calc(300px + var(--calculator-height));
+        }
+
+        @media (width > 1600px) {
+            max-height: calc(400px + var(--calculator-height));
+        }
+    }
+}

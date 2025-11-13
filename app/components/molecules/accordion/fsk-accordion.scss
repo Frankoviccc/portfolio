@@ -1,0 +1,54 @@
+.accordion {
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--color-white);
+    border: 1px solid var(--border);
+
+    @media (width > 1600px) {
+        padding: 20px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @media (width > 1600px) {
+            gap: 20px;
+        }
+    }
+
+    &__icon {
+        min-width: 30px;
+        font-size: 1.875rem;
+        background: var(--gradient);
+
+        @media (width > 1600px) {
+            min-width: 40px;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+
+        @media (width > 1600px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__content {
+        margin-top: 10px;
+        opacity: 0.8;
+    }
+
+    &__text {
+        font-size: 0.875rem;
+
+        @media (width > 1600px) {
+            font-size: 1rem;
+        }
+    }
+}

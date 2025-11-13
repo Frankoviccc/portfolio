@@ -1,7 +1,9 @@
 <template>
     <div
         v-if="is === 'select'"
+        ref="inputField"
         class="input-field__container"
+        @click="setCalculatorHeight"
     >
         <div
             :class="[
@@ -28,7 +30,6 @@
                 v-show="optionsListVisible"
                 ref="optionsList"
                 class="input-field__list"
-                key="options-list-select"
             >
                 <div
                     v-for="(option, index) in options?.slice(1)"
@@ -51,7 +52,9 @@
 
     <div
         v-if="is === 'checkbox'"
+        ref="inputField"
         class="input-field__container"
+        @click="setCalculatorHeight"
     >
         <div
             :title="options?.length === 0 ? 'Please select Project Type' : ''"
@@ -68,7 +71,9 @@
                 class="input-field__selected"
                 @click="toggleList"
             >
-                {{ featureLabel ? featureLabel : 'Features & Functionality' }}
+                <div class="input-field__content">
+                    {{ featureLabel ? featureLabel : 'Features & Functionality' }}
+                </div>
 
                 <Icon
                     class="input-field__icon"
@@ -145,13 +150,23 @@ const props = defineProps<Props>();
 
 const { openField, closeField, isFieldOpen } = useInputFieldState();
 
-const emit = defineEmits(['input', 'blur', 'toggle'])
+const emit = defineEmits(['input', 'blur'])
+
 const marginBottom = ref(0 + 'px');
 
 const optionsListVisible = isFieldOpen(props.fieldId)
-console.log('optionsListVisible', optionsListVisible.value);
 const optionsList = ref();
 const currentIndex = ref<number>(0);
+
+const general = useGeneralStore();
+const { calculatorHeight } = storeToRefs(general);
+const inputField = ref<HTMLElement>();
+
+function setCalculatorHeight() {
+    if (inputField.value) {
+        calculatorHeight.value = inputField.value.clientHeight + 'px';
+    }
+}
 
 function toggleList() {
     if (optionsListVisible.value) {
@@ -188,7 +203,7 @@ const handleBlur = (event: Event) => {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use 'fsk-input-field';
 
 .input-field {
