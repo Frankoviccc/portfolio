@@ -1,0 +1,15 @@
+.social-proof {
+    padding: var(--padding);
+    text-align: center;
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+        gap: 16px;
+
+        > * {
+            min-height: 80px;
+        }
+    }
+}
