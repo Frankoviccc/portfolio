@@ -1,0 +1,27 @@
+.icon-container {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--color-neutral-200);
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100%;
+        padding: 16px 32px;
+
+        &--small {
+            padding: 10px;
+            max-width: 40px;
+            max-height: 40px;
+
+            @media (width > 450px) {
+                padding: 16px;
+                max-width: 60px;
+                max-height: 60px;
+            }
+        }
+    }
+}
