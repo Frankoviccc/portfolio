@@ -1,6 +1,14 @@
 .content-block {
     margin: var(--spacing);
 
+    &--desktop {
+        display: none;
+
+        @media (width >= 1024px) {
+            display: block;
+        }
+    }
+
     &__inner {
         display: flex;
         flex-direction: column;

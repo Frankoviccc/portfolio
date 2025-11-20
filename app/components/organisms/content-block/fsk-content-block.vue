@@ -1,8 +1,17 @@
 <template>
-    <section class="content-block">
+    <section
+        :class="[
+            'content-block',
+            { 'content-block--desktop': desktopOnly }
+        ]"
+    >
         <div
-            class="content-block__inner bento"
-            :class="!text ? 'content-block__inner--no-text' : ''"
+            :class="[
+                'content-block__inner bento',
+                {
+                    'content-block__inner--no-text': !text,
+                }
+            ]"
         >
             <div class="content-block__container">
                 <h2 class="content-block__title">
@@ -37,7 +46,7 @@
                     <FskButton
                         :to="link"
                         :icon="'arrow-up-right'"
-                        :background="true"
+                        :background="buttonBackground"
                     >
                         {{ label }}
                     </FskButton>
@@ -56,6 +65,8 @@ interface Props {
     link?: string;
     label?: string;
     buttonGroup?: { icon: iconType; label: string; link: string; background: boolean }[];
+    buttonBackground?: boolean;
+    desktopOnly?: boolean;
 }
 
 defineProps<Props>();
