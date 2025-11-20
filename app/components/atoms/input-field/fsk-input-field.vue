@@ -95,6 +95,7 @@
                     <input
                         class="input-field__checkbox"
                         type="checkbox"
+                        :name="name"
                         @click="$emit('input', option.value, index, option.label)"
                     >
                     {{ option.label }}
@@ -124,13 +125,42 @@
             <input
                 class="input-field__input"
                 type="text"
-                pattern="[0-9]*"
-                inputmode="numeric"
+                :inputmode="inputMode"
                 :placeholder="placeholder"
                 :value="value"
+                :name="name"
                 @input="handleInput"
                 @blur="handleBlur"
             >
+        </div>
+
+        <p
+            v-if="error"
+            class="input-field__error-message"
+        >
+            {{ errorMessage }}
+        </p>
+    </div>
+
+    <div
+        v-if="is === 'textarea'"
+        class="input-field__container"
+    >
+        <div
+            :class="[
+                'input-field',
+                'input-field--textarea',
+                { 'input-field--error': error }
+            ]"
+        >
+            <textarea
+                class="input-field__textarea"
+                type="text"
+                :placeholder="placeholder"
+                :name="name"
+                :rows="rows"
+                @blur="handleBlur"
+            />
         </div>
 
         <p
@@ -154,7 +184,8 @@ const emit = defineEmits(['input', 'blur'])
 
 const marginBottom = ref(0 + 'px');
 
-const optionsListVisible = isFieldOpen(props.fieldId)
+const optionsListVisible = props.fieldId ? isFieldOpen(props.fieldId) : ref(false)
+
 const optionsList = ref();
 const currentIndex = ref<number>(0);
 
@@ -169,11 +200,11 @@ function setCalculatorHeight() {
 }
 
 function toggleList() {
+    if (!props.fieldId) return;
+
     if (optionsListVisible.value) {
-        // Als de lijst zichtbaar is, sluit deze dan
         closeField();
     } else {
-        // Zo niet, open de lijst
         openField(props.fieldId);
     }
 
@@ -194,7 +225,12 @@ const handleOptionSelect = (option: any, index: number) => {
 
 const handleInput = (event: Event) => {
     const target = event.target as HTMLInputElement;
-    target.value = target.value.replace(/[^0-9]/g, '');
+
+    if (props.inputMode === 'numeric') {
+        target.value = target.value.replace(/[^0-9]/g, '');
+    } else {
+        emit ('input', target.value)
+    }
 }
 
 const handleBlur = (event: Event) => {

@@ -6,7 +6,6 @@
     font-size: 0.875rem;
     color: var(--color-black);
     appearance: none;
-    cursor: pointer;
     background: var(--color-neutral-200);
 
     &--list-open:not(.input-field--empty) {
@@ -35,6 +34,7 @@
         justify-content: space-between;
         padding: 21px 20px;
         font-size: 0.875rem;
+        cursor: pointer;
 
         @media (width > 1200px) {
             font-size: 1rem;
@@ -64,7 +64,8 @@
         }
     }
 
-    &__input {
+    &__input,
+    &__textarea {
         background: none;
         border: none;
         width: 100%;
@@ -149,5 +150,9 @@
     &__icon {
         min-width: 20px;
         font-size: 1.25rem;
+    }
+
+    &__textarea {
+        resize: none;
     }
 }
