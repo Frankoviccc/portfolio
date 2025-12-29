@@ -35,11 +35,13 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
+        display: 'swap',
         name: 'Casanova',
         provider: 'local',
-        src: '/fonts/CasanovaScotia.otf'
+        src: '/fonts/CasanovaScotia.woff2'
       },
       {
+        display: 'swap',
         name: 'Manrope',
         provider: 'google',
         weights: [400, 600],
@@ -62,7 +64,9 @@ export default defineNuxtConfig({
     },
   ],
 
-  site: { indexable: false },
+  site: {
+    indexable: false
+  },
 
   colorMode: {
     preference: 'system',
