@@ -1,0 +1,29 @@
+{
+  "contentBlock": {
+    "title": "Goal",
+    "buttonLabel": "Visit live website"
+  },
+  "stack": {
+    "title": "Tech Stack"
+  },
+  "industries": {
+    "title": "Industries"
+  },
+  "duration": {
+    "title": "Duration"
+  },
+  "contentBlockEmpty": {
+    "title": "Want a modern website?",
+    "label": "Let's build it!",
+    "link": "/contact"
+  },
+  "challenge": {
+    "title": "Challenge"
+  },
+  "solution": {
+    "title": "Solution"
+  },
+  "outcome": {
+    "title": "Outcome"
+  }
+}

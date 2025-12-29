@@ -1,0 +1,27 @@
+{
+  "share": [
+    {
+      "title": "Share",
+      "items": [
+        { "icon": "facebook", "link": "/" },
+        { "icon": "instagram", "link": "/" },
+        { "icon": "linkedin", "link": "/", "color": "#0e76a8"}
+      ]
+    },
+    {
+      "title": "Share this article",
+      "items": [
+        { "icon": "facebook", "link": "/" },
+        { "icon": "instagram", "link": "/" },
+        { "icon": "linkedin", "link": "/", "color": "#0e76a8"},
+        { "icon": "copylink", "link": "/" }
+      ]
+    }
+  ],
+  "contentBlock": {
+    "title": "Read related articles",
+    "titleMobile": "Blog",
+    "label": "See all",
+    "link": "/blog"
+  }
+}

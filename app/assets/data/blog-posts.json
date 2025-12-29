@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "why-clean-code-matters-in-frontend-development",
+    "title": "Why Clean Code Matters in Frontend Development",
+    "text": "A look at how writing maintainable, well-structured code saves time, reduces bugs, and makes projects future-proof.",
+    "image": {
+      "src": "/blog-posts/blog.webp",
+      "alt": "Html template"
+    },
+    "contentBlocks": [
+      {
+        "text": "<h5>How to Write Clean Frontend Code</h5><ul><li><strong>Use meaningful names:</strong> getUserProfile() is much clearer than getData().</li><li><strong>Keep components small:</strong> each should do one thing well.</li><li><strong>Follow a style guide:</strong> whether it's ESLint, Prettier, or a team-defined rulebook.</li><li><strong>Write comments sparingly but wisely:</strong> explain why, not what.</li><li><strong>Refactor regularly:</strong> don't let \"temporary fixes\" live forever.</li></ul>"
+      },
+      {
+        "text": "<p>In the fast-paced world of web development, deadlines often push developers to prioritize speed over structure. But in the long run, messy code becomes a burden for both the developer and the client.</p><p>Clean code isn't about writing fewer lines of code. It's about writing code that is easy to read, easy to understand, and easy to change. Think of it as writing a story: someone else (or even your future self) should be able to read your code and immediately know what's going on without guessing.</p><p>Some key traits of clean code:</p><ol><li>Clear naming conventions for variables, functions, and components.</li><li>Avoiding unnecessary complexity.</li><li>Following established best practices and coding standards.</li></ol>"
+      },
+      {
+        "image": {
+          "src": "/blog-posts/blog-1.webp",
+          "alt": "Html tags"
+        }
+      },
+      {
+        "text": "<h5>Why It Matters in Frontend Development</h5><ol><li><strong>Better Collaboration</strong><br>Frontend projects often involve multiple developers working together. Clean code ensures that everyone can understand and extend each other's work without wasting time trying to figure out what a piece of code is doing.</li><li><strong>Easier Maintenance</strong><br>Websites and applications evolve over time. New features get added, designs change, and bugs appear. Clean, well-structured code makes it easier to maintain and update a project without breaking existing functionality.</li><li><strong>Improved Performance</strong><br>While not always obvious, messy code can sometimes lead to performance issues. Clean, efficient code often runs faster and avoids common pitfalls like duplicate logic or unnecessary re-rendering.</li><li><strong>Scalability</strong><br>A website might start small, but most businesses grow — and so do their digital platforms. Clean code provides a strong foundation for scaling the project without having to rewrite large parts of it later.</li><li><strong>Future-Proofing</strong><br>The frontend ecosystem evolves quickly. Frameworks, libraries, and tools come and go. Clean, modular code makes it easier to migrate or integrate with new technologies when needed.</li></ol>"
+      },
+      {
+        "text": "<h3>Final Thoughts</h3><p>Clean code may take a little extra effort up front, but it pays off enormously in the long run. It makes projects easier to maintain, scale, and improve — and it saves countless hours of frustration. For frontend developers, clean code is not just about writing software that works today, but about building a foundation that will continue to deliver value tomorrow.</p>`\n"
+      }
+    ]
+  },
+  {
+    "slug": "responsive-design-more-than-just-mobile-friendly",
+    "title": "Responsive Design: More Than Just Mobile-Friendly",
+    "text": "Tips on creating websites that look and feel great on every device — because first impressions happen everywhere.",
+    "image": {
+      "src": "/blog-posts/setup.webp",
+      "alt": "Setup"
+    },
+    "contentBlocks": [
+      {
+        "text": "<h5>How to Write Clean Frontend Code</h5><ul><li><strong>Use meaningful names:</strong> getUserProfile() is much clearer than getData().</li><li><strong>Keep components small:</strong> each should do one thing well.</li><li><strong>Follow a style guide:</strong> whether it's ESLint, Prettier, or a team-defined rulebook.</li><li><strong>Write comments sparingly but wisely:</strong> explain why, not what.</li><li><strong>Refactor regularly:</strong> don't let \"temporary fixes\" live forever.</li></ul>"
+      },
+      {
+        "text": "<p>In the fast-paced world of web development, deadlines often push developers to prioritize speed over structure. But in the long run, messy code becomes a burden for both the developer and the client.</p><p>Clean code isn't about writing fewer lines of code. It's about writing code that is easy to read, easy to understand, and easy to change. Think of it as writing a story: someone else (or even your future self) should be able to read your code and immediately know what's going on without guessing.</p><p>Some key traits of clean code:</p><ol><li>Clear naming conventions for variables, functions, and components.</li><li>Avoiding unnecessary complexity.</li><li>Following established best practices and coding standards.</li></ol>\"\n"
+      },
+      {
+        "image": {
+          "src": "/blog-posts/blog-1.webp",
+          "alt": "Html tags"
+        }
+      },
+      {
+        "text": "<h5>Why It Matters in Frontend Development</h5><ol><li><strong>Better Collaboration</strong><br>Frontend projects often involve multiple developers working together. Clean code ensures that everyone can understand and extend each other's work without wasting time trying to figure out what a piece of code is doing.</li><li><strong>Easier Maintenance</strong><br>Websites and applications evolve over time. New features get added, designs change, and bugs appear. Clean, well-structured code makes it easier to maintain and update a project without breaking existing functionality.</li><li><strong>Improved Performance</strong><br>While not always obvious, messy code can sometimes lead to performance issues. Clean, efficient code often runs faster and avoids common pitfalls like duplicate logic or unnecessary re-rendering.</li><li><strong>Scalability</strong><br>A website might start small, but most businesses grow — and so do their digital platforms. Clean code provides a strong foundation for scaling the project without having to rewrite large parts of it later.</li><li><strong>Future-Proofing</strong><br>The frontend ecosystem evolves quickly. Frameworks, libraries, and tools come and go. Clean, modular code makes it easier to migrate or integrate with new technologies when needed.</li></ol>"
+      },
+      {
+        "text": "<h3>Final Thoughts</h3><p>Clean code may take a little extra effort up front, but it pays off enormously in the long run. It makes projects easier to maintain, scale, and improve — and it saves countless hours of frustration. For frontend developers, clean code is not just about writing software that works today, but about building a foundation that will continue to deliver value tomorrow.</p>`\n"
+      }
+    ]
+  },
+  {
+    "slug": "my-favorite-frontend-tools-in-2025",
+    "title": "My favorite Frontend Tools in 2025",
+    "text": "From frameworks to debugging tools, here’s what I use daily to speed up development and keep code quality high.",
+    "image": {
+      "src": "/blog-posts/tag.webp",
+      "alt": "Html tag"
+    },
+    "contentBlocks": [
+      {
+        "text": "<h5>How to Write Clean Frontend Code</h5><ul><li><strong>Use meaningful names:</strong> getUserProfile() is much clearer than getData().</li><li><strong>Keep components small:</strong> each should do one thing well.</li><li><strong>Follow a style guide:</strong> whether it's ESLint, Prettier, or a team-defined rulebook.</li><li><strong>Write comments sparingly but wisely:</strong> explain why, not what.</li><li><strong>Refactor regularly:</strong> don't let \"temporary fixes\" live forever.</li></ul>"
+      },
+      {
+        "text": "<p>In the fast-paced world of web development, deadlines often push developers to prioritize speed over structure. But in the long run, messy code becomes a burden for both the developer and the client.</p><p>Clean code isn't about writing fewer lines of code. It's about writing code that is easy to read, easy to understand, and easy to change. Think of it as writing a story: someone else (or even your future self) should be able to read your code and immediately know what's going on without guessing.</p><p>Some key traits of clean code:</p><ol><li>Clear naming conventions for variables, functions, and components.</li><li>Avoiding unnecessary complexity.</li><li>Following established best practices and coding standards.</li></ol>\"\n"
+      },
+      {
+        "image": {
+          "src": "/blog-posts/blog-1.webp",
+          "alt": "Html tags"
+        }
+      },
+      {
+        "text": "<h5>Why It Matters in Frontend Development</h5><ol><li><strong>Better Collaboration</strong><br>Frontend projects often involve multiple developers working together. Clean code ensures that everyone can understand and extend each other's work without wasting time trying to figure out what a piece of code is doing.</li><li><strong>Easier Maintenance</strong><br>Websites and applications evolve over time. New features get added, designs change, and bugs appear. Clean, well-structured code makes it easier to maintain and update a project without breaking existing functionality.</li><li><strong>Improved Performance</strong><br>While not always obvious, messy code can sometimes lead to performance issues. Clean, efficient code often runs faster and avoids common pitfalls like duplicate logic or unnecessary re-rendering.</li><li><strong>Scalability</strong><br>A website might start small, but most businesses grow — and so do their digital platforms. Clean code provides a strong foundation for scaling the project without having to rewrite large parts of it later.</li><li><strong>Future-Proofing</strong><br>The frontend ecosystem evolves quickly. Frameworks, libraries, and tools come and go. Clean, modular code makes it easier to migrate or integrate with new technologies when needed.</li></ol>"
+      },
+      {
+        "text": "<h3>Final Thoughts</h3><p>Clean code may take a little extra effort up front, but it pays off enormously in the long run. It makes projects easier to maintain, scale, and improve — and it saves countless hours of frustration. For frontend developers, clean code is not just about writing software that works today, but about building a foundation that will continue to deliver value tomorrow.</p>`\n"
+      }
+    ]
+  }
+]
