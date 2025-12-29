@@ -20,7 +20,7 @@
                 <FskIconContainer
                     v-for="(item, index) in items"
                     :key="index"
-                    :to="item.link"
+                    :to="item.link || undefined"
                     :icon="item.icon"
                     :image="item.image"
                     :label="item.label"
