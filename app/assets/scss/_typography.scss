@@ -1,18 +1,43 @@
 body {
     font-family: 'Manrope', sans-serif;
-    color: var(--color-black);
+    color: var(--text-color);
 }
 
 h1, .u-heading-1 {
     font-family: 'Casanova', sans-serif;
-    font-size: 5rem;
-    line-height: 5.5rem;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+
+    @media (width > 500px) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    @media (width > 1024px) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    @media (width > 1600px) {
+        font-size: 5rem;
+        line-height: 5.5rem;
+    }
 }
 
 h2, .u-heading-2 {
     font-family: 'Casanova', sans-serif;
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @media (width > 500px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    @media (width > 1024px) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
 
     @media (width > 1600px) {
         font-size: 4rem;
@@ -23,11 +48,58 @@ h2, .u-heading-2 {
 h3, .u-heading-3 {
     font-family: 'Casanova', sans-serif;
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
 
-    @media (width > 1600px) {
+    @media (width > 500px) {
         font-size: 1.5rem;
         line-height: 2rem;
+    }
+
+    @media (width > 1024px) {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    @media (width > 1600px) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+h4, .u-heading-4 {
+    font-family: 'Casanova', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+
+    @media (width > 500px) {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    @media (width > 1024px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    @media (width > 1600px) {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+}
+
+h5, .u-heading-5 {
+    font-family: 'Casanova', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
+    @media (width > 1024px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    @media (width > 1600px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
 }
 
@@ -36,7 +108,7 @@ p, .u-paragraph {
     line-height: 1.375rem;
 
     @media (width > 1600px) {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         line-height: 1.75rem;
     }
 }
@@ -45,4 +117,10 @@ p, .u-paragraph {
     font-size: 0.875rem;
     line-height: 1.33rem;
     opacity: 0.6;
+}
+
+.u-text-xl {
+    font-family: 'Casanova', sans-serif;
+    font-size: 2.5rem;
+    line-height: 3rem;
 }

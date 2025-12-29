@@ -1,12 +1,20 @@
 :root {
-    --color-neutral-100: #fafafa; // gray item
-    --color-neutral-200: #f1f1f1; // gray
+    --color-neutral-100: #FAFAFA;
+    --color-neutral-200: #F1F1F1;
+    --color-neutral-300: #E0E0E0;
+    --color-neutral-400: #E6E6E6;
+
+    --border: #e6e6e6;
+
+    --color-dark-100: #4a4a4a;
+    --color-dark-200: #333333;
+    --color-dark-300: #242424;
+    --color-dark-400: #1A1A1A;
 
     --color-black: #2f2f2f;
     --color-white: #ffffff;
 
     --gradient: linear-gradient(to right, #00DC82 0%, #42B883 100%);
-    --border: #e6e6e6; // stroke
 
     --spacing: 6px;
     --padding: 16px;
@@ -24,4 +32,26 @@
         --spacing: 10px;
         --padding: 64px;
     }
+}
+
+html.light {
+    --color-inverse: var(--color-black);
+    --page-background: var(--color-neutral-200);
+    --text-color: var(--color-black);
+    --bento-background: var(--color-neutral-100);
+    --language-selector-background: var(--color-white);
+    --language-selector-icon: var(--color-black);
+    --border: var(--color-neutral-400);
+    --surface: var(--color-white);
+}
+
+html.dark {
+    --color-inverse: var(--color-white);
+    --page-background: var(--color-dark-400);
+    --text-color: var(--color-neutral-300);
+    --bento-background: var(--color-dark-300);
+    --language-selector-background: var(--color-dark-200);
+    --language-selector-icon: var(--color-dark-400);
+    --border: var(--color-dark-100);
+    --surface: var(--color-dark-400);
 }
