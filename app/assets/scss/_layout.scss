@@ -1,5 +1,5 @@
 .bento {
-    background: var(--color-neutral-100);
+    background: var(--bento-background);
     border-radius: 12px;
     border: 1px solid var(--border);
 }
@@ -10,35 +10,5 @@
 
     @media (width > 1200px) {
         max-width: 80px;
-    }
-}
-
-.page-row {
-    display: flex;
-    flex-direction: column;
-    margin: var(--spacing);
-    gap: var(--spacing);
-
-    @media (width > 1024px) {
-        flex-direction: row;
-
-        > :first-child {
-            width: 66.6%;
-        }
-
-        > :last-child {
-            width: 33%;
-        }
-    }
-}
-
-.page-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin: var(--spacing);
-    gap: var(--spacing);
-
-    @media (width > 1024px) {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
