@@ -6,7 +6,7 @@
     <FskCardCollection
         :cards="blogPosts"
         :style="{ margin: 'var(--spacing)' }"
-        path-name="projects"
+        path-name="blog"
     />
 </template>
 

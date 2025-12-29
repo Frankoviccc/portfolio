@@ -28,6 +28,7 @@
                     :icon-color="color"
                     :size="size"
                     :center="center"
+                    @click="item.action ? handleAction(item.action) : undefined"
                 />
             </div>
         </div>
@@ -37,10 +38,31 @@
 <script lang="ts" setup>
 import type { Props } from './fsk-icon-collection.types';
 import FskIconContainer from "~/components/atoms/icon-container/fsk-icon-container.vue";
+const { shareToFacebook, shareToLinkedIn, copyLink } = useShare()
 
 withDefaults(defineProps<Props>(), {
     direction: "row",
 })
+
+const handleCopyLink = async () => {
+    const success = await copyLink()
+    if (success) {
+        alert('Link copied!')
+    }
+}
+
+const actionMap: Record<string, () => void> = {
+    shareToFacebook,
+    shareToLinkedIn,
+    handleCopyLink,
+    copyLink
+}
+
+const handleAction = (action: string) => {
+    if (actionMap[action]) {
+        actionMap[action]()
+    }
+}
 </script>
 
 <style lang="scss">

@@ -15,4 +15,5 @@ export interface CollectionItem {
     link?: string;
     label?: string;
     image?: string;
+    action?: string;
 }

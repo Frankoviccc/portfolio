@@ -82,6 +82,7 @@
                 :title="blogPost.contentBlock.title"
                 :button-label="blogPost.contentBlock.label"
                 :button-link="blogPost.contentBlock.link"
+                path-name="/blog"
             />
         </FskLayout>
     </main>

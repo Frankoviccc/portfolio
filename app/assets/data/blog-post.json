@@ -3,18 +3,18 @@
     {
       "title": "Share",
       "items": [
-        { "icon": "facebook", "link": "/" },
-        { "icon": "instagram", "link": "/" },
-        { "icon": "linkedin", "link": "/", "color": "#0e76a8"}
+        { "icon": "facebook", "action": "shareToFacebook" },
+        { "icon": "instagram", "action": "handleCopyLink" },
+        { "icon": "linkedin", "action": "shareToLinkedin", "color": "#0e76a8"}
       ]
     },
     {
       "title": "Share this article",
       "items": [
-        { "icon": "facebook", "link": "/" },
-        { "icon": "instagram", "link": "/" },
-        { "icon": "linkedin", "link": "/", "color": "#0e76a8"},
-        { "icon": "copylink", "link": "/" }
+        { "icon": "facebook", "action": "shareToFacebook" },
+        { "icon": "instagram", "action": "handleCopyLink" },
+        { "icon": "linkedin", "action": "shareToLinkedin", "color": "#0e76a8"},
+        { "icon": "copylink", "action": "handleCopyLink" }
       ]
     }
   ],
