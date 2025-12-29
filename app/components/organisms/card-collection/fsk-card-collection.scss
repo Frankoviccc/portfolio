@@ -1,0 +1,67 @@
+.card-collection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &--background {
+        @media (width < 1024px) {
+            padding: var(--padding) 0 var(--padding) var(--padding);
+            background: var(--bento-background);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
+
+        @media (width > 768px) {
+            flex-direction: row;
+        }
+
+        > * {
+            flex: 1;
+        }
+
+        &--swipe {
+            flex-direction: row;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+
+            @media (width < 1024px) {
+                padding-right: var(--padding);
+            }
+
+            > * {
+                min-width: 280px;
+            }
+
+            .card {
+                @media (width < 1024px) {
+                    background: var(--surface);
+                }
+            }
+        }
+    }
+
+    &__button,
+    &__title {
+        @media (width >= 1024px) {
+            display: none;
+        }
+    }
+
+    &__button {
+        @media (width < 1024px) {
+            margin-right: var(--padding)
+        }
+    }
+
+    .card__button {
+        margin: 0 0 0 10px;
+    }
+}
