@@ -22,8 +22,10 @@
 
             <FskInputField
                 is="input"
+                name="pages"
                 field-id="number-of-pages"
                 placeholder="Number of Pages"
+                input-mode="numeric"
                 :error="values.numberOfPages.error"
                 :error-message="values.numberOfPages.errorMessage"
                 :value="values.numberOfPages.value"
@@ -76,7 +78,7 @@
                 class="calculator__price"
             >
                 <span class="calculator__price-tag">
-                         Price Estimation:
+                    Price Estimation:
                 </span>
 
                 <span class="calculator__price-value">
@@ -94,8 +96,6 @@
     </section>
 </template>
 <script setup lang="ts">
-import FskInputField from "~/components/atoms/input-field/fsk-input-field.vue";
-import FskButton from "~/components/atoms/button/fsk-button.vue";
 import type { Props, FormValues } from './fsk-calculator.types';
 import { defaultFormValues } from './fsk-calculator.types'
 

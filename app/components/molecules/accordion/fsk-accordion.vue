@@ -28,10 +28,9 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-    title: String,
-    text: String,
-})
+import type { Props } from './fsk-accordion.types';
+
+defineProps<Props>()
 
 const isOpen = ref(false)
 const accordion = ref()
