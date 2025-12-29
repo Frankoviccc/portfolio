@@ -1,7 +1,7 @@
 export default defineCachedEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig()
-        const url = 'https://www.barcatrips.com'
+        const url = 'https://www.frankstruik.com'
 
         if (!url) {
             throw createError({
