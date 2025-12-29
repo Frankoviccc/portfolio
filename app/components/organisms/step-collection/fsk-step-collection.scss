@@ -1,0 +1,44 @@
+.step-collection {
+
+    &__inner {
+        padding: var(--padding);
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        list-style: none;
+
+        @media (width > 1600px) {
+            gap: 20px
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        @media (width > 768px) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__button {
+        display: none;
+
+        @media (width > 768px) {
+            display: flex;
+        }
+    }
+
+    &__button-mobile {
+        margin-top: 1rem;
+
+        @media (width > 768px) {
+            display: none;
+        }
+    }
+}
