@@ -46,15 +46,11 @@
 </template>
 
 <script setup lang="ts">
+import type { Props } from "./fsk-language-selector.types"
 import NuxtLink from '#app/components/nuxt-link.js'
 import FskButton from "~/components/atoms/button/fsk-button.vue";
 
 const switchLocalePath = useSwitchLocalePath();
-
-interface Props {
-    languages: { label: string; code: "nl" | "en" }[];
-    inDropdown?: boolean;
-}
 
 defineProps<Props>();
 

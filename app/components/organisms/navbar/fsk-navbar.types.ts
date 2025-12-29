@@ -1,4 +1,4 @@
 export interface Props {
     links: { label: string; to: string }[];
-    icons: { icon: string; to: string }[];
+    languages: { label: string; code: string; }[];
 }

@@ -1,27 +1,82 @@
 .icon-container {
     display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1 1 0;
     border: 1px solid var(--border);
     border-radius: 6px;
-    background: var(--color-neutral-200);
+    background: var(--surface);
 
-    &__link {
+    :has(.icon-container__icon--set-size) {
+        border-radius: 12px;
+    }
+
+    &__wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        min-height: 100%;
-        padding: 16px 32px;
+        padding: 10px;
 
-        &--small {
-            padding: 10px;
-            max-width: 40px;
-            max-height: 40px;
+        @media (width > 450px) {
+            padding: 16px;
+        }
 
-            @media (width > 450px) {
-                padding: 16px;
-                max-width: 60px;
-                max-height: 60px;
+        &--center {
+            justify-content: center;
+            gap: 10px;
+
+            @media (width > 1600px) {
+                gap: 20px;
             }
+        }
+
+        :has(.icon-container__label) &:not(.icon-container__wrapper--center) {
+            justify-content: flex-start;
+            gap: 20px;
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        color: var(--icon-color);
+        fill: var(--icon-color);
+
+        &--set-size {
+            width: var(--icon-size);
+            height: var(--icon-size);
+        }
+
+        &--sm {
+            --icon-size: 28px;
+
+            @media (width > 1600px) {
+                --icon-size: 35px;
+            }
+        }
+
+        &--md {
+            --icon-size: 30px;
+
+            @media (width > 1600px) {
+                --icon-size: 50px;
+            }
+        }
+
+        &--lg {
+            --icon-size: 48px;
+
+            @media (width > 1600px) {
+                --icon-size: 70px;
+            }
+        }
+    }
+
+    &__label {
+        font-size: 0.875rem;
+
+        @media (width > 1600px) {
+            font-size: 1.125rem;
         }
     }
 }

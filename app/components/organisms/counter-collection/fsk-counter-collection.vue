@@ -15,11 +15,9 @@
 </template>
 
 <script setup lang="ts">
-import FskCounter from "~/components/molecules/counter/fsk-counter.vue";
-import {usePagespeedStore} from "~/stores/pagespeed";
+import { usePagespeed } from "~/composables/usePagespeed";
 
-const pagespeed = usePagespeedStore();
-const { metrics, isLoading } = storeToRefs(pagespeed);
+const { metrics, isLoading } = usePagespeed();
 </script>
 
 <style lang="scss">

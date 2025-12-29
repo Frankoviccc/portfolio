@@ -18,7 +18,7 @@
             <NuxtLink
                 v-for="(item, index) in links"
                 :key="index"
-                :to="item.url"
+                :to="item.to"
                 type="secondary"
                 class="footer__nav-link bento"
             >
@@ -39,8 +39,9 @@
                     <FskIconContainer
                         v-for="(item, index) in icons"
                         :key="index"
-                        :item="item"
-                        :small="true"
+                        :to="item.to"
+                        :icon="item.icon"
+                        size="sm"
                     />
                 </div>
             </div>
@@ -48,26 +49,10 @@
     </footer>
 </template>
 <script setup lang="ts">
-import FskIndicator from "~/components/molecules/indicator/fsk-indicator.vue";
-import FskContactForm from "~/components/organisms/contact-form/fsk-contact-form.vue";
-import FskButton from "~/components/atoms/button/fsk-button.vue";
-import FskIconContainer from "~/components/atoms/icon-container/fsk-icon-container.vue";
-
 import type { Props } from './fsk-footer.types';
-import NuxtLink from "#app/components/nuxt-link";
-
-import Logo from "~/assets/images/logo.svg";
-import Github from "@/assets/icons/github.svg";
-import Linkedin from "@/assets/icons/linkedin.svg";
-import X from "@/assets/icons/x.svg";
+import Logo from "~/assets/icons/logo.vue";
 
 defineProps<Props>();
-
-const icons = [
-    { to: '/', icon: Github },
-    { to: '/', icon: Linkedin },
-    { to: '/', icon: X },
-]
 </script>
 
 <style lang="scss">

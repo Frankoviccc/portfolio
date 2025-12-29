@@ -2,7 +2,8 @@
     <section
         :class="[
             'content-block',
-            { 'content-block--desktop': desktopOnly }
+            { 'content-block--desktop': desktopOnly },
+            { 'content-block--image': image }
         ]"
     >
         <div
@@ -18,12 +19,16 @@
                     {{ title }}
                 </h2>
 
+                <slot name="title" />
+
                 <p
                     v-if="text"
                     class="content-block__text"
                 >
                     {{ text }}
                 </p>
+
+                <slot name="text" />
             </div>
 
             <div class="content-block__container">
@@ -37,39 +42,38 @@
                         :to="item.link"
                         :icon="item.icon"
                         :mirror="true"
+                        :target="item.link ? '_blank' : undefined"
+                        :rel="item.link ? 'noopener noreferrer' : undefined"
                     >
                         {{ item.label }}
                     </FskButton>
                 </div>
 
-                <div v-else>
+                <div v-else-if="link">
                     <FskButton
                         :to="link"
-                        :icon="'arrow-up-right'"
                         :background="buttonBackground"
+                        icon="arrow-up-right"
                     >
                         {{ label }}
                     </FskButton>
                 </div>
             </div>
         </div>
+
+        <NuxtPicture
+            v-if="image"
+            class="content-block__image bento"
+            :src="image.src"
+            :alt="image.alt"
+        />
     </section>
 </template>
 <script setup lang="ts">
 import FskButton from "~/components/atoms/button/fsk-button.vue";
-import type { iconType } from '@/components/atoms/button/fsk-button.vue'
+import type { Props } from './fsk-content-block.types';
 
-interface Props {
-    title: string;
-    text?: string;
-    link?: string;
-    label?: string;
-    buttonGroup?: { icon: iconType; label: string; link: string; background: boolean }[];
-    buttonBackground?: boolean;
-    desktopOnly?: boolean;
-}
-
-defineProps<Props>();
+defineProps<Props>()
 </script>
 
 <style lang="scss">

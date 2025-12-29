@@ -1,4 +1,9 @@
 export interface Props {
     title: string;
-    items: Array;
+    items: FAQItem[];
+}
+
+interface FAQItem {
+    title: string;
+    text: string;
 }

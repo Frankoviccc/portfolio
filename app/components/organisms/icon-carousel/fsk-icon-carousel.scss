@@ -1,7 +1,26 @@
 .icon-carousel {
+    position: relative;
     width: 100%;
     text-align: center;
-    overflow: hidden;
+
+    &--glow-effect {
+        padding: 1px;
+        z-index: 0;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 25px;
+            height: 215%;
+            background: #42B883;
+            animation: rotate 4s linear infinite;
+            transform-origin: center center;
+            z-index: -1;
+        }
+    }
 
     &__inner {
         display: flex;
@@ -49,7 +68,7 @@
 
     &__list {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         gap: 16px;
 
         @media (width > 1600px) {
@@ -61,25 +80,42 @@
             justify-content: center;
             align-items: center;
             flex-shrink: 0;
-            width: 60px;
-            height: 60px;
             padding: 14px;
             border-radius: 12px;
             border: 1px solid var(--border);
-            background: var(--color-neutral-200);
+            background: var(--page-background);
 
-            @media (width > 1024px) {
-                width: 75px;
-                height: 75px;
+            &--square {
+                width: 60px;
+                height: 60px;
+
+                @media (width > 1024px) {
+                    width: 75px;
+                    height: 75px;
+                }
+
+                @media (width > 1600px) {
+                    width: 100px;
+                    height: 100px;
+                }
             }
 
-            @media (width > 1600px) {
-                width: 100px;
-                height: 100px;
+            &-icon {
+                font-size: 2.25rem;
+                color: #00dc82;
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
             }
         }
 
         &--animate {
+            justify-content: unset;
             animation: scrolling 19.6s linear infinite;
         }
 
@@ -94,15 +130,15 @@
         transform: translateX(0)
     }
     to {
-        transform: translateX(-100%)
+        transform: translateX(-50%)
     }
 }
 
-@keyframes scrolling-reverse {
+@keyframes rotate {
     from {
-        transform: translateX(-100%)
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     to {
-        transform: translateX(0)
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }

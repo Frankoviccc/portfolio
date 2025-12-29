@@ -8,7 +8,9 @@
             <FskIconContainer
                 v-for="(item, index) in icons"
                 :key="index"
-                :item="item"
+                :to="item?.to"
+                :icon="item?.icon"
+                :image="item?.image"
             />
         </div>
     </section>
@@ -16,7 +18,6 @@
 
 <script lang="ts" setup>
 import type { Props } from './fsk-social-proof.types';
-import FskIconContainer from "~/components/atoms/icon-container/fsk-icon-container.vue";
 
 defineProps<Props>()
 </script>

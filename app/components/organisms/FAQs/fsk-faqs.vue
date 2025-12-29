@@ -1,5 +1,8 @@
 <template>
-    <section class="faqs bento">
+    <section
+        class="faqs bento"
+        :style="{ '--calculator-height': `${calculatorHeight}` }"
+    >
         <div class="faqs__inner">
             <div class="faqs__content">
                 <h2 class="faqs__title">
@@ -20,7 +23,6 @@
 </template>
 
 <script lang="ts" setup>
-import FskAccordion from "~/components/molecules/accordion/fsk-accordion.vue";
 import type { Props } from './fsk-faqs.types';
 
 const general = useGeneralStore();
@@ -31,8 +33,4 @@ defineProps<Props>();
 
 <style lang="scss" scoped>
 @use 'fsk-faqs';
-
-.faqs {
-    --calculator-height: v-bind(calculatorHeight);
-}
 </style>

@@ -3,4 +3,8 @@
     flex-direction: column;
     padding: var(--padding);
     gap: 16px;
+
+    @media (width > 1600px) {
+        gap: 20px;
+    }
 }

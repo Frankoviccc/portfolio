@@ -50,7 +50,7 @@
         height: 35px;
         border: 1px solid var(--border);
         border-radius: 100px;
-        background: var(--color-white);
+        background: var(--language-selector-background);
 
         @media (width > 1200px) {
             width: 85px;
@@ -68,7 +68,7 @@
         left: 5px;
         border-radius: 50%;
         z-index: 1;
-        background: var(--color-black);
+        background: var(--language-selector-icon);
         transition: transform 0.3s ease;
 
         @media (width > 1200px) {

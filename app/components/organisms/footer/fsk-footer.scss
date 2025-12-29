@@ -44,7 +44,7 @@
             padding: 16px;
             font-size: 1.25rem;
             line-height: 2.5rem;
-            color: var(--color-black);
+            color: inherit;
             text-decoration: none;
             font-family: 'Casanova', sans-serif;
 
@@ -97,6 +97,10 @@
         display: flex;
         margin-left: 10px;
         padding: 6px 0;
-        gap: 16px;
+        gap: 12px;
+
+        @media (width > 375px) {
+            gap: 16px;
+        }
     }
 }

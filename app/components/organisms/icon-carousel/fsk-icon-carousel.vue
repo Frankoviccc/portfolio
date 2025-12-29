@@ -1,44 +1,96 @@
 <template>
-    <section class="icon-carousel">
+    <section
+        class="icon-carousel"
+        :class="[
+            'icon-carousel',
+            { 'icon-carousel--glow-effect': glowEffect && isDark }
+        ]"
+    >
         <div class="icon-carousel__inner bento">
             <h2 class="icon-carousel__title">
                 {{ title }}
             </h2>
 
             <div
-                class="icon-carousel__track"
-                :class="centerTrack ? 'icon-carousel__track--center' : ''"
+                :class="[
+                    'icon-carousel__track',
+                    { 'icon-carousel__track--center': centerTrack }
+                ]"
             >
                 <ul
-                    v-if="items.length > 7"
-                    v-for="(list, index) in doubleItems"
+                    v-if="doubleTrack"
+                    v-for="(list, index) in doubleLists"
                     :key="index"
-                    class="icon-carousel__list"
+                    :style="{ animationDuration: `${animationDuration}s` }"
                     :class="[
-                        items.length > 4 ? 'icon-carousel__list--animate' : '',
-                        index % 2 !== 0 ? 'icon-carousel__list--reverse' : ''
+                        'icon-carousel__list',
+                        { 'icon-carousel__list--animate': animate || items.length >= 7 },
+                        { 'icon-carousel__list--reverse': index % 2 !== 0 }
                     ]"
                 >
                     <li
                         v-for="(item, itemIndex) in list"
                         :key="itemIndex"
-                        class="icon-carousel__list-item"
+                        :class="[
+                            'icon-carousel__list-item',
+                            { 'icon-carousel__list-item--square': square }
+                        ]"
                     >
-                        <component :is="item.icon" />
+                        <component
+                            v-if="!item.label"
+                            :is="getIcon(item.icon)"
+                        />
+
+                        <div
+                            v-else
+                            class="icon-carousel__list-item-content"
+                        >
+                            <Icon
+                                :name="'tabler:' + item.icon"
+                                class="icon-carousel__list-item-icon"
+                            />
+
+                            <span>
+                                {{ item.label }}
+                            </span>
+                        </div>
                     </li>
                 </ul>
 
                 <ul
                     v-else
-                    class="icon-carousel__list"
-                    :class="items.length > 4 ? 'icon-carousel__list--animate' : ''"
+                    :style="{ animationDuration: `${animationDuration}s` }"
+                    :class="[
+                        'icon-carousel__list',
+                        { 'icon-carousel__list--animate': animate }
+                    ]"
                 >
                     <li
-                        v-for="(item, index) in doubleItems"
+                        v-for="(item, index) in singleList"
                         :key="index"
-                        class="icon-carousel__list-item"
+                        :class="[
+                            'icon-carousel__list-item',
+                            { 'icon-carousel__list-item--square': square }
+                        ]"
                     >
-                        <component :is="item.icon" />
+                        <component
+                            v-if="!item.label"
+                            :is="getIcon(item.icon)"
+                        />
+
+                        <div
+                            v-else
+                            class="icon-carousel__list-item-content"
+                        >
+                            <Icon
+                                :name="'tabler:' + item.icon"
+                                class="icon-carousel__list-item-icon"
+                            />
+
+                            <span>
+                                {{ item.label }}
+                            </span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -47,26 +99,45 @@
 </template>
 
 <script setup lang="ts">
-import type { Component } from 'vue';
-interface Props {
-    title: string;
-    centerTrack?: boolean;
-    items: { icon: Component | string }[];
-}
+import type { Props } from './fsk-icon-carousel.types';
+import { getIcon } from "@/composables/useIcon"
+
+const colorMode = useColorMode()
 
 const props = defineProps<Props>();
 
-const doubleItems = computed(() => {
-    if (props.items.length < 8) {
+const singleList = computed(() => {
+    if (props.animate) {
         return [...props.items, ...props.items]
+    } else {
+        return [...props.items]
     }
-    if (props.items.length > 7) {
-        return  [
-            [...props.items.slice(0, props.items.length / 2), ...props.items.slice(0, props.items.length / 2)],
-            [...props.items.slice(props.items.length / 2, props.items.length), ...props.items.slice(props.items.length / 2, props.items.length)],
-        ]
-    }
-    return [];
+})
+
+const doubleLists = computed(() => {
+    const half = Math.floor(props.items.length / 2)
+    const firstHalf = props.items.slice(0, half)
+    const secondHalf = props.items.slice(half)
+    return [
+        [...firstHalf, ...firstHalf],
+        [...secondHalf, ...secondHalf]
+    ]
+})
+
+const animationDuration = computed(() => {
+    const baseSpeed = 3
+    return props.items.length * baseSpeed
+})
+
+const mounted = ref(false)
+
+onMounted(() => {
+    mounted.value = true
+})
+
+const isDark = computed(() => {
+    if (!mounted.value) return false
+    return colorMode.value === 'dark';
 })
 </script>
 

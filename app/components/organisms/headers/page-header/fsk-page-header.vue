@@ -9,7 +9,7 @@
                         </span>
 
                         <span class="page-header__title-main">
-                            {{ subTitle }}
+                            {{ subtitle }}
                         </span>
                     </h1>
 
@@ -24,8 +24,8 @@
                         :key="index"
                         class="page-header__item"
                     >
-                        <component
-                            :is="item.icon"
+                        <Icon
+                            :name="'tabler:' + item.icon"
                             class="page-header__item-icon"
                         />
 
@@ -37,38 +37,35 @@
 
                 <div class="page-header__button-group">
                     <FskButton
-                        v-for="(item, index) in buttonGroup"
-                        :key="index"
-                        :is="item.is"
-                        :background="item.background"
-                        :icon="item.icon"
+                        :background="true"
+                        icon="arrow-up-right"
                     >
                         View my work
+                    </FskButton>
+
+                    <FskButton
+                        icon="download"
+                        is="button"
+                    >
+                        Download CV
                     </FskButton>
                 </div>
             </div>
         </div>
         <div class="page-header__container bento">
             <NuxtPicture
-                src="tokyo.webp"
+                :src="image.src"
+                :alt="image.alt"
                 class="page-header__image"
-                alt="Photo Frank in Ginza, Tokyo"
             />
+
+<!--            <FskDistortionImage />-->
         </div>
     </div>
 </template>
 <script setup lang="ts">
-import FskButton from "~/components/atoms/button/fsk-button.vue";
-import type { iconType } from '@/components/atoms/button/fsk-button.vue'
-import NuxtLink from '#app/components/nuxt-link.js'
-
-interface Props {
-    title: string;
-    subTitle: string;
-    text: string;
-    items: { icon: string; label: string }[];
-    buttonGroup: { icon: iconType; label: string; link: string; background: boolean; is: 'button' | typeof NuxtLink; }[];
-}
+import type { Props } from "./fsk-page-header.types";
+import FskDistortionImage from "~/components/atoms/distortion-image/fsk-distortion-image.vue";
 
 defineProps<Props>();
 </script>

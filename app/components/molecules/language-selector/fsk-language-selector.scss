@@ -42,6 +42,10 @@
             font-family: 'Casanova', sans-serif;
             font-size: 1.5rem;
             font-weight: 400;
+
+            .button {
+                color: inherit;
+            }
         }
 
         &-drop {
@@ -54,11 +58,11 @@
             gap: 10px;
             border-radius: 12px;
             list-style: none;
-            background: var(--color-neutral-200);
+            background: var(--page-background);
 
             .language-selector__list-item {
                 padding: 26px 32px;
-                background: var(--color-neutral-100);
+                background: var(--bento-background);
             }
         }
     }

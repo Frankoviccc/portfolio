@@ -1,8 +1,11 @@
 <template>
     <header class="navbar">
         <div class="navbar__logo bento box">
-            <NuxtLink class="navbar__logo-link" to="/">
-                <Logo />
+            <NuxtLink
+                class="navbar__logo-link"
+                to="/"
+            >
+                <Logo class="navbar__logo-image" />
             </NuxtLink>
         </div>
 
@@ -15,9 +18,8 @@
                 class="navbar__menu-item bento"
             >
                 <FskButton
-                    :is="NuxtLink"
                     type="secondary"
-                    :to="item.url"
+                    :to="item.to"
                 >
                     {{ item.label }}
                 </FskButton>
@@ -53,11 +55,11 @@
                         class="navbar__menu-item bento"
                     >
                         <FskButton
-                            :is="NuxtLink"
                             type="secondary"
-                            :to="item.url"
+                            :to="item.to"
                             :icon="'arrow-up-right'"
                             class="navbar__menu-mobile-button"
+                            @click="toggleNavbar"
                         >
                             {{ item.label }}
                         </FskButton>
@@ -79,26 +81,16 @@
 </template>
 
 <script setup lang="ts">
-import Logo from '~/assets/images/logo.svg'
-import NuxtLink from '#app/components/nuxt-link.js'
-import FskIndicator from "~/components/molecules/indicator/fsk-indicator.vue";
-import FskButton from "~/components/atoms/button/fsk-button.vue";
-import FskLanguageSelector from "~/components/molecules/language-selector/fsk-language-selector.vue";
-import FskModeSelector from "~/components/molecules/mode-selector/fsk-mode-selector.vue";
+import type { Props } from './fsk-navbar.types'
+import Logo from '~/assets/icons/logo.vue'
+
+defineProps<Props>();
 
 const general = useGeneralStore();
 const { navbarIsOpen } = storeToRefs(general);
 const { toggleNavbar } = useGeneralStore();
 
-interface Props {
-    logo: string;
-    links: { label: string; url: string }[];
-    languages: { label: string; code: "nl" | "en" }[];
-}
-
-defineProps<Props>();
-
-watch(navbarIsOpen, (newValue) => {
+watch(navbarIsOpen, () => {
     if (document.body.style.overflow === 'hidden') {
         document.body.style.overflow = 'unset';
     } else {

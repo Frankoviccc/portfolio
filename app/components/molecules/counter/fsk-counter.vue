@@ -6,7 +6,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 class="counter__metric"
             >
-                <circle cx="60" cy="60" r="54" fill="#FFFFFF"/>
+                <circle cx="60" cy="60" r="54" fill="var(--surface)"/>
                 <circle cx="60" cy="60" r="53.9" fill="none" stroke="#B3B3B3" stroke-width="12"/>
                 <circle
                     class="counter__metrics-progress"
@@ -41,9 +41,9 @@
             </svg>
         </div>
 
-        <label class="counter__label">
+        <span class="counter__label">
             {{ label }}
-        </label>
+        </span>
     </div>
 </template>
 

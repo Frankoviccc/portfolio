@@ -6,13 +6,15 @@
     >
         <div class="mode-selector__container">
             <div
-                class="mode-selector__icon-container"
-                :class="!general.lightMode ? 'mode-selector__icon-container--dark' : ''"
+                :class="[
+                    'mode-selector__icon-container',
+                    { 'mode-selector__icon-container--dark': isDark }
+                ]"
             >
                 <Transition name="fade">
                     <Icon
-                        :name="`tabler:${mode}`"
-                        :key="mode"
+                        :name="`tabler:${icon}`"
+                        :key="icon"
                         size="20"
                         class="mode-selector__icon"
                     />
@@ -29,12 +31,26 @@ interface Props {
 
 defineProps<Props>();
 
-const general = useGeneralStore();
-const { toggleMode } = useGeneralStore();
+const colorMode = useColorMode();
+const mounted = ref(false)
 
-const mode = computed(() => {
-    return general.lightMode ? 'moon-filled' : 'sun';
+onMounted(() => {
+    mounted.value = true
 })
+
+const icon = computed(() => {
+    if (!mounted.value) return 'moon-filled'
+    return colorMode.value === 'light' ? 'moon-filled' : 'sun';
+});
+
+const isDark = computed(() => {
+    if (!mounted.value) return false
+    return colorMode.value === 'dark';
+})
+
+const toggleMode = () => {
+    colorMode.preference = colorMode.value === 'light' ? 'dark' : 'light';
+};
 </script>
 
 <style lang="scss">

@@ -3,27 +3,28 @@
         v-if="data"
         class="widget bento"
     >
-        <h2 class="widget__title">
-            Contributions
-        </h2>
+        <div class="widget__inner">
+            <h2 class="widget__title">
+                Contributions
+            </h2>
 
-        <div class="widget__contributions">
-            <div class="widget__contributions-wrapper">
-                <table class="widget__table">
-                    <thead class="widget__table-head">
-                    <tr class="widget__months-row">
-                        <th class="widget__weekday-column-header"/>
-                        <th
-                            v-for="label in monthLabels"
-                            :key="label.name"
-                            :colspan="label.weeksInMonth"
-                            class="widget__month-label"
-                        >
-                            {{ label.name }}
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
+            <div class="widget__contributions">
+                <div class="widget__contributions-wrapper">
+                    <table class="widget__table">
+                        <thead class="widget__table-head">
+                        <tr class="widget__months-row">
+                            <th class="widget__weekday-column-header"/>
+                            <th
+                                v-for="label in monthLabels"
+                                :key="label.name"
+                                :colspan="label.weeksInMonth"
+                                class="widget__month-label"
+                            >
+                                {{ label.name }}
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
                         <tr
                             v-for="(weekday, dayIndex) in 7"
                             :key="dayIndex"
@@ -53,21 +54,22 @@
                                 ></div>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
 
-        <div class="widget__legend">
-            <span>Minder</span>
-            <div class="widget__legend-colors">
-                <div class="widget__legend-day"/>
-                <div class="widget__legend-day"/>
-                <div class="widget__legend-day"/>
-                <div class="widget__legend-day"/>
-                <div class="widget__legend-day"/>
+            <div class="widget__legend">
+                <span>Minder</span>
+                <div class="widget__legend-colors">
+                    <div class="widget__legend-day"/>
+                    <div class="widget__legend-day"/>
+                    <div class="widget__legend-day"/>
+                    <div class="widget__legend-day"/>
+                    <div class="widget__legend-day"/>
+                </div>
+                <span>Meer</span>
             </div>
-            <span>Meer</span>
         </div>
     </div>
 </template>

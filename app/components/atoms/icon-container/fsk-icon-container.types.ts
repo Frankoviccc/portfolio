@@ -1,8 +1,10 @@
 export interface Props {
-    item: {
-        icon?: string | Component;
-        image?: string;
-        to?: string;
-    }
-    small?: boolean;
+    icon?: string | Component;
+    iconColor?: string;
+    iconColorItem?: string;
+    size?: "sm" | "md" | "lg";
+    image?: string;
+    to?: string;
+    label?: string;
+    center?: boolean;
 }

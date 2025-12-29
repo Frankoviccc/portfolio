@@ -14,7 +14,7 @@
                     >
                         <div class="experience__list-item-header">
                             <div class="experience__list-item-icon">
-                                <component :is="item.logo" />
+                                <component :is="getIcon(item.logo)" />
                             </div>
 
                             <div class="experience__list-item-content">
@@ -36,12 +36,12 @@
 
                         <ul class="experience__list-item-tasks">
                             <li
-                                v-for="(item, itemIndex) in item.tasks"
-                                :key="itemIndex"
+                                v-for="(task, taskIndex) in item.tasks"
+                                :key="taskIndex"
                                 class="experience__list-item-task"
                             >
                                 <span>
-                                    {{ item.task }}
+                                    {{ task }}
                                 </span>
                             </li>
                         </ul>
@@ -53,12 +53,9 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-    title: string;
-    items: { logo: Component; name: string; title: string; date: string; items: { tasks: string }}[]
-}
+import type { Props } from './fsk-experience.types';
 
-const props = defineProps<Props>()
+defineProps<Props>()
 </script>
 
 <style lang="scss">
