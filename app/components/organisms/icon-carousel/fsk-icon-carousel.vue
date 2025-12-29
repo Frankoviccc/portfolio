@@ -7,9 +7,14 @@
         ]"
     >
         <div class="icon-carousel__inner bento">
-            <h2 class="icon-carousel__title">
+            <h2
+                v-if="title"
+                class="icon-carousel__title"
+            >
                 {{ title }}
             </h2>
+
+            <slot name="title"/>
 
             <div
                 :class="[

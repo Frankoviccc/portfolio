@@ -24,27 +24,36 @@
     >
         <FskIconCarousel
             v-if="post?.technologies"
-            :title="project.stack.title"
             :items="post?.technologies"
             :animate="true"
             :square="true"
-        />
+        >
+            <template #title>
+                <h2 class="u-text-xl">{{ project.stack.title }}</h2>
+            </template>
+        </FskIconCarousel>
 
         <FskIconCollection
-            :title="project.industries.title"
             :items="post?.industries"
             :center="true"
             size="md"
             color="#00dc82"
-        />
+        >
+            <template #title>
+                <h2 class="u-text-xl">{{ project.industries.title }}</h2>
+            </template>
+        </FskIconCollection>
 
         <FskIconCollection
-            :title="project.duration.title"
             :items="post?.duration"
             :center="true"
             size="md"
             color="#00dc82"
-        />
+        >
+            <template #title>
+                <h2 class="u-text-xl">{{ project.duration.title }}</h2>
+            </template>
+        </FskIconCollection>
     </FskLayout>
 
     <FskContentBlock

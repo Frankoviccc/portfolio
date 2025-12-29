@@ -19,10 +19,6 @@ export default defineNuxtConfig({
     }
   },
 
-  image: {
-    dir: 'assets/images',
-  },
-
   icon: {
     serverBundle: {
       collections: ['tabler']

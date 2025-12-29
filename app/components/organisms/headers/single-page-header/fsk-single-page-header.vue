@@ -1,5 +1,10 @@
 <template>
-    <section class="single-page-header">
+    <section
+        :class="[
+            'single-page-header',
+            category && `single-page-header--${category}`
+        ]"
+    >
         <div class="single-page-header__header bento">
             <Icon
                 name="tabler:arrow-left"
@@ -70,6 +75,9 @@ import FskLayout from "~/components/organisms/layout/fsk-layout.vue";
 defineProps<Props>();
 
 const router = useRouter();
+const route = useRoute();
+
+const category = route.path.split('/')[1]
 </script>
 
 <style lang="scss">

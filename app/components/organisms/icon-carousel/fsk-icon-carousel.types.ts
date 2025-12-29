@@ -1,5 +1,5 @@
 export interface Props {
-    title: string;
+    title?: string;
     centerTrack?: boolean;
     doubleTrack?: boolean;
     items: IconItem[];

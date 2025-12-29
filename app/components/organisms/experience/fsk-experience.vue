@@ -5,6 +5,8 @@
                 {{ title }}
             </h2>
 
+            <slot name="title" />
+
             <div class="experience__content">
                 <ul class="experience__list">
                     <li
