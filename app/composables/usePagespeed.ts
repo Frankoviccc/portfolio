@@ -1,5 +1,7 @@
 export const usePagespeed = () => {
-    const { data, status } = useFetch('/api/pagespeed')
+    const { data, status } = useFetch('/api/pagespeed', {
+        key: 'pagespeed-metrics'
+    })
 
     const metrics = computed(() => ({
         performance: { label: 'Performance', value: data.value?.performance ?? '' },
