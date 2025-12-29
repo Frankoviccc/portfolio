@@ -1,8 +1,7 @@
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig()
-        const query = getQuery(event)
-        const url = query.url
+        const url = 'https://www.frankstruik.com'
 
         if (!url) {
             throw createError({
@@ -39,4 +38,5 @@ export default defineEventHandler(async (event) => {
             statusMessage: error.data?.error?.message || error.message || 'Failed to fetch metrics'
         })
     }
+}, {
 })
