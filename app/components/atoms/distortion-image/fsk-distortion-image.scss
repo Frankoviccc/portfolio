@@ -1,0 +1,15 @@
+.distortion-image {
+    position: relative;
+
+    img {
+        display: block;
+        width: 100%;
+        opacity: 0;
+    }
+
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
