@@ -21,8 +21,10 @@ export default defineNuxtConfig({
   },
 
   icon: {
-    serverBundle: {
-      collections: ['tabler']
+    serverBundle: false,
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 0
     }
   },
 
@@ -65,6 +67,7 @@ export default defineNuxtConfig({
     },
   ],
 
+  //@ts-ignore
   site: {
     indexable: false
   },
