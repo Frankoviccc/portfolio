@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig()
         const body = await readBody(event)
@@ -42,4 +42,6 @@ export default defineEventHandler(async (event) => {
             statusMessage: 'Failed to fetch GitHub data'
         })
     }
+}, {
+    maxAge: 60 * 60 * 24 * 30,
 })

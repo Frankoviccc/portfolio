@@ -15,9 +15,12 @@
 </template>
 
 <script setup lang="ts">
-import { usePagespeed } from "~/composables/usePagespeed";
+import { usePagespeedStore } from "~/stores/pagespeed";
 
-const { metrics, isLoading } = usePagespeed();
+const pagespeed = usePagespeedStore();
+const { metrics, isLoading } = storeToRefs(pagespeed);
+
+await useAsyncData('pagespeed', () => pagespeed.fetchMetrics())
 </script>
 
 <style lang="scss">

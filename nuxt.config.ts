@@ -83,12 +83,4 @@ export default defineNuxtConfig({
     storageKey: 'nuxt-color-mode',
     storage: 'cookie'
   },
-
-  ssr: true,
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/']
-    }
-  }
 })

@@ -4,8 +4,8 @@
         :is="is"
         :to="to"
         :background="background"
-        class="button"
         :class="[
+            'button',
             type ? `button-type--${type}` : null,
             { 'button--background': background },
             { 'button--mirror': mirror },

@@ -1,7 +1,8 @@
 export default defineCachedEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig()
-        const url = 'https://www.frankstruik.com'
+        const query = getQuery(event)
+        const url = query.url || 'https://www.barcatrips.com'
 
         if (!url) {
             throw createError({
@@ -39,6 +40,5 @@ export default defineCachedEventHandler(async (event) => {
         })
     }
 }, {
-    server: true,
-    lazy: false
+    maxAge: 60 * 60 * 24 * 30,
 })
