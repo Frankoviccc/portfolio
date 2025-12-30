@@ -2,7 +2,7 @@ export default defineCachedEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig()
         const query = getQuery(event)
-        const url = query.url || 'https://www.barcatrips.com'
+        const url = query.url || 'https://www.frankstruik.com'
 
         if (!url) {
             throw createError({
