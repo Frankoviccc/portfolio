@@ -24,8 +24,13 @@ export default defineNuxtConfig({
     serverBundle: false,
     clientBundle: {
       scan: true,
-      sizeLimitKb: 0
-    }
+      sizeLimitKb: 0,
+      icons: [
+        'tabler:clock',
+        'tabler:palette',
+        'tabler:device-mobile'
+      ]
+    },
   },
 
   vite: {
