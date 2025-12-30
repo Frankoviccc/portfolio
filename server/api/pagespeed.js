@@ -39,4 +39,6 @@ export default defineCachedEventHandler(async (event) => {
         })
     }
 }, {
+    server: true,
+    lazy: false
 })
