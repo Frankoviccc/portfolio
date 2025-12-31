@@ -14,10 +14,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     pagespeedKey: process.env.PAGESPEED_KEY || '',
-    public: {
-      githubToken: process.env.GITHUB_TOKEN || '',
-      pagespeedKey: process.env.PAGESPEED_KEY || ''
-    }
+    githubToken: process.env.GITHUB_TOKEN || '',
   },
 
   icon: {
