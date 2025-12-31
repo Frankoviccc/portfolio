@@ -83,9 +83,4 @@ export default defineNuxtConfig({
     storageKey: 'nuxt-color-mode',
     storage: 'cookie'
   },
-
-  routeRules: {
-    '/api/pagespeed': { prerender: true },
-    '/api/github': { prerender: true }
-  }
 })
