@@ -1,7 +1,10 @@
 export default defineCachedEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig()
-        const body = await readBody(event)
+
+        const currentYear = new Date().getFullYear()
+        const fromDate = new Date(`${currentYear}-01-01T00:00:00Z`)
+        const toDate = new Date(`${currentYear}-12-31T23:59:59Z`)
 
         return await $fetch('https://api.github.com/graphql', {
             method: 'POST',
@@ -30,8 +33,8 @@ export default defineCachedEventHandler(async (event) => {
                 `,
                 variables: {
                     userName: 'Frankoviccc',
-                    from: body.fromDate,
-                    to: body.toDate
+                    from: fromDate,
+                    to: toDate
                 }
             }
         })

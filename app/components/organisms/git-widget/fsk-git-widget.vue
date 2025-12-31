@@ -76,16 +76,7 @@
 
 <script setup>
 const currentYear = new Date().getFullYear()
-const startYear = new Date(`${currentYear}-01-01T00:00:00Z`)
-const endYear = new Date(`${currentYear}-12-31T23:59:59Z`)
-
-const data = await $fetch('/api/github', {
-    method: 'POST',
-    body: {
-        fromDate: startYear,
-        toDate: endYear
-    }
-})
+const data = await $fetch('/api/github')
 
 const getContributionColor = (count) => {
     if (count === 0) return 'var(--color-neutral-200)'
