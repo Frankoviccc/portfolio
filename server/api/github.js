@@ -9,7 +9,7 @@ export default defineCachedEventHandler(async (event) => {
         return await $fetch('https://api.github.com/graphql', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${config.public.githubToken}`,
+                'Authorization': `Bearer ${config.githubToken}`,
                 'Content-Type': 'application/json'
             },
             body: {
