@@ -87,6 +87,11 @@
             border: 1px solid var(--border);
             background: var(--page-background);
 
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
             &--square {
                 width: 60px;
                 height: 60px;

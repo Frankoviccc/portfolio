@@ -14,8 +14,8 @@
     },
     "areaOfWork": [
       { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
-      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
-      { "label": "Area of work", "icon": "braces", "text": "CMS integration"}
+      { "label": "Area of work", "icon": "rocket", "text": "Performance optimization" },
+      { "label": "Area of work", "icon": "settings", "text": "CMS integration"}
     ],
     "technologies": [
       { "icon": "vue" },
@@ -80,8 +80,8 @@
     },
     "areaOfWork": [
       { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
-      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
-      { "label": "Area of work", "icon": "braces", "text": "CMS integration"}
+      { "label": "Area of work", "icon": "rocket", "text": "Performance optimization" },
+      { "label": "Area of work", "icon": "settings", "text": "CMS integration"}
     ],
     "technologies": [
       { "icon": "vue" },
@@ -145,8 +145,8 @@
     },
     "areaOfWork": [
       { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
-      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
-      { "label": "Area of work", "icon": "braces", "text": "CMS integration"}
+      { "label": "Area of work", "icon": "rocket", "text": "Performance optimization" },
+      { "label": "Area of work", "icon": "settings", "text": "CMS integration"}
     ],
     "technologies": [
       { "icon": "vue" },
