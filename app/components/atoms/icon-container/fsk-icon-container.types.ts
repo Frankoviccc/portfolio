@@ -3,8 +3,9 @@ export interface Props {
     iconColor?: string;
     iconColorItem?: string;
     size?: "sm" | "md" | "lg";
-    image?: string;
+    image?: { src: string; alt: string }
     to?: string;
     label?: string;
+    ariaLabel?: string;
     center?: boolean;
 }

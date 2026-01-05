@@ -23,10 +23,9 @@
 
                 <p
                     v-if="text"
+                    v-html="text"
                     class="content-block__text"
-                >
-                    {{ text }}
-                </p>
+                />
 
                 <slot name="text" />
             </div>
@@ -61,11 +60,16 @@
             </div>
         </div>
 
+
         <NuxtPicture
             v-if="image"
             class="content-block__image bento"
             :src="image.src"
             :alt="image.alt"
+            loading="lazy"
+            sizes="100vw md:50vw xxl:75vw"
+            format="avif, webp"
+            densities="1x, 2x"
         />
     </section>
 </template>

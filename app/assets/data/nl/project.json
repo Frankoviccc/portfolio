@@ -1,0 +1,29 @@
+{
+  "contentBlock": {
+    "title": "Doel",
+    "buttonLabel": "Bezoek live website"
+  },
+  "stack": {
+    "title": "Tech"
+  },
+  "industries": {
+    "title": "Sectoren"
+  },
+  "duration": {
+    "title": "Duur"
+  },
+  "contentBlockEmpty": {
+    "title": "Wil je een moderne website?",
+    "label": "Laten we samen werken!",
+    "link": "/contact"
+  },
+  "challenge": {
+    "title": "Uitdaging"
+  },
+  "solution": {
+    "title": "Oplossing"
+  },
+  "outcome": {
+    "title": "Uitkomst"
+  }
+}

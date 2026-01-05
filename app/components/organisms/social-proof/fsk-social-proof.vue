@@ -6,11 +6,13 @@
 
         <div class="social-proof__icons">
             <FskIconContainer
+                v-if="icons"
                 v-for="(item, index) in icons"
                 :key="index"
-                :to="item?.to"
-                :icon="item?.icon"
-                :image="item?.image"
+                :to="item.to"
+                :icon="item.icon"
+                :image="item.image"
+                :aria-label="item.ariaLabel"
             />
         </div>
     </section>

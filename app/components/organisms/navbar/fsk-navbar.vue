@@ -4,8 +4,9 @@
             <NuxtLink
                 class="navbar__logo-link"
                 to="/"
+                aria-label="Navigate to homepage"
             >
-                <Logo class="navbar__logo-image" />
+                <Logo class="navbar__logo-image" aria-hidden="true" />
             </NuxtLink>
         </div>
 

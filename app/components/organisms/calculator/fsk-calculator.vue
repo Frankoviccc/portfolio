@@ -63,7 +63,9 @@
             <FskButton
                 :icon="'coin-euro'"
                 :background="true"
+                is="button"
                 class="calculator__button"
+                aria-label="Calculate the price of your project"
                 @click="calculate"
             >
                 Calculate

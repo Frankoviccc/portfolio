@@ -17,6 +17,7 @@
 
         <FskFooter
             :title="config.footer.title"
+            :text="config.footer.text"
             :links="config.footer.links"
             :icons="config.footer.icons"
         />
@@ -24,5 +25,5 @@
 </template>
 
 <script setup lang="ts">
-import config from "~/assets/data/config.json"
+import config from "~/assets/data/en/config.json"
 </script>

@@ -1,7 +1,8 @@
 .language-selector {
     position: relative;
     display: none;
-    padding: 15px;
+    width: 100%;
+    padding: 10px 5px;
     gap: 10px;
     cursor: pointer;
 
@@ -9,10 +10,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 60px;
     }
 
     @media (width > 1200px) {
-        padding: 10px 24px;
+        padding: 10px 14px;
+        max-width: 77px;
+    }
+
+    @media (width > 1600px) {
+        max-width: 80px;
     }
 
     &--in-dropdown {
@@ -26,43 +33,30 @@
         }
     }
 
-    &__list {
+    &__container {
         display: none;
+        align-items: center;
+        gap: 4px;
+        font-family: 'Casanova', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        @media (width >= 1600px) {
+            display: flex;
+        }
+    }
+
+    &__list {
+        display: flex;
         list-style: none;
 
-        @media (width <= 400px) {
-            display: flex;
-        }
-
-        @media (width > 1200px) {
-            display: flex;
-        }
-
         &-item {
-            font-family: 'Casanova', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             .button {
                 color: inherit;
-            }
-        }
-
-        &-drop {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            padding: 10px;
-            bottom: -195px;
-            left: 0;
-            gap: 10px;
-            border-radius: 12px;
-            list-style: none;
-            background: var(--page-background);
-
-            .language-selector__list-item {
-                padding: 26px 32px;
-                background: var(--bento-background);
             }
         }
     }

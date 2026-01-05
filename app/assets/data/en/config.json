@@ -1,0 +1,25 @@
+{
+  "navbar": {
+    "links": [
+      { "label": "Projects", "to": "/projects" },
+      { "label": "About", "to": "/about" },
+      { "label": "Contact", "to": "/contact" }
+    ],
+    "languages": [
+      { "label": "EN", "code": "en"},
+      { "label": "NL", "code": "nl"}
+    ]
+  },
+  "footer": {
+    "title": "Contact me",
+    "text": "Based in the Netherlands",
+    "links": [
+      { "label": "Projects", "to": "/projects" },
+      { "label": "About", "to": "/about" }
+    ],
+    "icons": [
+      { "to": "https://github.com/Frankoviccc", "icon": "github", "ariaLabel": "Navigate to my Github profile" },
+      { "to": "https://www.linkedin.com/feed/", "icon": "linkedin", "ariaLabel": "Navigate to my LinkedIn profile" }
+    ]
+  }
+}

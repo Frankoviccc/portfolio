@@ -113,35 +113,46 @@
             />
         </FskLayout>
 
-        <FskContentBlock
-            :title="index.contentBlockEmpty.title"
-            :label="index.contentBlockEmpty.label"
-            :link="index.contentBlockEmpty.link"
-            :desktop-only="true"
-            :style="{ margin: 'var(--spacing)' }"
-        />
+<!--        <FskContentBlock-->
+<!--            :title="index.contentBlockEmpty.title"-->
+<!--            :label="index.contentBlockEmpty.label"-->
+<!--            :link="index.contentBlockEmpty.link"-->
+<!--            :desktop-only="true"-->
+<!--            :style="{ margin: 'var(&#45;&#45;spacing)' }"-->
+<!--        />-->
 
-        <FskLayout
-            direction="row"
-            layout="equal"
-            :style="{ margin: 'var(--spacing)' }"
-        >
-            <FskCardCollection
-                :is-swipe="true"
-                :filter-image="true"
-                :cards="blogPosts"
-                :title="index.contentBlockEmpty.title"
-                :button-label="index.contentBlockEmpty.label"
-                :button-link="index.contentBlockEmpty.link"
-                path-name="/blog"
-            />
-        </FskLayout>
+<!--        <FskLayout-->
+<!--            direction="row"-->
+<!--            layout="equal"-->
+<!--            :style="{ margin: 'var(&#45;&#45;spacing)' }"-->
+<!--        >-->
+<!--            <FskCardCollection-->
+<!--                :is-swipe="true"-->
+<!--                :filter-image="true"-->
+<!--                :cards="blogPosts"-->
+<!--                :title="index.contentBlockEmpty.title"-->
+<!--                :button-label="index.contentBlockEmpty.label"-->
+<!--                :button-link="index.contentBlockEmpty.link"-->
+<!--                path-name="/blog"-->
+<!--            />-->
+<!--        </FskLayout>-->
     </main>
 </template>
 <script setup lang="ts">
-import index from "@/assets/data/index.json"
+const { locale } = useI18n()
+const index = (await import(`~/assets/data/${locale.value}/index.json`)).default
 
-const { getAllBlogPosts, getAllProjects } = useContent()
+const { getAllBlogPosts, getAllProjects } = await useContent()
 const blogPosts = getAllBlogPosts()
 const projects = getAllProjects()
+
+useHead({
+    title: 'Frank Struik',
+    meta: [
+        {
+            name: 'description',
+            content: 'Frank Struik - Frontend Developer Portfolio',
+        }
+    ]
+})
 </script>

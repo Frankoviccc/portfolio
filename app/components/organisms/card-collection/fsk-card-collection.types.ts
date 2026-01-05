@@ -4,6 +4,6 @@ export interface Props {
     buttonLink?: string;
     isSwipe?: boolean;
     filterImage?: boolean;
-    cards: { slug: string; image: { src: string, alt: string }; title: string; text?: string; year?: string; items?: { label: string }[] }[]
+    cards: { slug: string; thumbnail: { src: string, alt: string }; title: string; text?: string; year?: string; items?: { label: string }[] }[]
     pathName?: string;
 }

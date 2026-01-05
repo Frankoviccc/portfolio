@@ -2,7 +2,10 @@
     <footer class="footer">
         <div class="footer__header">
             <NuxtLink class="footer__logo-link" to="/">
-                <Logo class="box bento" />
+                <Logo
+                    class="footer__logo box bento"
+                    aria-label="Navigate to homepage"
+                />
             </NuxtLink>
 
             <FskIndicator text="Available"/>
@@ -30,6 +33,10 @@
                 />
             </NuxtLink>
 
+            <span class="footer__nav-link bento">
+                {{ text }}
+            </span>
+
             <div class="footer__socials bento">
             <span class="footer__copyright">
                 Copyright ©2025
@@ -40,6 +47,7 @@
                         v-for="(item, index) in icons"
                         :key="index"
                         :to="item.to"
+                        :aria-label="item.ariaLabel"
                         :icon="item.icon"
                         size="sm"
                     />

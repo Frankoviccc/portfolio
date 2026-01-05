@@ -1,7 +1,8 @@
-import blogPosts from "~/assets/data/blog-posts.json"
-import projects from "~/assets/data/projects.json"
+export const useContent = async () => {
+    const { locale } = useI18n()
+    const blogPosts = (await import(`~/assets/data/${locale.value}/blog-posts.json`)).default
+    const projects = (await import(`~/assets/data/${locale.value}/projects.json`)).default
 
-export const useContent = () => {
     const getBlogPost = (slug: string) => {
         return blogPosts.find(post => post.slug === slug)
     }

@@ -29,11 +29,16 @@
             <FskText :text="contentBlocks?.[1]?.text" />
         </FskLayout>
 
-        <FskImage
+        <NuxtImg
             v-if="contentBlocks?.[2]?.image"
-            :source="contentBlocks[2].image.src"
+            :src="contentBlocks[2].image.src"
             :alt="contentBlocks[2].image.alt"
             :style="{ margin: 'var(--spacing)' }"
+            width="1200"
+            height="500"
+            loading="lazy"
+            sizes="sm:640px md:768px lg:1024px xl:1200px"
+            class="image bento"
         />
 
         <FskLayout
@@ -89,10 +94,11 @@
 </template>
 
 <script setup lang="ts">
-import blogPost from "~/assets/data/blog-post.json";
+const { locale } = useI18n()
+const blogPost = (await import(`~/assets/data/${locale.value}/blog-post.json`)).default
 
 const route = useRoute()
-const { getBlogPost, getAllBlogPosts } = useContent()
+const { getBlogPost, getAllBlogPosts } = await useContent()
 
 const allBlogPosts = getAllBlogPosts()
 

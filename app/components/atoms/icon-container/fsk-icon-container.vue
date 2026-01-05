@@ -9,10 +9,12 @@
                 'icon-container__wrapper',
                 { 'icon-container__wrapper--center': center },
             ]"
+            :aria-label="to ? ariaLabel: undefined"
         >
             <NuxtImg
-                v-if="image"
-                :src="image"
+                v-if="image?.src"
+                :src="image.src"
+                :alt="image.alt"
                 class="icon-container__image"
             />
 

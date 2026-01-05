@@ -1,0 +1,133 @@
+{
+  "header": {
+    "title": "Frontend",
+    "subtitle": "Developer",
+    "text": "Die ideeën omzet in perfecte digitale ervaringen",
+    "items": [
+      { "icon": "braces", "label": "Schone code" },
+      { "icon": "wand", "label": "Modern design" },
+      { "icon": "rocket", "label": "Hoge performance" }
+    ],
+    "image": {
+      "src": "tokyo.webp",
+      "alt": "Ik, in Tokyo"
+    }
+  },
+  "contentBlock": {
+    "title": "Over mij",
+    "text": "Hey, ik ben Frank Struik, een frontend developer gericht op het bouwen van moderne, snelle en schaalbare websites. Ik heb gewerkt aan e-commerce platformen, storytelling websites en alles daartussenin. Wat voor mij telt: schone code, goede performance en zorgen dat klanten precies krijgen wat ze nodig hebben.",
+    "items": [
+      { "icon": "brand-github", "label": "Github", "link": "https://github.com/Frankoviccc" },
+      { "icon": "brand-linkedin", "label": "Linkedin", "link": "https://www.linkedin.com/in/frank-struik-958258203/" }
+    ]
+  },
+  "technologies": {
+    "title": "Mijn stack",
+    "items": [
+      { "icon": "vue" },
+      { "icon": "nuxt" },
+      { "icon": "javascript" },
+      { "icon": "typescript" },
+      { "icon": "figma" },
+      { "icon": "scss" },
+      { "icon": "html" },
+      { "icon": "css" },
+      { "icon": "pinia" },
+      { "icon": "slack" },
+      { "icon": "tailwind" }
+    ]
+  },
+  "experience": {
+    "title": "Ervaring",
+    "items": [
+      { "logo": "dt", "title": "Frontend developer", "name": "Digital Thrust", "date": "Mrt 2025 - Heden", "tasks": ["Volledige website development", "CMS integratie", "Performance & SEO", "E-commerce oplossingen"] },
+      { "logo": "leads", "title": "Frontend developer", "name": "Leads", "date": "Sept 2023 - Mrt 2025", "tasks": ["Template development", "CRO development", "Herbruikbare componenten", "Interne tooling", "Cross-team samenwerking"] }
+    ]
+  },
+  "projects": {
+    "title": "Mijn werk",
+    "label": "Neem contact op",
+    "link": "/contact",
+    "items": [
+      { "slug": "wijmakendaken", "image": { "src": "/wmd.webp", "alt": "Mockup WijMakenDaken" }, "title": "WijMakenDaken", "year": "2025", "items": [{ "label": "Nuxt" }, { "label": "Vue" }, { "label": "SCSS" }, { "label": "Performance optimalisatie" }, { "label": "Animaties" }] },
+      { "slug": "italianopoli", "image": { "src": "/itnp.webp", "alt": "Mockup Italianopoli" }, "title": "Italianopoli", "year": "2025", "items": [{ "label": "Nuxt" }, { "label": "Vue" }, { "label": "Performance optimalisatie" }] },
+      { "slug": "gianlucastories", "image": { "src": "/gls.webp", "alt": "Mockup GianlucaStories" }, "title": "GianlucaStories", "year": "2025", "items": [{ "label": "Toegankelijkheid" }, { "label": "HTML5" }, { "label": "JavaScript" }] }
+    ]
+  },
+  "stepCollection": {
+    "title": "Hoe ik werk",
+    "buttonText": "Neem contact op",
+    "buttonLink": "/contact",
+    "items": [
+      { "number": "01", "title": "Ontdekking & planning", "text": "Ik begin met het bekijken van de designs, het verduidelijken van de vereisten en het kiezen van de beste tools om het project tot leven te brengen." },
+      { "number": "02", "title": "Development", "text": "Vervolgens bouw ik dynamische, responsive en pixel-perfecte pagina's — altijd met performance en veiligheid in gedachten." },
+      { "number": "03", "title": "Oplevering & support", "text": "Tot slot lever ik schone, goed gedocumenteerde code en blijf ik beschikbaar voor ondersteuning en verbeteringen." }
+    ]
+  },
+  "industries": {
+    "title": "Sectoren",
+    "items": [
+      { "icon": "shopping-cart", "label": "E-commerce" },
+      { "icon": "building-estate", "label": "Vastgoed" },
+      { "icon": "coin-euro", "label": "Financiën" },
+      { "icon": "heart", "label": "Gezondheidszorg" },
+      { "icon": "speakerphone", "label": "Marketing" },
+      { "icon": "plane", "label": "Travel" },
+      { "icon": "school", "label": "Onderwijs" },
+      { "icon": "hammer", "label": "Bouw" }
+    ]
+  },
+  "calculator": {
+    "title": "Prijscalculator",
+    "text": "Wil je een snelle projectschatting?",
+    "projectOptions": [
+      { "value": "", "label": "Project type" },
+      { "value": "landing-page", "label": "Landing page", "minNumberOfPages": 1 },
+      { "value": "corporate-website", "label": "Bedrijfswebsite", "minNumberOfPages": 5 },
+      { "value": "web-app", "label": "Web app", "minNumberOfPages": 5 },
+      { "value": "e-commerce", "label": "E-commerce", "minNumberOfPages": 5 }
+    ],
+    "designOptions": [
+      { "value": "", "label": "Design beschikbaarheid" },
+      { "value": "yes", "label": "Ik heb al een design" },
+      { "value": "no", "label": "Ik heb design en development nodig" }
+    ],
+    "timelineOptions": [
+      { "value": "", "label": "Tijdlijn" },
+      { "value": "urgent", "label": "Minder dan 1 maand" },
+      { "value": "short", "label": "1-3 maanden" },
+      { "value": "long", "label": "3-6 maanden" }
+    ]
+  },
+  "FAQs": {
+    "title": "Veelgestelde vragen",
+    "items": [
+      { "title": "Hoe starten we een project?", "text": "We beginnen met een kennismaking waarin ik je wensen en doelen bespreek. Daarna ontvang je een plan met tijdlijn en offerte. Zodra je akkoord geeft, ga ik aan de slag." },
+      { "title": "Hoe houd je me op de hoogte tijdens het project?", "text": "Je ontvangt regelmatig updates met voortgang en een link naar de development omgeving. Communicatie gaat via e-mail of een kanaal naar keuze. Bij elke mijlpaal geef ik een tijdsindicatie voor de volgende fase." },
+      { "title": "Hoe lang duurt een project gemiddeld?", "text": "Een landing page is meestal binnen 1-2 weken klaar. Een complete website met CMS duurt 3-6 weken, afhankelijk van de complexiteit. Je krijgt vooraf altijd een realistische planning." },
+      { "title": "Wat kost een website?", "text": "Dat hangt af van de scope. Een eenvoudige website begint rond €1500, een webshop of maatwerk project hoger. Na ons eerste gesprek ontvang je een vrijblijvende offerte." },
+      { "title": "Lever je ook het design, of alleen de bouw?", "text": "Ik focus op development. Heb je al een design? Dan bouw ik dat pixel-perfect na. Nog geen design? Dan kan ik samenwerken met een designer waarmee ik vaker werk of help ik je een passende oplossing te vinden." },
+      { "title": "Wat gebeurt er na oplevering?", "text": "Je krijgt een korte uitleg over het CMS zodat je zelf content kunt beheren. Voor onderhoud, updates of uitbreidingen kun je altijd bij me terecht." }
+    ]
+  },
+  "socialProof": {
+    "title": "Vertrouwd door",
+    "items": [
+      { "icon": "gls", "to": "https://gianlucastories.com", "ariaLabel": "Bezoek GianlucaStories website" },
+      { "icon": "wmd", "to": "https://wijmakendaken.nl", "ariaLabel": "Bezoek WijMakenDaken website" },
+      { "image": { "src": "/projects/itnp/itnp-logo.webp", "alt": "Logo Italianopoli" }, "to": "https://italianopoli-com.digitalthrust.io/", "ariaLabel": "Bezoek Italianopoli website" }
+    ]
+  },
+  "testimonials": {
+    "title": "Recensies",
+    "items": [
+      { "stars": 5, "text": "Voor mijn travelblog zocht ik een developer met ervaring in de nieuwste SEO-technieken. Frank heeft mijn idee uitstekend gebouwd, mijn site heeft goede performance en scoort erg goed.", "author": "Gianluca B", "date": "12 nov 2025" },
+      { "stars": 5, "text": "Op basis van een aanbeveling van een vriend en Franks expertise in vindbare websites, kozen we uiteindelijk voor Frank. We legden onze wensen uit en hij vertaalde die naar een mooie, supersnelle website die perfect aan onze behoeften voldeed.", "author": "Patricia L", "date": "20 aug 2025" }
+    ]
+  },
+  "contentBlockEmpty": {
+    "title": "Blog",
+    "label": "Bekijk alles",
+    "link": "/blog"
+  }
+}

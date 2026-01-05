@@ -35,10 +35,20 @@
 
             @media (width > 1024px) {
                 width: 50%;
+                max-height: 350px;
             }
 
             @media (width > 1600px) {
                 width: calc(100% / 1.5);
+                max-height: 550px;
+            }
+
+            @media (width > 1920px) {
+                max-height: 650px;
+            }
+
+            @media (width > 2560px) {
+                max-height: 800px;
             }
         }
     }
@@ -54,6 +64,10 @@
         @media (width > 1024px) {
             flex-direction: row;
             gap: 135px;
+        }
+
+        &:not(.content-block--image) {
+            align-items: flex-start;
         }
 
         .content-block--image & {

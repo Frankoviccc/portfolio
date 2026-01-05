@@ -29,7 +29,7 @@
             name="message"
             field-id="message"
             placeholder="Message"
-            rows="5"
+            rows="4"
             :error="values.message.error"
             :error-message="values.message.errorMessage"
             :value="values.message.value"
@@ -37,7 +37,9 @@
         />
 
         <FskButton
+            is="button"
             icon="arrow-up-right"
+            aria-label="Submit form"
             :background="true"
             @click="handleForm"
         >

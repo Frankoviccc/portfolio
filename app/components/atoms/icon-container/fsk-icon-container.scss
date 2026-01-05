@@ -72,6 +72,15 @@
         }
     }
 
+    &__image {
+        width: 55px;
+        height: 55px;
+
+        html.dark & {
+            filter: brightness(0) invert(1);
+        }
+    }
+
     &__label {
         font-size: 0.875rem;
 

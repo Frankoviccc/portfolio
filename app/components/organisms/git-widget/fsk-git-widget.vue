@@ -75,8 +75,17 @@
 </template>
 
 <script setup>
-const currentYear = new Date().getFullYear()
-const data = await $fetch('/api/github')
+const endDate = new Date()
+const startDate = new Date()
+startDate.setFullYear(startDate.getFullYear() - 1)
+
+const data = await $fetch('/api/github', {
+    method: 'POST',
+    body: {
+        fromDate: startDate,
+        toDate: endDate
+    }
+})
 
 const getContributionColor = (count) => {
     if (count === 0) return 'var(--color-neutral-200)'
@@ -135,13 +144,7 @@ const monthLabels = computed(() => {
 
     weeks.value.forEach((week, index) => {
         // Zoek de eerste dag in deze week die in het huidige kalender jaar valt
-        const relevantDay = week.contributionDays.find(day => {
-            if (!day) return false
-            // Pak daar de datum van
-            const date = new Date(day.date)
-            // Return als dat jaar overeen komt met het huidige jaar
-            return date.getFullYear() === currentYear
-        }) || week.contributionDays.find(day => day) // Anders fallback naar eerste beschikbare dag
+        const relevantDay = week.contributionDays.find(day => day)
 
         if (relevantDay) {
             // Pak de maand van de relevante dag

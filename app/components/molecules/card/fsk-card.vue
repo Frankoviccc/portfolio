@@ -5,7 +5,6 @@
             class="card__link"
         >
             <div class="card__inner">
-
                 <NuxtPicture
                     v-if="image"
                     :src="image.src"
@@ -14,6 +13,10 @@
                         'card__image',
                         { 'card__image--filter': filterImage }
                     ]"
+                    sizes="xs:100vw sm:100vw md:256px lg:341px xl:427px"
+                    densities="1x, 2x"
+                    format="avif,webp"
+                    loading="lazy"
                 />
 
                 <div class="card__content">

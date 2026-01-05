@@ -36,7 +36,12 @@
                 v-if="image"
                 :src="image.src"
                 :alt="image.alt"
-                class="single-page-header__image"
+                loading="eager"
+                fetchpriority="high"
+                sizes="100vw md:75vw"
+                format="avif, webp"
+                densities="1x, 2x"
+                class="single-page-header__image bento"
             />
 
             <slot name="items">

@@ -1,16 +1,14 @@
 export default defineCachedEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig()
-
-        const currentYear = new Date().getFullYear()
-        const fromDate = new Date(`${currentYear}-01-01T00:00:00Z`)
-        const toDate = new Date(`${currentYear}-12-31T23:59:59Z`)
+        const body = await readBody(event)
 
         return await $fetch('https://api.github.com/graphql', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${config.githubToken}`,
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'User-Agent': 'nuxt-portfolio-app'
             },
             body: {
                 query: `
@@ -33,8 +31,8 @@ export default defineCachedEventHandler(async (event) => {
                 `,
                 variables: {
                     userName: 'Frankoviccc',
-                    from: fromDate,
-                    to: toDate
+                    from: body.fromDate,
+                    to: body.toDate
                 }
             }
         })

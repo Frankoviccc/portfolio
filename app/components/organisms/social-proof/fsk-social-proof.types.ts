@@ -1,7 +1,8 @@
 export interface SocialProofItem {
     icon?: string;
-    image?: string;
+    image?: { src: string; alt: string };
     to?: string;
+    ariaLabel?: string;
 }
 
 export interface Props {

@@ -5,37 +5,17 @@
         :class="inDropdown ? 'language-selector--in-dropdown' : ''"
         @click="toggleList"
     >
-        <Icon
-            class="language-selector__icon"
-            name="tabler:world"
-            size="28"
-        />
-
         <ul class="language-selector__list">
-            <li class="language-selector__list-item">
-                <FskButton
-                    :is="NuxtLink"
-                    type="secondary"
-                    icon="chevron-down"
-                >
-                    {{ languages[currentIndex]?.label }}
-                </FskButton>
-            </li>
-        </ul>
-
-        <ul
-            v-show="isOpen"
-            class="language-selector__list-drop bento"
-        >
             <li
-                v-for="(item, index) in languages"
+                v-for="(item, index) in filteredLanguages"
                 :key="index"
-                class="language-selector__list-item bento"
+                class="language-selector__list-item"
                 @click="handleClick(index)"
             >
                 <FskButton
                     :is="NuxtLink"
                     :to="switchLocalePath(item.code)"
+                    :lang="item.code"
                     type="secondary"
                 >
                     {{ item.label }}
@@ -48,11 +28,15 @@
 <script setup lang="ts">
 import type { Props } from "./fsk-language-selector.types"
 import NuxtLink from '#app/components/nuxt-link.js'
-import FskButton from "~/components/atoms/button/fsk-button.vue";
 
+const props = defineProps<Props>();
+
+const { locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath();
 
-defineProps<Props>();
+const filteredLanguages = computed(() => {
+    return props.languages.filter(lang => lang.code !== locale.value)
+})
 
 const currentIndex = ref(0);
 const isOpen = ref(false)

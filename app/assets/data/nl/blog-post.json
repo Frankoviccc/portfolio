@@ -1,0 +1,27 @@
+{
+  "share": [
+    {
+      "title": "Deel",
+      "items": [
+        { "icon": "facebook", "action": "shareToFacebook" },
+        { "icon": "instagram", "action": "handleCopyLink" },
+        { "icon": "linkedin", "action": "shareToLinkedin", "color": "#0e76a8"}
+      ]
+    },
+    {
+      "title": "Deel dit artikel",
+      "items": [
+        { "icon": "facebook", "action": "shareToFacebook" },
+        { "icon": "instagram", "action": "handleCopyLink" },
+        { "icon": "linkedin", "action": "shareToLinkedin", "color": "#0e76a8"},
+        { "icon": "copylink", "action": "handleCopyLink" }
+      ]
+    }
+  ],
+  "contentBlock": {
+    "title": "Lees gerelateerde artikelen",
+    "titleMobile": "Blog",
+    "label": "Bekijk alles",
+    "link": "/blog"
+  }
+}

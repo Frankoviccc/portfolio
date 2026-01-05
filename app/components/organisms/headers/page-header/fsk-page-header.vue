@@ -39,6 +39,8 @@
                     <FskButton
                         :background="true"
                         icon="arrow-up-right"
+                        aria-label="Navigate to my projects page"
+                        to="/projects"
                     >
                         View my work
                     </FskButton>
@@ -56,6 +58,11 @@
             <NuxtPicture
                 :src="image.src"
                 :alt="image.alt"
+                loading="eager"
+                fetchpriority="high"
+                sizes="100vw lg:50vw"
+                format="avif, webp"
+                densities="1x, 2x"
                 class="page-header__image"
             />
 

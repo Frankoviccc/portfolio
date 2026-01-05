@@ -1,0 +1,200 @@
+[
+  {
+    "slug": "italianopoli",
+    "title": "Italianopoli",
+    "text": "Italianopoli is a language school dedicated to teaching Italian to people from all over the world.",
+    "link": "https://italianopoli.com/",
+    "image": {
+      "src": "/projects/itnp/itnp-mockup-1.webp",
+      "alt": "Mockup of website Italianopoli desktop"
+    },
+    "thumbnail": {
+      "src": "/projects/itnp/itnp.webp",
+      "alt": "Thumbnail of website Italianopoli desktop"
+    },
+    "areaOfWork": [
+      { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
+      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
+      { "label": "Area of work", "icon": "braces", "text": "CMS integration"}
+    ],
+    "technologies": [
+      { "icon": "vue" },
+      { "icon": "nuxt" },
+      { "icon": "typescript" },
+      { "icon": "figma" },
+      { "icon": "scss" }
+    ],
+    "industries": [
+      { "icon": "school", "label": "Education" },
+      { "icon": "plane", "label": "Travel" }
+    ],
+    "duration": [
+      { "icon": "clock", "label": "2 weeks (120 hours)" }
+    ],
+    "contentBlocks": [
+      {
+        "text": "Transform an outdated Italian language school website into a modern, fast, and user-friendly platform that better represents the quality of their courses. The previous website no longer reflected who they are as a school and was actively hurting conversions. The new site needed to be easy to maintain, perform well on all devices, and make it as simple as possible for potential students to sign up for courses.",
+        "image": {
+          "src": "/projects/itnp/itnp-mockup-2.webp",
+          "alt": "Mockup of website Italianopoli mobile device"
+        }
+      },
+      {
+        "image": {
+          "src": "/projects/itnp/itnp-mockup-3.webp",
+          "alt": "Mockup of various pages Italianopoli"
+        }
+      },
+      {
+        "text": "The existing website suffered from poor UX, broken layouts, slow performance, and an overwhelming contact form with 20+ fields that discouraged potential students from signing up."
+      },
+      {
+        "text": "Built a completely new website with SSR for optimal speed, connected to a headless CMS for easy content management. Redesigned the enrollment form from 20+ fields down to 9, with smart prefilling based on course selection. Implemented modern SEO techniques and optimized all images for performance."
+      },
+      {
+        "image": {
+          "src": "/projects/itnp/itnp-mockup-5.webp",
+          "alt": "Mockup of various pages on mobile device Italianopoli"
+        }
+      }
+    ],
+    "outcome": [
+      { "icon": "number-100-small", "label": "Nearly perfect performance scores" },
+      { "icon": "device-analytics", "label": "SEO optimized for search engines" },
+      { "icon": "settings", "label": "Easy content management via CMS" },
+      { "icon": "user-check", "label": "No UX frustration for potential students" }
+    ]
+  },
+  {
+    "slug": "wijmakendaken",
+    "title": "WijMakenDaken",
+    "text": "WijMakenDaken is a construction company specialized in Bitumen and traditional roofing.",
+    "link": "https://wijmakendaken.com/",
+    "image": {
+      "src": "/projects/wmd/wmd-mockup-1.webp",
+      "alt": "Mockup of website WijMakenDaken desktop device"
+    },
+    "thumbnail": {
+      "src": "/projects/wmd/wmd.webp",
+      "alt": "Thumbnail of website WijMakenDaken desktop"
+    },
+    "areaOfWork": [
+      { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
+      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
+      { "label": "Area of work", "icon": "braces", "text": "Api integration"}
+    ],
+    "technologies": [
+      { "icon": "vue" },
+      { "icon": "nuxt" },
+      { "icon": "javascript" },
+      { "icon": "figma" },
+      { "icon": "scss" }
+    ],
+    "industries": [
+      { "icon": "hammer", "label": "Construction" }
+    ],
+    "duration": [
+      { "icon": "clock", "label": "2 weeks (120 hours)" }
+    ],
+    "contentBlocks": [
+      {
+        "text": "Transform an outdated WordPress website for a roofing company into a modern, high-performance platform designed to attract customers nationwide instead of just regionally. The client had ambitious growth plans and needed a website that could support content marketing efforts, showcase their extensive project portfolio, and handle a large volume of images without sacrificing speed. The new site also needed to be easy to update without technical knowledge.",
+        "image": {
+          "src": "/projects/wmd/wmd-mockup-2.webp",
+          "alt": "Mockup of website WijMakenDaken on mobile device"
+        }
+      },
+      {
+        "image": {
+          "src": "/projects/wmd/wmd-mockup-3.webp",
+          "alt": "Mockup of website WijMakenDaken on various devices"
+        }
+      },
+      {
+        "text": "The existing WordPress site was slow due to an extensive portfolio of project photos, lacked the structure to target customers in different regions, and didn't reflect the quality of work the company delivers. The client had no way to effectively reach potential customers outside their local area."
+      },
+      {
+        "text": "Built a new website with SSR and migrated from WordPress to Storyblok for better performance and easier content management. Added a blog section structured for regional SEO, allowing the client to create articles targeting specific areas across the country. Optimized all images for fast loading and created custom drone footage of completed projects to showcase their work professionally."
+      },
+      {
+        "image": {
+          "src": "/projects/wmd/wmd-mockup-4.webp",
+          "alt": "Mockup of website WijMakenDaken on tablet device"
+        }
+      }
+    ],
+    "outcome": [
+      { "icon": "brand-speedtest", "label": "Fast loading despite image-heavy portfolio" },
+      { "icon": "pencil-pin", "label": "Regional blog targeting customers in different regions" },
+      { "icon": "settings", "label": "Easy content updates via Storyblok CMS" },
+      { "icon": "drone", "label": "Professional drone footage of completed projects" }
+    ]
+  },
+  {
+    "slug": "gianlucastories",
+    "title": "GianlucaStories",
+    "text": "Gianlucastories is a storytelling platform that shares experiences from places most people don't visit.",
+    "link": "https://gianlucastories.com/",
+    "image": {
+      "src": "/projects/gls/gls-mockup-2.webp",
+      "alt": "Mockup of website Gianlucastories desktop"
+    },
+    "thumbnail": {
+      "src": "/projects/gls/gls-hero.webp",
+      "alt": "Thumbnail of website Italianopoli desktop"
+    },
+    "areaOfWork": [
+      { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
+      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
+      { "label": "Area of work", "icon": "braces", "text": "Api integration"}
+    ],
+    "technologies": [
+      { "icon": "vue" },
+      { "icon": "nuxt" },
+      { "icon": "javascript" },
+      { "icon": "typescript" },
+      { "icon": "figma" },
+      { "icon": "scss" }
+    ],
+    "industries": [
+      { "icon": "camera", "label": "Photography" },
+      { "icon": "plane", "label": "Travel" }
+    ],
+    "duration": [
+      { "icon": "clock", "label": "1 weeks (60 hours)" }
+    ],
+    "contentBlocks": [
+      {
+        "text": "Create a storytelling platform for a travel writer who explores destinations around the world. The website needed to support long-form articles, image galleries, and drone footage while being built for growth. As the client continues to travel and write, the site should scale effortlessly with new countries and stories. The end goal is to build an audience and eventually monetize through affiliate partnerships.",
+        "image": {
+          "src": "/projects/gls/gls-mockup-7.webp",
+          "alt": "Mockup of website GianlucaStories"
+        }
+      },
+      {
+        "image": {
+          "src": "/projects/gls/gls-mockup-11.webp",
+          "alt": "Mockup of various pages Italianopoli"
+        }
+      },
+      {
+        "text": "The content-heavy nature of the project, with extensive image galleries and drone videos from remote locations, required careful attention to performance. The site also needed a flexible structure that could grow organically as new destinations and articles are added, without becoming cluttered or slow over time."
+      },
+      {
+        "text": "Built a scalable website with SSR for fast page loads despite heavy media content. Connected to a headless CMS so the client can publish articles independently from anywhere in the world. Designed a flexible content architecture that organizes stories by country and region, ready to expand as the journey continues. Optimized video loading and image delivery for smooth performance across all devices."
+      },
+      {
+        "image": {
+          "src": "/projects/gls/gls-mockup-5.webp",
+          "alt": "Mockup tablet of Gianlucastories"
+        }
+      }
+    ],
+    "outcome": [
+      { "icon": "device-analytics", "label": "Optimized for heavy media content" },
+      { "icon": "pencil-pin", "label": "Self publishing content from anywhere in the world" },
+      { "icon": "trending-up", "label": "Scalable architecture for growth" },
+      { "icon": "currency-euro", "label": "Ready for affiliate integration" }
+    ]
+  }
+]

@@ -22,7 +22,7 @@
                 :key="index"
                 :filterImage="filterImage"
                 :link="`${pathName}/${card.slug}`"
-                :image="card.image"
+                :image="card.thumbnail"
                 :title="card.title"
                 :text="card.text"
                 :year="card.year"

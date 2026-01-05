@@ -53,14 +53,15 @@ export default defineNuxtConfig({
       }
     ],
   },
-  // i18n: {
-  //   locales: [
-  //     { code: 'nl', iso: 'nl-NL', file: 'nl.json' },
-  //     { code: 'en', iso: 'en-US', file: 'en.json' },
-  //   ],
-  //   defaultLocale: 'en',
-  //   strategy: 'prefix_except_default',
-  // },
+
+  i18n: {
+    locales: [
+      { code: 'nl', iso: 'nl-NL' },
+      { code: 'en', iso: 'en-US' },
+    ],
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+  },
 
   components: [
     {
@@ -80,4 +81,28 @@ export default defineNuxtConfig({
     storageKey: 'nuxt-color-mode',
     storage: 'cookie'
   },
+
+  nitro: {
+    preset: 'cloudflare-pages'
+  },
+
+  routeRules: {
+    '/': { prerender: true }
+  },
+
+  image: {
+    provider: 'ipx',
+  },
+
+  app: {
+    head: {
+      title: "Frank Struik",
+      htmlAttrs: {
+        lang: 'en'
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
+  }
 })

@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-const { getAllProjects } = useContent()
+const { getAllProjects } = await useContent()
 
 const projects = getAllProjects()
 </script>

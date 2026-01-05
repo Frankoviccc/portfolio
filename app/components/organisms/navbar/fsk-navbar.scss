@@ -17,12 +17,18 @@
 
     &__logo {
         padding: 5px;
+        flex-shrink: 0;
 
         &-link {
             display: flex;
         }
 
         &-image {
+            max-width: 80px;
+            max-height: 65px;
+            height: 100%;
+            width: 100%;
+
             &::after {
                 content: "";
                 position: absolute;
@@ -47,7 +53,7 @@
             padding: 16px;
 
             @media (width > 1200px) {
-                padding: 27px 32px;
+                padding: 27px 30px;
             }
 
             .button {
@@ -76,7 +82,7 @@
             background: var(--page-background);
 
             @media (width > 1200px) {
-                top: calc(88px + var(--spacing));
+                top: calc(85px + var(--spacing));
             }
 
             @media (width >= 1600px) {

@@ -7,6 +7,10 @@
       "src": "/blog-posts/blog.webp",
       "alt": "Html template"
     },
+    "thumbnail": {
+      "src": "/blog-posts/blog.webp",
+      "alt": "Html template"
+    },
     "contentBlocks": [
       {
         "text": "<h5>How to Write Clean Frontend Code</h5><ul><li><strong>Use meaningful names:</strong> getUserProfile() is much clearer than getData().</li><li><strong>Keep components small:</strong> each should do one thing well.</li><li><strong>Follow a style guide:</strong> whether it's ESLint, Prettier, or a team-defined rulebook.</li><li><strong>Write comments sparingly but wisely:</strong> explain why, not what.</li><li><strong>Refactor regularly:</strong> don't let \"temporary fixes\" live forever.</li></ul>"
@@ -32,9 +36,9 @@
     "slug": "responsive-design-more-than-just-mobile-friendly",
     "title": "Responsive Design: More Than Just Mobile-Friendly",
     "text": "Tips on creating websites that look and feel great on every device — because first impressions happen everywhere.",
-    "image": {
+    "thumbnail": {
       "src": "/blog-posts/setup.webp",
-      "alt": "Setup"
+      "alt": "Image setup"
     },
     "contentBlocks": [
       {
@@ -62,6 +66,10 @@
     "title": "My favorite Frontend Tools in 2025",
     "text": "From frameworks to debugging tools, here’s what I use daily to speed up development and keep code quality high.",
     "image": {
+      "src": "/blog-posts/tag.webp",
+      "alt": "Html tag"
+    },
+    "thumbnail": {
       "src": "/blog-posts/tag.webp",
       "alt": "Html tag"
     },

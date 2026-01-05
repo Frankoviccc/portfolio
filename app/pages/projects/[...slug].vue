@@ -64,13 +64,26 @@
         :style="{ margin: 'var(--spacing)' }"
     />
 
-    <FskImage
+    <div
         v-if="contentBlocks?.[1]?.image"
-        :source="contentBlocks?.[1].image.src"
-        :alt="contentBlocks?.[1].image.alt"
         class="bento"
-        :style="{ margin: 'var(--spacing)' }"
-    />
+        :style="{
+            display: 'flex',
+            justifyContent: 'center',
+            margin: 'var(--spacing)',
+            background: 'var(--bento-background)',
+        }"
+    >
+        <NuxtPicture
+            :src="contentBlocks?.[1].image.src"
+            :alt="contentBlocks?.[1].image.alt"
+            loading="lazy"
+            format="avif, webp"
+            densities="1x, 2x"
+            class="picture"
+            :style="{ maxWidth: '1500px' }"
+        />
+    </div>
 
     <FskLayout
         direction="row"
@@ -94,11 +107,26 @@
         layout="two-third"
         collapse="lg"
     >
-        <FskImage
-            v-if="post?.image"
-            :source="post.image.src"
-            :alt="post.image.alt"
-        />
+        <div
+            class="bento"
+            :style="{
+                display: 'flex',
+                justifyContent: 'center',
+                background: 'var(--bento-background)',
+                padding: 'var(--padding)',
+            }"
+        >
+            <NuxtPicture
+                v-if="contentBlocks?.[4]?.image"
+                :src="contentBlocks[4].image.src"
+                :alt="contentBlocks[4].image.alt"
+                loading="lazy"
+                format="avif, webp"
+                densities="1x, 2x"
+                sizes="100vw lg:75vw"
+                class="picture"
+            />
+        </div>
 
         <FskIconCollection
             title="Outcome"
@@ -112,10 +140,11 @@
 </template>
 
 <script lang="ts" setup>
-import project from "@/assets/data/project.json"
+const { locale } = useI18n()
+const project = (await import(`~/assets/data/${locale.value}/project.json`)).default
 
 const route = useRoute()
-const { getProject } = useContent()
+const { getProject } = await useContent()
 
 const slug = computed(() => {
     return Array.isArray(route.params.slug)

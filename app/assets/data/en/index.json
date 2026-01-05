@@ -1,0 +1,133 @@
+{
+  "header": {
+    "title": "Frontend",
+    "subtitle": "Developer",
+    "text": "Who turns ideas into seamless digital experiences",
+    "items": [
+      { "icon": "braces", "label": "Clean code" },
+      { "icon": "wand", "label": "Modern design" },
+      { "icon": "rocket", "label": "High performance" }
+    ],
+    "image": {
+      "src": "tokyo.webp",
+      "alt": "Me, in Tokyo"
+    }
+  },
+  "contentBlock": {
+    "title": "About me",
+    "text": "Hey, I'm Frank Struik, a frontend developer focused on building modern, fast, and scalable websites. I've worked on e-commerce platforms, storytelling websites, and everything in between. What matters to me: clean code, solid performance, and making sure clients get exactly what they need.",
+    "items": [
+      { "icon": "brand-github", "label": "Github", "link": "https://github.com/Frankoviccc" },
+      { "icon": "brand-linkedin", "label": "Linkedin", "link": "https://www.linkedin.com/in/frank-struik-958258203/" }
+    ]
+  },
+  "technologies": {
+    "title": "Stack i use",
+    "items": [
+      { "icon": "vue" },
+      { "icon": "nuxt" },
+      { "icon": "javascript" },
+      { "icon": "typescript" },
+      { "icon": "figma" },
+      { "icon": "scss" },
+      { "icon": "html" },
+      { "icon": "css" },
+      { "icon": "pinia" },
+      { "icon": "slack" },
+      { "icon": "tailwind"}
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      { "logo": "dt", "title": "Frontend developer", "name": "Digital Thrust", "date": "Mar 2025 - Present", "tasks": ["Full Website Development", "CMS Integration", "Performance & SEO", "E-commerce Solutions"]},
+      { "logo": "leads", "title": "Frontend developer", "name": "Leads", "date": "Sept 2023 - Mar 2025", "tasks": ["Template Development", "CRO Development", "Reuseable Components", "Internal Tooling", "Cross Team Collab"]}
+    ]
+  },
+  "projects": {
+    "title": "My works",
+    "label": "Contact with me",
+    "link": "/contact",
+    "items": [
+      { "slug": "wijmakendaken", "image": { "src": "/wmd.webp", "alt": "Mockup WijMakenDaken" }, "title": "WijMakenDaken", "year": "2025", "items": [{ "label": "Nuxt" }, { "label": "Vue" }, { "label": "SCSS" }, { "label": "Performance Optimization" }, { "label": "Animations" }] },
+      { "slug": "italianopoli", "image": { "src": "/itnp.webp", "alt": "Mockup Italianopoli" }, "title": "Italianopoli", "year": "2025", "items": [{ "label": "Nuxt" }, { "label": "Vue" }, { "label": "Performance Optimization" }] },
+      { "slug": "gianlucastories", "image": { "src": "/gls.webp", "alt": "Mockup GianlucaStories" }, "title": "GianlucaStories", "year": "2025", "items": [{ "label": "Accessibility" }, { "label": "HTML5" }, { "label": "JavaScript" }] }
+    ]
+  },
+  "stepCollection": {
+    "title": "How i work",
+    "buttonText": "Contact with me",
+    "buttonLink": "/contact",
+    "items": [
+      { "number": "01", "title": "Discovery & planning", "text": "I begin by reviewing the designs, clarifying requirements, and deciding on the best tools to bring the project to life." },
+      { "number": "02", "title": "Development", "text": "Then I build dynamic, responsive, and pixel-perfect pages — always keeping performance and security in mind." },
+      { "number": "03", "title": "Delivery & Support", "text": "Finally, I deliver clean, well-documented code and remain available for ongoing support and improvements." }
+    ]
+  },
+  "industries": {
+    "title": "Industries served",
+    "items": [
+      { "icon": "shopping-cart", "label": "E-commerce" },
+      { "icon": "building-estate", "label": "Real estate" },
+      { "icon": "coin-euro", "label": "Finance" },
+      { "icon": "heart", "label": "Healthcare" },
+      { "icon": "speakerphone", "label": "Marketing" },
+      { "icon": "plane", "label": "Travel" },
+      { "icon": "school", "label": "Education" },
+      { "icon": "hammer", "label": "Construction" }
+    ]
+  },
+  "calculator": {
+    "title": "Price calculator",
+    "text": "Want a quick project estimate?",
+    "projectOptions": [
+      { "value": "", "label": "Project Type" },
+      { "value": "landing-page", "label": "Landing Page", "minNumberOfPages": 1 },
+      { "value": "corporate-website", "label": "Corporate Website", "minNumberOfPages": 5 },
+      { "value": "web-app", "label": "Web App", "minNumberOfPages": 5 },
+      { "value": "e-commerce", "label": "E-commerce", "minNumberOfPages": 5 }
+    ],
+    "designOptions": [
+      { "value": "", "label": "Design Availability" },
+      { "value": "yes", "label": "I have ready designs" },
+      { "value": "no", "label": "I need design and development" }
+    ],
+    "timelineOptions": [
+      { "value": "", "label": "Timeline" },
+      { "value": "urgent", "label": "Less than 1 month" },
+      { "value": "short", "label": "1-3 months" },
+      { "value": "long", "label": "3-6 months" }
+    ]
+  },
+  "FAQs": {
+    "title": "FAQs",
+    "items": [
+      { "title": "How do we start a project?", "text": "We begin with an introduction where I discuss your needs and goals. After that, you'll receive a plan with timeline and quote. Once you approve, I get to work." },
+      { "title": "How do you keep me updated during the project?", "text": "You'll receive regular updates with progress and a link to the development environment. Communication is via email or a channel of your choice. At each milestone, I'll provide a time estimate for the next phase." },
+      { "title": "How long does a project typically take?", "text": "A landing page is usually done within 1-2 weeks. A complete website with CMS takes 3-6 weeks, depending on complexity. You'll always get a realistic timeline upfront." },
+      { "title": "What does a website cost?", "text": "That depends on the scope. A simple website starts around €1500, a webshop or custom project higher. After our first conversation, you'll receive a no-obligation quote." },
+      { "title": "Do you also deliver the design, or just the build?", "text": "I focus on development. Already have a design? I'll build it pixel-perfect. No design yet? I can collaborate with a designer I usually work with or help you find a suitable solution." },
+      { "title": "What happens after delivery?", "text": "You'll get a brief walkthrough of the CMS so you can manage content yourself. For maintenance, updates, or extensions, you can always reach out." }
+    ]
+  },
+  "socialProof": {
+    "title": "Trusted by",
+    "items": [
+      { "icon": "gls", "to": "https://gianlucastories.com", "ariaLabel": "Visit GianlucaStories website" },
+      { "icon": "wmd", "to": "https://wijmakendaken.nl", "ariaLabel": "Visit WijMakenDaken website" },
+      { "image": { "src": "/projects/itnp/itnp-logo.webp", "alt": "Logo Italianopoli" }, "to": "https://italianopoli-com.digitalthrust.io/", "ariaLabel": "Visit Italianopoli website" }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "items": [
+      { "stars": 5, "text": "For my travelblog I was looking for a developer who had experience with the latest SEO techniques. Frank did a great job building my idea, my site has good performance and scores very well.", "author": "Gianluca B", "date": "12 Nov 2025" },
+      { "stars": 5, "text": "Based on a friend's recommendation and Frank's expertise in searchable websites, we ultimately chose Frank. We explained our requirements, and he translated them into a beautiful, super-fast website that perfectly met our needs.", "author": "Patricia L", "date": "20 Aug 2025" }
+    ]
+  },
+  "contentBlockEmpty": {
+    "title": "Blog",
+    "label": "See all",
+    "link": "/blog"
+  }
+}

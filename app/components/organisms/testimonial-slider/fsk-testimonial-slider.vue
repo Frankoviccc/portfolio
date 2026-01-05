@@ -8,6 +8,8 @@
             <FskButton
                 icon="arrow-up-right"
                 class="testimonial-slider__button-desktop"
+                aria-label="Navigate to contact page"
+                to="/contact"
             >
                 Contact With Me
             </FskButton>
@@ -60,7 +62,10 @@
                 />
             </div>
 
-            <div class="testimonial-slider__navigation">
+            <div
+                v-if="items.length > 2"
+                class="testimonial-slider__navigation"
+            >
                 <Icon
                     name="tabler:circle-arrow-left"
                     :class="[
@@ -84,6 +89,8 @@
         <FskButton
             icon="arrow-up-right"
             class="testimonial-slider__button-mobile"
+            aria-label="Navigate to contact page"
+            to="/contact"
         >
             Contact With Me
         </FskButton>

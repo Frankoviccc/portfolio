@@ -1,5 +1,9 @@
 <template>
     <div class="indicator bento">
+        <NuxtLink
+            class="indicator__button"
+            to="/contact"
+        >
         <div class="indicator__container">
             <div
                 class="indicator__pulsing"
@@ -10,20 +14,14 @@
                 <div class="indicator__pulsing-3" />
             </div>
 
-            <NuxtLink class="indicator__button">
-                {{ text }}
-
-                <Icon
-                    class="indicator__button-icon"
-                    name="tabler:arrow-up-right"
-                />
-            </NuxtLink>
-            <FskButton
-
-            >
-
-            </FskButton>
         </div>
+            {{ text }}
+
+            <Icon
+                class="indicator__button-icon"
+                name="tabler:arrow-up-right"
+            />
+        </NuxtLink>
     </div>
 </template>
 
