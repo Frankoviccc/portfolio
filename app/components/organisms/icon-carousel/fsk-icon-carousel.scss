@@ -7,6 +7,7 @@
     &--glow-effect {
         padding: 1px;
         z-index: 0;
+        border-radius: 12px;
         overflow: hidden;
 
         &::after {
