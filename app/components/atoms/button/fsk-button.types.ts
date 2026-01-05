@@ -4,6 +4,8 @@ export interface Props {
     to?: string;
     icon?: iconType | undefined | string;
     iconSize?: string;
+    download?: string;
+    external?: boolean;
     type?: 'primary' | 'secondary';
     background?: boolean;
     mirror?: boolean;

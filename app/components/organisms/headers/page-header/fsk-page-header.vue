@@ -47,7 +47,10 @@
 
                     <FskButton
                         icon="download"
-                        is="button"
+                        to="/cv.pdf"
+                        aria-label="Download my CV"
+                        download="frank-struik.pdf"
+                        external
                     >
                         Download CV
                     </FskButton>

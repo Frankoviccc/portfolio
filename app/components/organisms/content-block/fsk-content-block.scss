@@ -35,16 +35,16 @@
 
             @media (width > 1024px) {
                 width: 50%;
-                max-height: 350px;
+                max-height: 450px;
             }
 
             @media (width > 1600px) {
                 width: calc(100% / 1.5);
-                max-height: 550px;
+                max-height: 650px;
             }
 
             @media (width > 1920px) {
-                max-height: 650px;
+                max-height: 700px;
             }
 
             @media (width > 2560px) {
@@ -66,7 +66,7 @@
             gap: 135px;
         }
 
-        &:not(.content-block--image) {
+        &:not(.content-block--image):not(:has(.button)) {
             align-items: flex-start;
         }
 

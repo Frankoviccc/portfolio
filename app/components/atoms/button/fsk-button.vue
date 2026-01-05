@@ -4,6 +4,8 @@
         :is="is"
         :to="to"
         :background="background"
+        :download="download"
+        :external="external"
         :class="[
             'button',
             type ? `button-type--${type}` : null,
