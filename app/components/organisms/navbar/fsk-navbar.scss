@@ -75,11 +75,15 @@
 
         &-mobile {
             position: absolute;
-            top: calc(65px + var(--spacing));
+            top: calc(66px + var(--spacing));
             width: calc(100% - var(--spacing) * 2);
             min-height: 100vh;
             z-index: 100;
             background: var(--page-background);
+
+            @media (width > 400px) {
+                top: calc(68px + var(--spacing));
+            }
 
             @media (width > 1200px) {
                 top: calc(85px + var(--spacing));
