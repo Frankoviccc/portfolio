@@ -9,8 +9,8 @@
       { "icon": "rocket", "label": "Hoge performance" }
     ],
     "image": {
-      "src": "tokyo.webp",
-      "alt": "Ik, in Tokyo"
+      "src": "mt-fuji.webp",
+      "alt": "Ik, bij Mt. Fuji"
     }
   },
   "contentBlock": {

@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     pagespeedKey: process.env.PAGESPEED_KEY || '',
     githubToken: process.env.GITHUB_TOKEN || '',
+    resendKey: process.env.RESEND_API_KEY || ''
   },
 
   icon: {
@@ -70,11 +71,6 @@ export default defineNuxtConfig({
     },
   ],
 
-  //@ts-ignore
-  site: {
-    indexable: false
-  },
-
   colorMode: {
     preference: 'system',
     fallback: 'light',
@@ -91,7 +87,18 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: 'ipx',
+    screens: {
+      xs: 320,
+      sm: 576,
+      md: 768,
+      lg: 1024,
+      xl: 1200,
+      xxl: 1600,
+    },
+    provider: 'cloudflare',
+    cloudflare: {
+      baseURL: 'https://frankstruik.com/'
+    }
   },
 
   app: {

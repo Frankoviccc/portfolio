@@ -12,9 +12,7 @@
         </div>
 
         <div class="footer__form bento">
-            <FskContactForm
-                title="Contact me"
-            />
+            <FskContactForm :title="title" />
         </div>
 
         <nav class="footer__nav">

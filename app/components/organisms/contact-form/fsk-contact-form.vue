@@ -1,5 +1,8 @@
 <template>
-    <div class="form">
+    <form
+        class="form"
+        @submit.prevent="handleForm"
+    >
         <h2 class="footer__form-title" v-html="title"/>
 
         <FskInputField
@@ -38,14 +41,17 @@
 
         <FskButton
             is="button"
-            icon="arrow-up-right"
             aria-label="Submit form"
+            :icon="icon"
             :background="true"
-            @click="handleForm"
+            :class="[
+                'form__button',
+                { 'form__button--loading': iconLoading }
+            ]"
         >
-            Send Message
+            {{ label }}
         </FskButton>
-    </div>
+    </form>
 </template>
 <script setup lang="ts">
 import FskInputField from "~/components/atoms/input-field/fsk-input-field.vue";
@@ -57,6 +63,23 @@ defineProps<Props>()
 
 const values = ref<FormValues>(defaultFormValues);
 const formIsValid = ref<boolean>(false);
+const iconLoading = ref(false)
+
+function iconHandler() {
+    iconLoading.value = true
+
+    setTimeout(() => {
+        iconLoading.value = false
+    }, 1500);
+}
+
+const icon = computed(() => {
+    return iconLoading.value ? 'loader-2' : 'arrow-up-right'
+})
+
+const label = computed(() => {
+    return iconLoading.value ? 'Sending...' : 'Send Message'
+})
 
 function handleForm() {
     Object.entries(values.value).forEach(([key, value]) => {
@@ -67,14 +90,28 @@ function handleForm() {
 
     formIsValid.value = !Object.values(values.value).some((field) => field.error);
 
-    console.log(formIsValid.value)
+    if (formIsValid.value) {
+        iconHandler()
+
+        $fetch('/api/contact', {
+            method: 'POST',
+            body: {
+                name: values.value.name.value,
+                email: values.value.email.value,
+                message: values.value.message.value
+            }
+        })
+
+        Object.entries(values.value).forEach(([key, field]) => {
+            console.log(field.value)
+            field.value = ''
+        })
+    }
 }
 
 function handleUserInput(value: string, objectKey: string) {
-    console.log(values.value[objectKey])
     if (values.value[objectKey]) {
         if (values.value[objectKey].pattern.test(value)) {
-            console.log('dit werkt')
             values.value[objectKey].value = value;
             values.value[objectKey].error = false;
         } else {

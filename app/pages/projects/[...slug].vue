@@ -37,7 +37,7 @@
             :items="post?.industries"
             :center="true"
             size="md"
-            color="#00dc82"
+            color="var(--color-green)"
         >
             <template #title>
                 <h2 class="u-text-xl">{{ project.industries.title }}</h2>
@@ -48,7 +48,7 @@
             :items="post?.duration"
             :center="true"
             size="md"
-            color="#00dc82"
+            color="var(--color-green)"
         >
             <template #title>
                 <h2 class="u-text-xl">{{ project.duration.title }}</h2>
@@ -132,7 +132,7 @@
             title="Outcome"
             direction="column"
             size="md"
-            color="#00dc82"
+            color="var(--color-green)"
             :center="false"
             :items="post?.outcome"
         />

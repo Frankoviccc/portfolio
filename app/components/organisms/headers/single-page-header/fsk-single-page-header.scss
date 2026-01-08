@@ -63,7 +63,7 @@
 
         &-icon {
             font-size: 3.75rem;
-            color: #00dc82;
+            color: var(--color-green);
 
             @media (width > 1200px) {
                 font-size: 4.375rem;

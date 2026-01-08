@@ -10,7 +10,10 @@
             </p>
         </div>
 
-        <form class="calculator__form">
+        <form
+            class="calculator__form"
+            @submit.prevent="calculate"
+        >
             <FskInputField
                 is="select"
                 field-id="project-type"

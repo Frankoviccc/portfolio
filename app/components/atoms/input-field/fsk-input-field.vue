@@ -16,6 +16,9 @@
             <div
                 v-if="options"
                 class="input-field__selected"
+                tabindex="0"
+                @keydown.enter="toggleList"
+                @keydown.space.prevent="toggleList"
                 @click="toggleList"
             >
                 {{ options[currentIndex]?.label }}
@@ -35,7 +38,10 @@
                     v-for="(option, index) in options?.slice(1)"
                     :key="index"
                     class="input-field__list-item"
+                    tabindex="0"
                     @click="handleOptionSelect(option, index)"
+                    @keydown.enter="handleOptionSelect(option, index)"
+                    @keydown.space.prevent="handleOptionSelect(option, index)"
                 >
                     {{ option.label }}
                 </div>
@@ -69,6 +75,9 @@
             <div
                 v-if="options"
                 class="input-field__selected"
+                tabindex="0"
+                @keydown.enter="toggleList"
+                @keydown.space.prevent="toggleList"
                 @click="toggleList"
             >
                 <div class="input-field__content">
@@ -159,6 +168,7 @@
                 :placeholder="placeholder"
                 :name="name"
                 :rows="rows"
+                :value="value"
                 @blur="handleBlur"
             />
         </div>

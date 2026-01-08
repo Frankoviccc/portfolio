@@ -11,15 +11,15 @@
     ]
   },
   "footer": {
-    "title": "Contact me",
-    "text": "Based in the Netherlands",
+    "title": "Bericht mij",
+    "text": "Gevestigd in the Netherlands",
     "links": [
       { "label": "Projects", "to": "/projects" },
       { "label": "About", "to": "/about" }
     ],
     "icons": [
-      { "to": "https://github.com/Frankoviccc", "icon": "github", "ariaLabel": "Navigate to my Github profile" },
-      { "to": "https://www.linkedin.com/feed/", "icon": "linkedin", "ariaLabel": "Navigate to my LinkedIn profile" }
+      { "to": "https://github.com/Frankoviccc", "icon": "github", "ariaLabel": "Navigeer naar mijn Github profiel" },
+      { "to": "https://www.linkedin.com/feed/", "icon": "linkedin", "ariaLabel": "Navigeer naar mijn LinkedIn profiel" }
     ]
   }
 }

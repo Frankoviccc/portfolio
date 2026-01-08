@@ -2,20 +2,20 @@
   {
     "slug": "italianopoli",
     "title": "Italianopoli",
-    "text": "Italianopoli is a language school dedicated to teaching Italian to people from all over the world.",
-    "link": "https://italianopoli.com/",
+    "text": "Italianopoli is een taalschool die zich richt op het onderwijzen van Italiaans aan mensen van over de hele wereld.",
+    "link": "https://italianopoli-com.digitalthrust.io/",
     "image": {
       "src": "/projects/itnp/itnp-mockup-1.webp",
-      "alt": "Mockup of website Italianopoli desktop"
+      "alt": "Mockup van website Italianopoli desktop"
     },
     "thumbnail": {
       "src": "/projects/itnp/itnp.webp",
-      "alt": "Thumbnail of website Italianopoli desktop"
+      "alt": "Thumbnail van website Italianopoli desktop"
     },
     "areaOfWork": [
-      { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
-      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
-      { "label": "Area of work", "icon": "braces", "text": "CMS integration"}
+      { "label": "Werkgebied", "icon": "braces", "text": "Front-end development" },
+      { "label": "Werkgebied", "icon": "rocket", "text": "Performance optimization" },
+      { "label": "Werkgebied", "icon": "settings", "text": "CMS integration" }
     ],
     "technologies": [
       { "icon": "vue" },
@@ -25,63 +25,63 @@
       { "icon": "scss" }
     ],
     "industries": [
-      { "icon": "school", "label": "Education" },
-      { "icon": "plane", "label": "Travel" }
+      { "icon": "school", "label": "Onderwijs" },
+      { "icon": "plane", "label": "Reizen" }
     ],
     "duration": [
-      { "icon": "clock", "label": "2 weeks (120 hours)" }
+      { "icon": "clock", "label": "2 weken (120 uur)" }
     ],
     "contentBlocks": [
       {
-        "text": "Transform an outdated Italian language school website into a modern, fast, and user-friendly platform that better represents the quality of their courses. The previous website no longer reflected who they are as a school and was actively hurting conversions. The new site needed to be easy to maintain, perform well on all devices, and make it as simple as possible for potential students to sign up for courses.",
+        "text": "Een verouderde website van een Italiaanse taalschool transformeren naar een modern, snel en gebruiksvriendelijk platform dat de kwaliteit van hun cursussen beter weerspiegelt. De vorige website paste niet meer bij wie ze zijn als school en had een negatieve impact op conversies. De nieuwe site moest makkelijk te onderhouden zijn, goed presteren op alle apparaten en het zo eenvoudig mogelijk maken voor potentiële studenten om zich in te schrijven.",
         "image": {
           "src": "/projects/itnp/itnp-mockup-2.webp",
-          "alt": "Mockup of website Italianopoli mobile device"
+          "alt": "Mockup van website Italianopoli op mobiel"
         }
       },
       {
         "image": {
           "src": "/projects/itnp/itnp-mockup-3.webp",
-          "alt": "Mockup of various pages Italianopoli"
+          "alt": "Mockup van verschillende pagina's Italianopoli"
         }
       },
       {
-        "text": "The existing website suffered from poor UX, broken layouts, slow performance, and an overwhelming contact form with 20+ fields that discouraged potential students from signing up."
+        "text": "De bestaande website had last van slechte UX, kapotte layouts, trage prestaties en een overweldigend contactformulier met meer dan 20 velden dat potentiële studenten afschrikte."
       },
       {
-        "text": "Built a completely new website with SSR for optimal speed, connected to a headless CMS for easy content management. Redesigned the enrollment form from 20+ fields down to 9, with smart prefilling based on course selection. Implemented modern SEO techniques and optimized all images for performance."
+        "text": "Een compleet nieuwe website gebouwd met SSR voor optimale snelheid, gekoppeld aan een headless CMS voor eenvoudig contentbeheer. Het inschrijfformulier teruggebracht van 20+ velden naar 9, met slimme voorinvulling op basis van cursusselectie. Moderne SEO-technieken geïmplementeerd en alle afbeeldingen geoptimaliseerd voor performance."
       },
       {
         "image": {
           "src": "/projects/itnp/itnp-mockup-5.webp",
-          "alt": "Mockup of various pages on mobile device Italianopoli"
+          "alt": "Mockup van verschillende pagina's op mobiel Italianopoli"
         }
       }
     ],
     "outcome": [
-      { "icon": "number-100-small", "label": "Nearly perfect performance scores" },
-      { "icon": "device-analytics", "label": "SEO optimized for search engines" },
-      { "icon": "settings", "label": "Easy content management via CMS" },
-      { "icon": "user-check", "label": "No UX frustration for potential students" }
+      { "icon": "number-100-small", "label": "Bijna perfecte performance scores" },
+      { "icon": "device-analytics", "label": "SEO geoptimaliseerd voor zoekmachines" },
+      { "icon": "settings", "label": "Eenvoudig contentbeheer via CMS" },
+      { "icon": "user-check", "label": "Geen UX-frustratie voor potentiële studenten" }
     ]
   },
   {
     "slug": "wijmakendaken",
     "title": "WijMakenDaken",
-    "text": "WijMakenDaken is a construction company specialized in Bitumen and traditional roofing.",
+    "text": "WijMakenDaken is een bouwbedrijf gespecialiseerd in bitumen en traditionele dakbedekking.",
     "link": "https://wijmakendaken.com/",
     "image": {
       "src": "/projects/wmd/wmd-mockup-1.webp",
-      "alt": "Mockup of website WijMakenDaken desktop device"
+      "alt": "Mockup van website WijMakenDaken desktop"
     },
     "thumbnail": {
       "src": "/projects/wmd/wmd.webp",
-      "alt": "Thumbnail of website WijMakenDaken desktop"
+      "alt": "Thumbnail van website WijMakenDaken desktop"
     },
     "areaOfWork": [
-      { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
-      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
-      { "label": "Area of work", "icon": "braces", "text": "Api integration"}
+      { "label": "Werkgebied", "icon": "braces", "text": "Front-end development" },
+      { "label": "Werkgebied", "icon": "braces", "text": "Performance optimization" },
+      { "label": "Werkgebied", "icon": "braces", "text": "API integration" }
     ],
     "technologies": [
       { "icon": "vue" },
@@ -91,62 +91,62 @@
       { "icon": "scss" }
     ],
     "industries": [
-      { "icon": "hammer", "label": "Construction" }
+      { "icon": "hammer", "label": "Bouw" }
     ],
     "duration": [
-      { "icon": "clock", "label": "2 weeks (120 hours)" }
+      { "icon": "clock", "label": "2 weken (120 uur)" }
     ],
     "contentBlocks": [
       {
-        "text": "Transform an outdated WordPress website for a roofing company into a modern, high-performance platform designed to attract customers nationwide instead of just regionally. The client had ambitious growth plans and needed a website that could support content marketing efforts, showcase their extensive project portfolio, and handle a large volume of images without sacrificing speed. The new site also needed to be easy to update without technical knowledge.",
+        "text": "Een verouderde WordPress-website voor een dakdekkersbedrijf transformeren naar een modern, high-performance platform ontworpen om klanten landelijk aan te trekken in plaats van alleen regionaal. De klant had ambitieuze groeiplannen en had een website nodig die contentmarketing kon ondersteunen, hun uitgebreide projectportfolio kon tonen en een groot aantal afbeeldingen kon verwerken zonder snelheid in te leveren. De nieuwe site moest ook makkelijk te updaten zijn zonder technische kennis.",
         "image": {
           "src": "/projects/wmd/wmd-mockup-2.webp",
-          "alt": "Mockup of website WijMakenDaken on mobile device"
+          "alt": "Mockup van website WijMakenDaken op mobiel"
         }
       },
       {
         "image": {
           "src": "/projects/wmd/wmd-mockup-3.webp",
-          "alt": "Mockup of website WijMakenDaken on various devices"
+          "alt": "Mockup van website WijMakenDaken op verschillende apparaten"
         }
       },
       {
-        "text": "The existing WordPress site was slow due to an extensive portfolio of project photos, lacked the structure to target customers in different regions, and didn't reflect the quality of work the company delivers. The client had no way to effectively reach potential customers outside their local area."
+        "text": "De bestaande WordPress-site was traag door een uitgebreid portfolio met projectfoto's, miste de structuur om klanten in verschillende regio's te bereiken en weerspiegelde niet de kwaliteit van het werk dat het bedrijf levert. De klant had geen effectieve manier om potentiële klanten buiten hun lokale gebied te bereiken."
       },
       {
-        "text": "Built a new website with SSR and migrated from WordPress to Storyblok for better performance and easier content management. Added a blog section structured for regional SEO, allowing the client to create articles targeting specific areas across the country. Optimized all images for fast loading and created custom drone footage of completed projects to showcase their work professionally."
+        "text": "Een nieuwe website gebouwd met SSR en gemigreerd van WordPress naar Storyblok voor betere performance en eenvoudiger contentbeheer. Een blogsectie toegevoegd gestructureerd voor regionale SEO, waardoor de klant artikelen kan maken gericht op specifieke gebieden door het hele land. Alle afbeeldingen geoptimaliseerd voor snelle laadtijden en custom drone-opnames gemaakt van voltooide projecten om hun werk professioneel te presenteren."
       },
       {
         "image": {
           "src": "/projects/wmd/wmd-mockup-4.webp",
-          "alt": "Mockup of website WijMakenDaken on tablet device"
+          "alt": "Mockup van website WijMakenDaken op tablet"
         }
       }
     ],
     "outcome": [
-      { "icon": "brand-speedtest", "label": "Fast loading despite image-heavy portfolio" },
-      { "icon": "pencil-pin", "label": "Regional blog targeting customers in different regions" },
-      { "icon": "settings", "label": "Easy content updates via Storyblok CMS" },
-      { "icon": "drone", "label": "Professional drone footage of completed projects" }
+      { "icon": "brand-speedtest", "label": "Snel laden ondanks image-heavy portfolio" },
+      { "icon": "pencil-pin", "label": "Regionale blog gericht op klanten in verschillende regio's" },
+      { "icon": "settings", "label": "Eenvoudige content updates via Storyblok CMS" },
+      { "icon": "drone", "label": "Professionele drone-opnames van voltooide projecten" }
     ]
   },
   {
     "slug": "gianlucastories",
     "title": "GianlucaStories",
-    "text": "Gianlucastories is a storytelling platform that shares experiences from places most people don't visit.",
+    "text": "GianlucaStories is een storytelling platform dat ervaringen deelt van plekken die de meeste mensen niet bezoeken.",
     "link": "https://gianlucastories.com/",
     "image": {
       "src": "/projects/gls/gls-mockup-2.webp",
-      "alt": "Mockup of website Gianlucastories desktop"
+      "alt": "Mockup van website GianlucaStories desktop"
     },
     "thumbnail": {
       "src": "/projects/gls/gls-hero.webp",
-      "alt": "Thumbnail of website Italianopoli desktop"
+      "alt": "Thumbnail van website GianlucaStories desktop"
     },
     "areaOfWork": [
-      { "label": "Area of work", "icon": "braces", "text": "Front-end development" },
-      { "label": "Area of work", "icon": "braces", "text": "Performance optimization" },
-      { "label": "Area of work", "icon": "braces", "text": "Api integration"}
+      { "label": "Werkgebied", "icon": "braces", "text": "Front-end development" },
+      { "label": "Werkgebied", "icon": "braces", "text": "Performance optimization" },
+      { "label": "Werkgebied", "icon": "braces", "text": "API integration" }
     ],
     "technologies": [
       { "icon": "vue" },
@@ -157,44 +157,44 @@
       { "icon": "scss" }
     ],
     "industries": [
-      { "icon": "camera", "label": "Photography" },
-      { "icon": "plane", "label": "Travel" }
+      { "icon": "camera", "label": "Fotografie" },
+      { "icon": "plane", "label": "Reizen" }
     ],
     "duration": [
-      { "icon": "clock", "label": "1 weeks (60 hours)" }
+      { "icon": "clock", "label": "1 week (60 uur)" }
     ],
     "contentBlocks": [
       {
-        "text": "Create a storytelling platform for a travel writer who explores destinations around the world. The website needed to support long-form articles, image galleries, and drone footage while being built for growth. As the client continues to travel and write, the site should scale effortlessly with new countries and stories. The end goal is to build an audience and eventually monetize through affiliate partnerships.",
+        "text": "Een storytelling platform creëren voor een reisschrijver die bestemmingen over de hele wereld verkent. De website moest long-form artikelen, fotogalerijen en drone-opnames ondersteunen en gebouwd zijn voor groei. Naarmate de klant blijft reizen en schrijven, moet de site moeiteloos meeschalen met nieuwe landen en verhalen. Het einddoel is een publiek opbouwen en uiteindelijk monetizen via affiliate partnerships.",
         "image": {
           "src": "/projects/gls/gls-mockup-7.webp",
-          "alt": "Mockup of website GianlucaStories"
+          "alt": "Mockup van website GianlucaStories"
         }
       },
       {
         "image": {
           "src": "/projects/gls/gls-mockup-11.webp",
-          "alt": "Mockup of various pages Italianopoli"
+          "alt": "Mockup van verschillende pagina's GianlucaStories"
         }
       },
       {
-        "text": "The content-heavy nature of the project, with extensive image galleries and drone videos from remote locations, required careful attention to performance. The site also needed a flexible structure that could grow organically as new destinations and articles are added, without becoming cluttered or slow over time."
+        "text": "De content-heavy aard van het project, met uitgebreide fotogalerijen en drone-video's van afgelegen locaties, vereiste zorgvuldige aandacht voor performance. De site had ook een flexibele structuur nodig die organisch kon groeien naarmate nieuwe bestemmingen en artikelen worden toegevoegd, zonder rommelig of traag te worden."
       },
       {
-        "text": "Built a scalable website with SSR for fast page loads despite heavy media content. Connected to a headless CMS so the client can publish articles independently from anywhere in the world. Designed a flexible content architecture that organizes stories by country and region, ready to expand as the journey continues. Optimized video loading and image delivery for smooth performance across all devices."
+        "text": "Een schaalbare website gebouwd met SSR voor snelle page loads ondanks zware media content. Gekoppeld aan een headless CMS zodat de klant zelfstandig artikelen kan publiceren vanaf waar ook ter wereld. Een flexibele content architectuur ontworpen die verhalen organiseert per land en regio, klaar om uit te breiden naarmate de reis doorgaat. Video loading en image delivery geoptimaliseerd voor soepele performance op alle apparaten."
       },
       {
         "image": {
           "src": "/projects/gls/gls-mockup-5.webp",
-          "alt": "Mockup tablet of Gianlucastories"
+          "alt": "Mockup tablet van GianlucaStories"
         }
       }
     ],
     "outcome": [
-      { "icon": "device-analytics", "label": "Optimized for heavy media content" },
-      { "icon": "pencil-pin", "label": "Self publishing content from anywhere in the world" },
-      { "icon": "trending-up", "label": "Scalable architecture for growth" },
-      { "icon": "currency-euro", "label": "Ready for affiliate integration" }
+      { "icon": "device-analytics", "label": "Geoptimaliseerd voor zware media content" },
+      { "icon": "pencil-pin", "label": "Zelf content publiceren vanaf overal ter wereld" },
+      { "icon": "trending-up", "label": "Schaalbare architectuur voor groei" },
+      { "icon": "currency-euro", "label": "Klaar voor affiliate integratie" }
     ]
   }
 ]

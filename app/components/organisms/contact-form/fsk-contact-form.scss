@@ -7,4 +7,16 @@
     @media (width > 1600px) {
         gap: 20px;
     }
+
+    &__button--loading {
+        .button__icon {
+            animation: spin .6s infinite linear, grow .3s forwards ease-out;
+        }
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(359deg);
+    }
 }

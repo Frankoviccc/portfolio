@@ -34,7 +34,7 @@ export const defaultFormValues: FormValues = {
         value: '',
         error: false,
         errorMessage: 'Please fill in your name',
-        pattern: /^[a-zA-ZÀ-ÿ]{2,}$/
+        pattern: /^[a-zA-ZÀ-ÿ\s'-]{2,}$/
     },
     email: {
         value: '',

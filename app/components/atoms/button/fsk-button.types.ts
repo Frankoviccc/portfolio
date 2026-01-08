@@ -27,4 +27,5 @@ export type iconType =
     | 'brand-x-filled'
     | 'facebook'
     | 'instagram'
-    | 'coin-euro';
+    | 'coin-euro'
+    | 'loader';
