@@ -13,8 +13,7 @@
                         'card__image',
                         { 'card__image--filter': filterImage }
                     ]"
-                    :widths="[320, 480, 640, 768, 1024, 1200, 1600]"
-                    sizes="xs:100vw sm:100vw md:256px lg:341px xl:427px"
+                    sizes="xs:274px sm:530px md:215px lg:299px xl:358px xxl:33vw"
                     format="avif,webp"
                     loading="lazy"
                 />

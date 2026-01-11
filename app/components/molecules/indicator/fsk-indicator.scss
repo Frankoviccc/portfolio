@@ -77,6 +77,10 @@
         font-size: 0.875rem;
         font-weight: 400;
 
+        &:hover {
+            text-decoration: underline;
+        }
+
         @media (width > 1200px) {
             font-size: 1.5rem;
         }
@@ -89,6 +93,7 @@
         width: 100%;
         height: 100%;
         padding: 16px;
+        text-decoration: none;
 
         &-icon {
             display: none;

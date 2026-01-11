@@ -6,7 +6,7 @@
         :items="post?.areaOfWork"
     />
 
-    <FskContentBlock
+    <LazyFskContentBlock
         :title="project.contentBlock.title"
         :text="contentBlocks?.[0]?.text"
         :image="contentBlocks?.[0]?.image"
@@ -16,13 +16,13 @@
         :style="{ margin: 'var(--spacing)' }"
     />
 
-    <FskLayout
+    <LazyFskLayout
         direction="row"
         layout="equal"
         collapse="lg"
         :style="{ margin: 'var(--spacing)' }"
     >
-        <FskIconCarousel
+        <LazyFskIconCarousel
             v-if="post?.technologies"
             :items="post?.technologies"
             :animate="true"
@@ -31,9 +31,9 @@
             <template #title>
                 <h2 class="u-text-xl">{{ project.stack.title }}</h2>
             </template>
-        </FskIconCarousel>
+        </LazyFskIconCarousel>
 
-        <FskIconCollection
+        <LazyFskIconCollection
             :items="post?.industries"
             :center="true"
             size="md"
@@ -42,9 +42,9 @@
             <template #title>
                 <h2 class="u-text-xl">{{ project.industries.title }}</h2>
             </template>
-        </FskIconCollection>
+        </LazyFskIconCollection>
 
-        <FskIconCollection
+        <LazyFskIconCollection
             :items="post?.duration"
             :center="true"
             size="md"
@@ -53,10 +53,10 @@
             <template #title>
                 <h2 class="u-text-xl">{{ project.duration.title }}</h2>
             </template>
-        </FskIconCollection>
-    </FskLayout>
+        </LazyFskIconCollection>
+    </LazyFskLayout>
 
-    <FskContentBlock
+    <LazyFskContentBlock
         :title="project.contentBlockEmpty.title"
         :label="project.contentBlockEmpty.label"
         :link="project.contentBlockEmpty.link"
@@ -85,23 +85,23 @@
         />
     </div>
 
-    <FskLayout
+    <LazyFskLayout
         direction="row"
         collapse="md"
         :style="{ margin: 'var(--spacing)' }"
     >
-        <FskContentBlock
+        <LazyFskContentBlock
             :title="project.challenge.title"
             :text="contentBlocks?.[2]?.text"
         />
 
-        <FskContentBlock
+        <LazyFskContentBlock
             :title="project.solution.title"
             :text="contentBlocks?.[3]?.text"
         />
-    </FskLayout>
+    </LazyFskLayout>
 
-    <FskLayout
+    <LazyFskLayout
         :spacing="true"
         direction="row"
         layout="two-third"
@@ -127,7 +127,7 @@
             />
         </div>
 
-        <FskIconCollection
+        <LazyFskIconCollection
             title="Outcome"
             direction="column"
             size="md"
@@ -135,7 +135,7 @@
             :center="false"
             :items="post?.outcome"
         />
-    </FskLayout>
+    </LazyFskLayout>
 </template>
 
 <script lang="ts" setup>

@@ -8,22 +8,22 @@
             :image="index.header.image"
         />
 
-        <FskContentBlock
+        <LazyFskContentBlock
             :title="index.contentBlock.title"
             :text="index.contentBlock.text"
             :button-group="index.contentBlock.items"
             :style="{ margin: 'var(--spacing)' }"
         />
 
-        <FskCounterCollection />
+        <LazyFskCounterCollection />
 
-        <FskLayout
+        <LazyFskLayout
             direction="row"
             layout="equal"
             collapse="lg"
             :style="{ margin: 'var(--spacing)' }"
         >
-            <FskIconCarousel
+            <LazyFskIconCarousel
                 :title="index.technologies.title"
                 :items="index.technologies.items"
                 :animate="true"
@@ -32,15 +32,15 @@
                 :glow-effect="true"
             />
 
-            <FskGitWidget />
-        </FskLayout>
+            <LazyFskGitWidget />
+        </LazyFskLayout>
 
-        <FskExperience
+        <LazyFskExperience
             :title="index.experience.title"
             :items="index.experience.items"
         />
 
-        <FskContentBlock
+        <LazyFskContentBlock
             :title="index.projects.title"
             :label="index.projects.label"
             :link="index.projects.link"
@@ -48,41 +48,41 @@
             :style="{ margin: 'var(--spacing)' }"
         />
 
-        <FskCardCollection
+        <LazyFskCardCollection
             :cards="projects"
             :style="{ margin: 'var(--spacing)' }"
             path-name="projects"
         />
 
-        <FskLayout
+        <LazyFskLayout
             direction="row"
             layout="two-third"
             collapse="lg"
             :style="{ margin: 'var(--spacing)' }"
         >
-            <FskStepCollection
+            <LazyFskStepCollection
                 :title="index.stepCollection.title"
                 :button-text="index.stepCollection.buttonText"
                 :button-link="index.stepCollection.buttonLink"
                 :items="index.stepCollection.items"
             />
 
-            <FskIconCarousel
+            <LazyFskIconCarousel
                 :title="index.industries.title"
                 :items="index.industries.items"
                 :center-track="true"
                 :double-track="true"
                 :animate="true"
             />
-        </FskLayout>
+        </LazyFskLayout>
 
-        <FskLayout
+        <LazyFskLayout
             direction="row"
             layout="equal"
             collapse="lg"
             :style="{ margin: 'var(--spacing)' }"
         >
-            <FskCalculator
+            <LazyFskCalculator
                 :title="index.calculator.title"
                 :text="index.calculator.text"
                 :project-options="index.calculator.projectOptions"
@@ -90,28 +90,28 @@
                 :timeline-options="index.calculator.timelineOptions"
             />
 
-            <FskFaqs
+            <LazyFskFaqs
                 :title="index.FAQs.title"
                 :items="index.FAQs.items"
             />
-        </FskLayout>
+        </LazyFskLayout>
 
-        <FskLayout
+        <LazyFskLayout
             direction="row"
             layout="third-two"
             collapse="lg"
             :style="{ margin: 'var(--spacing)' }"
         >
-            <FskSocialProof
+            <LazyFskSocialProof
                 :title="index.socialProof.title"
                 :icons="index.socialProof.items"
             />
 
-            <FskTestimonialSlider
+            <LazyFskTestimonialSlider
                 :title="index.testimonials.title"
                 :items="index.testimonials.items"
             />
-        </FskLayout>
+        </LazyFskLayout>
 
 <!--        <FskContentBlock-->
 <!--            :title="index.contentBlockEmpty.title"-->

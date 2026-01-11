@@ -61,10 +61,9 @@
             <NuxtPicture
                 :src="image.src"
                 :alt="image.alt"
-                :widths="[320, 480, 640, 768, 1024, 1200, 1600]"
                 loading="eager"
                 fetchpriority="high"
-                sizes="100vw lg:50vw"
+                sizes="xs:530px sm:750px md:500px lg:590px xl:785px xxl:50vw"
                 format="avif,webp"
                 class="page-header__image"
             />

@@ -7,8 +7,10 @@
         >
             <div class="indicator__container">
                 <div
-                    class="indicator__pulsing"
-                    :class="!available ? 'pulsing--unavailable' : ''"
+                    :class="[
+                        'indicator__pulsing',
+                        { 'indicator__pulsing--unavailable': !available }
+                    ]"
                 >
                     <div class="indicator__pulsing-1" />
                     <div class="indicator__pulsing-2" />

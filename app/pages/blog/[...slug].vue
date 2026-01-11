@@ -18,18 +18,18 @@
             </template>
         </FskSinglePageHeader>
 
-        <FskLayout
+        <LazyFskLayout
             layout="third-two"
             direction="row"
             collapse="md"
             :style="{ margin: 'var(--spacing)' }"
         >
-            <FskText :text="contentBlocks?.[0]?.text" />
+            <LazyFskText :text="contentBlocks?.[0]?.text" />
 
-            <FskText :text="contentBlocks?.[1]?.text" />
-        </FskLayout>
+            <LazyFskText :text="contentBlocks?.[1]?.text" />
+        </LazyFskLayout>
 
-        <NuxtImg
+        <LazyNuxtImg
             v-if="contentBlocks?.[2]?.image"
             :src="contentBlocks[2].image.src"
             :alt="contentBlocks[2].image.alt"
@@ -41,18 +41,18 @@
             class="image bento"
         />
 
-        <FskLayout
+        <LazyFskLayout
             direction="row"
             layout="two-third"
             collapse="lg"
             :style="{ margin: 'var(--spacing)' }"
         >
-            <FskText :text="contentBlocks?.[3]?.text" />
+            <LazyFskText :text="contentBlocks?.[3]?.text" />
 
-            <FskLayout direction="column">
-                <FskText :text="contentBlocks?.[4]?.text" />
+            <LazyFskLayout direction="column">
+                <LazyFskText :text="contentBlocks?.[4]?.text" />
 
-                <FskIconCollection
+                <LazyFskIconCollection
                     direction="row"
                     size="lg"
                     :responsive="true"
@@ -64,23 +64,23 @@
                             {{ blogPost.share[1]?.title }}
                         </h3>
                     </template>
-                </FskIconCollection>
-            </FskLayout>
-        </FskLayout>
+                </LazyFskIconCollection>
+            </LazyFskLayout>
+        </LazyFskLayout>
 
-        <FskContentBlock
+        <LazyFskContentBlock
             :title="blogPost.contentBlock.title"
             :label="blogPost.contentBlock.label"
             :link="blogPost.contentBlock.link"
             :desktop-only="true"
         />
 
-        <FskLayout
+        <LazyFskLayout
             direction="row"
             layout="equal"
             :style="{ margin: 'var(--spacing)' }"
         >
-            <FskCardCollection
+            <LazyFskCardCollection
                 :is-swipe="true"
                 :filter-image="true"
                 :cards="allBlogPosts"
@@ -89,7 +89,7 @@
                 :button-link="blogPost.contentBlock.link"
                 path-name="/blog"
             />
-        </FskLayout>
+        </LazyFskLayout>
     </main>
 </template>
 
