@@ -1,33 +1,36 @@
 <template>
     <div class="indicator bento">
-        <NuxtLink
+        <component
             class="indicator__button"
-            to="/contact"
+            :is="isContactPage ? 'div' : NuxtLink"
+            :to="isContactPage ? undefined : '/contact'"
         >
-        <div class="indicator__container">
-            <div
-                class="indicator__pulsing"
-                :class="!available ? 'pulsing--unavailable' : ''"
-            >
-                <div class="indicator__pulsing-1" />
-                <div class="indicator__pulsing-2" />
-                <div class="indicator__pulsing-3" />
+            <div class="indicator__container">
+                <div
+                    class="indicator__pulsing"
+                    :class="!available ? 'pulsing--unavailable' : ''"
+                >
+                    <div class="indicator__pulsing-1" />
+                    <div class="indicator__pulsing-2" />
+                    <div class="indicator__pulsing-3" />
+                </div>
             </div>
 
-        </div>
-            {{ text }}
+            <span class="indicator__text">
+                {{ text }}
+            </span>
 
             <Icon
+                v-if="!isContactPage"
                 class="indicator__button-icon"
                 name="tabler:arrow-up-right"
             />
-        </NuxtLink>
+        </component>
     </div>
 </template>
 
 <script setup lang="ts">
 import NuxtLink from '#app/components/nuxt-link.js'
-import FskButton from "~/components/atoms/button/fsk-button.vue";
 
 interface Props {
     available?: boolean;
@@ -37,6 +40,12 @@ interface Props {
 withDefaults(defineProps<Props>(), {
     available: false,
 });
+
+const route = useRoute()
+
+const isContactPage = computed(() => {
+    return route.path === '/contact'
+})
 </script>
 
 <style lang="scss">
