@@ -95,7 +95,7 @@ export default defineNuxtConfig({
       xl: 1200,
       xxl: 1600,
     },
-    provider: 'cloudflare',
+    provider: process.env.NODE_ENV === 'production' ? 'cloudflare' : 'ipx',
     cloudflare: {
       baseURL: 'https://frankstruik.com/'
     }

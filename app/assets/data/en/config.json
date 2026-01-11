@@ -15,7 +15,8 @@
     "text": "Based in the Netherlands",
     "links": [
       { "label": "Projects", "to": "/projects" },
-      { "label": "About", "to": "/about" }
+      { "label": "About", "to": "/about" },
+      { "label": "Contact", "to": "/contact" }
     ],
     "icons": [
       { "to": "https://github.com/Frankoviccc", "icon": "github", "ariaLabel": "Navigate to my Github profile" },

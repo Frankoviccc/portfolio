@@ -32,7 +32,7 @@
             name="message"
             field-id="message"
             placeholder="Message"
-            rows="4"
+            rows="6"
             :error="values.message.error"
             :error-message="values.message.errorMessage"
             :value="values.message.value"

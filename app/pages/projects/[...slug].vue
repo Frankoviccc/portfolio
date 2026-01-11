@@ -121,8 +121,7 @@
                 :src="contentBlocks[4].image.src"
                 :alt="contentBlocks[4].image.alt"
                 loading="lazy"
-                format="avif, webp"
-                densities="1x, 2x"
+                format="avif,webp"
                 sizes="100vw lg:75vw"
                 class="picture"
             />

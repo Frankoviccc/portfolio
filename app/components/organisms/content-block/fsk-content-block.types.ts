@@ -1,7 +1,7 @@
 import type { iconType } from "~/components/atoms/button/fsk-button.types";
 
 export interface Props {
-    title: string;
+    title?: string;
     text?: string;
     link?: string;
     label?: string;

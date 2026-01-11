@@ -15,7 +15,10 @@
             ]"
         >
             <div class="content-block__container">
-                <h2 class="content-block__title">
+                <h2
+                    v-if="title"
+                    class="content-block__title"
+                >
                     {{ title }}
                 </h2>
 
@@ -30,7 +33,10 @@
                 <slot name="text" />
             </div>
 
-            <div class="content-block__container">
+            <div
+                v-if="buttonGroup || link"
+                class="content-block__container"
+            >
                 <div
                     v-if="buttonGroup"
                     class="content-block__button-group"
@@ -60,7 +66,6 @@
             </div>
         </div>
 
-
         <NuxtPicture
             v-if="image"
             class="content-block__image bento"
@@ -68,8 +73,7 @@
             :alt="image.alt"
             loading="lazy"
             sizes="100vw md:50vw xxl:75vw"
-            format="avif, webp"
-            densities="1x, 2x"
+            format="avif,webp"
         />
     </section>
 </template>

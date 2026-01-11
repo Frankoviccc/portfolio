@@ -62,11 +62,10 @@
                 :src="image.src"
                 :alt="image.alt"
                 :widths="[320, 480, 640, 768, 1024, 1200, 1600]"
-                desinties="1,2"
                 loading="eager"
                 fetchpriority="high"
                 sizes="100vw lg:50vw"
-                format="avif, webp"
+                format="avif,webp"
                 class="page-header__image"
             />
 

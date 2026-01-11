@@ -39,8 +39,7 @@
                 loading="eager"
                 fetchpriority="high"
                 sizes="100vw md:75vw"
-                format="avif, webp"
-                densities="1x, 2x"
+                format="avif,webp"
                 class="single-page-header__image bento"
             />
 

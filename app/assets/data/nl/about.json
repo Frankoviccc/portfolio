@@ -1,0 +1,8 @@
+{
+  "title": "Over mij",
+  "text": "<p>Hey, I'm Frank! About two and a half years ago I dove headfirst into front-end development at Leads.io. I started out with CRO work, which was the perfect playground for sharpening my CSS and JavaScript skills. Before long, I was building Vue components and crafting full CRO templates.</p><p>After a year and a half, I took the leap and went freelance. These days I spend my time building websites from the ground up with Nuxt. E-commerce, storytelling sites, business pages, funnels, and CMS integrations. Going solo has been a game-changer for my growth, and the side projects I've taken on have taught me more than I could've imagined.</p><p>Here's what I bring to the table:</p><ul><li>Turning Figma designs into pixel-perfect code</li><li>Building complete websites with CMS integration</li><li>Developing with accessibility in mind</li><li>State management</li><li>API handling</li><li>Performance optimization</li><li>SEO optimization</li></ul>",
+  "image": {
+    "src": "/bangkok.webp",
+    "alt": "Computer desk with Bangkok skyline as background"
+  }
+}

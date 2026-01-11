@@ -129,3 +129,13 @@ p, .u-paragraph {
     font-size: 2.5rem;
     line-height: 3rem;
 }
+
+.text-block {
+    p {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        margin-bottom: 1rem;
+    }
+}
