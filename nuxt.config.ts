@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
+    '@nuxtjs/sitemap'
   ],
 
   runtimeConfig: {
@@ -64,6 +65,10 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
   },
 
+  site: {
+    url: 'https://frankstruik.com',
+  },
+
   components: [
     {
       path: '~/components',
@@ -94,6 +99,9 @@ export default defineNuxtConfig({
       lg: 1024,
       xl: 1200,
       xxl: 1600,
+    },
+    modifiers: {
+      quality: 75,
     },
     provider: process.env.NODE_ENV === 'production' ? 'cloudflare' : 'ipx',
     cloudflare: {
