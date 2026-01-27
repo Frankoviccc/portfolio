@@ -121,7 +121,10 @@ p, .u-paragraph {
 .u-tiny-text {
     font-size: 0.875rem;
     line-height: 1.33rem;
-    opacity: 0.6;
+
+    @media (width > 1600px) {
+        font-size: 1rem;
+    }
 }
 
 .u-text-xl {

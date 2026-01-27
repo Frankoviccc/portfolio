@@ -51,4 +51,16 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener('resize', updateHeight)
 })
+
+useSeoMeta({
+    title: 'Contact - Frank Struik',
+    description: 'Get in touch with Frank Struik for frontend development projects, collaborations, or inquiries. Let\'s build something great together!',
+    ogTitle: 'Contact - Frank Struik',
+    ogDescription: 'Get in touch with Frank Struik for frontend development projects, collaborations, or inquiries. Let\'s build something great together!',
+    ogImage: 'https://frankstruik.com/og-logo.png',
+    ogImageWidth: '1200',
+    ogImageHeight: '1200',
+    twitterCard: 'summary_large_image',
+    twitterImage: 'https://frankstruik.com/og-logo.png',
+})
 </script>

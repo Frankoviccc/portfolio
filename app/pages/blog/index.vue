@@ -8,6 +8,8 @@
         :style="{ margin: 'var(--spacing)' }"
         path-name="blog"
     />
+
+    {{ blogPosts }}
 </template>
 
 <script setup lang="ts">

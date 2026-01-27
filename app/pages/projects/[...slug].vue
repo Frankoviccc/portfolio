@@ -156,4 +156,16 @@ const post = computed(() => {
 })
 
 const contentBlocks = post.value?.contentBlocks
+
+useSeoMeta({
+    title: `${post.value?.title} - Frank Struik`,
+    description: post.value?.text,
+    ogTitle: post.value?.title,
+    ogDescription: post.value?.text,
+    ogImage: post.value?.image.src,
+    ogImageWidth: '1200',
+    ogImageHeight: '630',
+    twitterCard: 'summary_large_image',
+    twitterImage: post.value?.image.src,
+})
 </script>

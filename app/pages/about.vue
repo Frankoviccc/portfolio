@@ -50,4 +50,16 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener('resize', updateHeight)
 })
+
+useSeoMeta({
+    title: 'About - Frank Struik',
+    description: 'Learn more about Frank Struik, a proactive Frontend Developer specializing in creating smooth web experiences.',
+    ogTitle: 'About - Frank Struik',
+    ogDescription: 'Learn more about Frank Struik, a proactive Frontend Developer specializing in creating smooth web experiences.',
+    ogImage: 'https://frankstruik.com/og-logo.png',
+    ogImageWidth: '1200',
+    ogImageHeight: '1200',
+    twitterCard: 'summary_large_image',
+    twitterImage: 'https://frankstruik.com/og-logo.png',
+})
 </script>

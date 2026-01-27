@@ -31,14 +31,6 @@
         }
     }
 
-    &__title {
-        font-size: 1rem;
-
-        @media (width > 1600px) {
-            font-size: 1.25rem;
-        }
-    }
-
     &__content {
         margin-top: 10px;
         opacity: 0.8;

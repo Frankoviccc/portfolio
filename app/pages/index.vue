@@ -146,13 +146,15 @@ const { getAllBlogPosts, getAllProjects } = await useContent()
 const blogPosts = getAllBlogPosts()
 const projects = getAllProjects()
 
-useHead({
-    title: 'Frank Struik',
-    meta: [
-        {
-            name: 'description',
-            content: 'Frank Struik - Frontend Developer Portfolio',
-        }
-    ]
+useSeoMeta({
+    title: 'Frank Struik - Frontend Developer',
+    description: 'Frank Struik - Frontend Developer Portfolio',
+    ogTitle: 'Frank Struik - Frontend Developer',
+    ogDescription: 'Frank Struik - Frontend Developer Portfolio',
+    ogImage: 'https://frankstruik.com/og-logo.png',
+    ogImageWidth: '1200',
+    ogImageHeight: '1200',
+    twitterCard: 'summary_large_image',
+    twitterImage: 'https://frankstruik.com/og-logo.png',
 })
 </script>

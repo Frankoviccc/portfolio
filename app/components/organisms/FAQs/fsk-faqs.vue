@@ -14,9 +14,19 @@
                 <FskAccordion
                     v-for="(item, index) in items"
                     :key="index"
-                    :title="item.title"
-                    :text="item.text"
-                />
+                >
+                    <template #title>
+                        <p>
+                            {{ item.title }}
+                        </p>
+                    </template>
+
+                    <template #text>
+                        <p class="u-tiny-text">
+                            {{ item.text }}
+                        </p>
+                    </template>
+                </FskAccordion>
             </ul>
         </div>
     </section>

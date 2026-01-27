@@ -5,9 +5,7 @@
         @click="toggle"
     >
         <div class="accordion__header">
-            <p class="accordion__title">
-                {{ title }}
-            </p>
+            <slot name="title"/>
 
             <Icon
                 class="accordion__icon"
@@ -20,18 +18,12 @@
             ref="content"
             class="accordion__content"
         >
-            <p>
-                {{ text }}
-            </p>
+            <slot name="text"/>
         </div>
     </li>
 </template>
 
 <script lang="ts" setup>
-import type { Props } from './fsk-accordion.types';
-
-defineProps<Props>()
-
 const isOpen = ref(false)
 const accordion = ref()
 const content = ref()
