@@ -35,7 +35,7 @@
                                 </span>
                             </td>
                             <td
-                                v-for="(week, weekIndex) in weeks"
+                                v-for="(week, weekIndex) in formattedWeeks"
                                 :key="weekIndex"
                                 class="widget__day-cell"
                             >
@@ -49,7 +49,7 @@
                                                 : 'transparent'
                                         }"
                                     :title="week.contributionDays[dayIndex]
-                                            ? `${week.contributionDays[dayIndex].contributionCount} contributions op ${new Date(week.contributionDays[dayIndex].date).toLocaleDateString('nl-NL')}`
+                                            ? `${week.contributionDays[dayIndex].contributionCount} contributions op ${week.contributionDays[dayIndex].formattedDate}`
                                             : 'Geen data beschikbaar'"
                                 />
                             </td>
@@ -86,6 +86,15 @@ const data = await $fetch('/api/github', {
         toDate: endDate
     }
 })
+
+// Functie om datum te formatteren zonder hydration issues
+const formatDate = (dateString) => {
+    const date = new Date(dateString)
+    const day = date.getDate().toString().padStart(2, '0')
+    const month = (date.getMonth() + 1).toString().padStart(2, '0')
+    const year = date.getFullYear()
+    return `${day}-${month}-${year}`
+}
 
 const getContributionColor = (count) => {
     if (count === 0) return 'var(--color-neutral-200)'
@@ -135,6 +144,20 @@ const weeks = computed(() => {
     }
 
     return apiWeeks
+})
+
+// Nieuwe computed property met geformatteerde datums
+const formattedWeeks = computed(() => {
+    return weeks.value.map(week => ({
+        ...week,
+        contributionDays: week.contributionDays.map(day => {
+            if (!day) return null
+            return {
+                ...day,
+                formattedDate: formatDate(day.date)
+            }
+        })
+    }))
 })
 
 const monthLabels = computed(() => {
