@@ -151,10 +151,10 @@ useSeoMeta({
     description: 'Frank Struik - Frontend Developer Portfolio',
     ogTitle: 'Frank Struik - Frontend Developer',
     ogDescription: 'Frank Struik - Frontend Developer Portfolio',
-    ogImage: 'https://frankstruik.com/og-logo.png',
+    ogImage: 'https://frankstruik.com/mt-fuji.webp',
     ogImageWidth: '1200',
-    ogImageHeight: '1200',
+    ogImageHeight: '630',
     twitterCard: 'summary_large_image',
-    twitterImage: 'https://frankstruik.com/og-logo.png',
+    twitterImage: 'https://frankstruik.com/mt-fuji.webp',
 })
 </script>
