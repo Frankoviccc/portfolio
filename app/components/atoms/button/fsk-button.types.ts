@@ -1,4 +1,4 @@
-import NuxtLink from '#app/components/nuxt-link.js';
+import type NuxtLink from '#app/components/nuxt-link.js';
 export interface Props {
     is?: 'button' | typeof NuxtLink;
     to?: string;

@@ -1,5 +1,5 @@
 export interface Props {
-    icon?: string | Component;
+    icon?: string | null;
     iconColor?: string;
     iconColorItem?: string;
     size?: "sm" | "md" | "lg";

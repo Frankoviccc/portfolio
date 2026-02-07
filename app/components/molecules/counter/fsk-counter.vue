@@ -48,12 +48,7 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-    counter: number;
-    label: string;
-    percentage: number;
-    isLoading: boolean
-}
+import type { Props } from './fsk-counter.types';
 
 const props = withDefaults(defineProps<Props>(), {
     isLoading: true

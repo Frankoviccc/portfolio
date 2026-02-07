@@ -1,9 +1,9 @@
 <template>
     <div class="indicator bento">
         <component
-            class="indicator__button"
             :is="isContactPage ? 'div' : NuxtLink"
             :to="isContactPage ? undefined : '/contact'"
+            class="indicator__button"
         >
             <div class="indicator__container">
                 <div
@@ -41,6 +41,7 @@ interface Props {
 
 withDefaults(defineProps<Props>(), {
     available: false,
+    text: 'Available'
 });
 
 const route = useRoute()

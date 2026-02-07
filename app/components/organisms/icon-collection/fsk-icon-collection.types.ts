@@ -10,10 +10,10 @@ export type Props = {
 }
 
 export interface CollectionItem {
-    icon: string | Component;
+    icon: string | null;
     color?: string;
     link?: string;
     label?: string;
-    image?: string;
+    image?: { src: string; alt: string };
     action?: string;
 }

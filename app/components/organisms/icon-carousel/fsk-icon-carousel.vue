@@ -42,8 +42,8 @@
                         ]"
                     >
                         <component
-                            v-if="!item.label"
                             :is="getIcon(item.icon)"
+                            v-if="!item.label"
                         />
 
                         <div
@@ -79,8 +79,8 @@
                         ]"
                     >
                         <component
-                            v-if="!item.label"
                             :is="getIcon(item.icon)"
+                            v-if="!item.label"
                         />
 
                         <div

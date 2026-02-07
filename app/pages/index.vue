@@ -142,8 +142,7 @@
 const { locale } = useI18n()
 const index = (await import(`~/assets/data/${locale.value}/index.json`)).default
 
-const { getAllBlogPosts, getAllProjects } = await useContent()
-const blogPosts = getAllBlogPosts()
+const { getAllProjects } = await useContent()
 const projects = getAllProjects()
 
 useSeoMeta({

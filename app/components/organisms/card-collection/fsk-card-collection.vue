@@ -7,9 +7,10 @@
     >
         <h2
             v-if="title"
-            v-html="title"
             class="card-collection__title"
-        />
+        >
+            {{ title }}
+        </h2>
 
         <div
             :class="[

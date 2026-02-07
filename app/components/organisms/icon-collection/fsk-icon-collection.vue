@@ -4,8 +4,9 @@
             <h2
                 v-if="title"
                 class="icon-collection__title"
-                v-html="title"
-            />
+            >
+                {{ title }}
+            </h2>
 
             <slot name="title" />
 

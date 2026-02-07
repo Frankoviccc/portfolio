@@ -1,7 +1,7 @@
 <template>
     <component
-        v-if="$slots.default || icon"
         :is="is"
+        v-if="$slots.default || icon"
         :to="to"
         :background="background"
         :download="download"

@@ -19,8 +19,8 @@
             />
 
             <component
-                v-else-if="icon && !label"
                 :is="getIcon(icon)"
+                v-else-if="icon && !label"
                 :class="[
                     'icon-container__icon',
                     size && `icon-container__icon--${size}`,
@@ -47,8 +47,9 @@
             <span
                 v-if="label"
                 class="icon-container__label"
-                v-html="label"
-            />
+            >
+                {{ label }}
+            </span>
         </component>
     </div>
 </template>

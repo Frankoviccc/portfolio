@@ -110,17 +110,33 @@ const currentIndexDesktop = ref<number>(0);
 
 function clickRight(isMobile: string) {
     if (isMobile === 'mobile') {
-        currentIndexMobile.value !== props.items.length - 1 ? currentIndexMobile.value++ : currentIndexMobile.value = 0;
+        if (currentIndexMobile.value !== props.items.length - 1) {
+            currentIndexMobile.value++;
+        } else {
+            currentIndexMobile.value = 0;
+        }
     } else {
-        currentIndexDesktop.value !== props.items.length - 2 ? currentIndexDesktop.value += 2 : currentIndexDesktop.value = props.items.length - 2
+        if (currentIndexDesktop.value !== props.items.length - 2) {
+            currentIndexDesktop.value += 2;
+        } else {
+            currentIndexDesktop.value = props.items.length - 2;
+        }
     }
 }
 
 function clickLeft(isMobile: string) {
     if (isMobile === 'mobile') {
-        currentIndexMobile.value !== 0 ? currentIndexMobile.value-- : currentIndexMobile.value = props.items.length - 1
+        if (currentIndexMobile.value !== 0) {
+            currentIndexMobile.value--;
+        } else {
+            currentIndexMobile.value = props.items.length - 1;
+        }
     } else {
-        currentIndexDesktop.value !== 0 ? currentIndexDesktop.value -= 2 : currentIndexDesktop.value = 0
+        if (currentIndexDesktop.value !== 0) {
+            currentIndexDesktop.value -= 2;
+        } else {
+            currentIndexDesktop.value = 0;
+        }
     }
 }
 </script>

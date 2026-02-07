@@ -69,8 +69,9 @@
                         <p
                             v-if="text"
                             class="card__content-text"
-                            v-html="text"
-                        />
+                        >
+                            {{ text }}
+                        </p>
                     </div>
                 </div>
             </div>

@@ -93,8 +93,8 @@
             <div
                 v-show="optionsListVisible && options?.length"
                 ref="optionsList"
-                class="input-field__list"
                 key="options-list-checkbox"
+                class="input-field__list"
             >
                 <div
                     v-for="(option, index) in options"

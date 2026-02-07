@@ -13,16 +13,16 @@
             />
 
             <div class="single-page-header__header-text">
-                <h1
-                    class="single-page-header__header-title"
-                    v-html="title"
-                />
+                <h1 class="single-page-header__header-title">
+                    {{ title }}
+                </h1>
 
                 <p
                     v-if="text"
                     class="single-page-header__header-text"
-                    v-html="text"
-                />
+                >
+                    {{ text }}
+                </p>
             </div>
         </div>
 
@@ -53,18 +53,18 @@
                         <span
                             v-if="item.label"
                             class="single-page-header__item-label"
-                            v-html="item.label"
-                        />
+                        >
+                            {{ item.label }}
+                        </span>
 
                         <Icon
                             :name="'tabler:' + item.icon"
                             class="single-page-header__item-icon"
                         />
 
-                        <span
-                            class="single-page-header__item-text"
-                            v-html="item.text"
-                        />
+                        <span class="single-page-header__item-text">
+                            {{ item.text }}
+                        </span>
                     </li>
                 </ul>
             </slot>

@@ -26,8 +26,8 @@
 
                 <p
                     v-if="text"
-                    v-html="text"
                     class="content-block__text"
+                    v-html="text"
                 />
 
                 <slot name="text" />

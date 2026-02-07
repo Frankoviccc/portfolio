@@ -51,7 +51,7 @@
                                     :title="week.contributionDays[dayIndex]
                                             ? `${week.contributionDays[dayIndex].contributionCount} contributions op ${new Date(week.contributionDays[dayIndex].date).toLocaleDateString('nl-NL')}`
                                             : 'Geen data beschikbaar'"
-                                ></div>
+                                />
                             </td>
                         </tr>
                         </tbody>

@@ -64,9 +64,9 @@
             />
 
             <FskButton
+                is="button"
                 :icon="'coin-euro'"
                 :background="true"
-                is="button"
                 class="calculator__button"
                 aria-label="Calculate the price of your project"
                 @click="calculate"
@@ -158,8 +158,13 @@ function handleProjectType(value: string, minNumberOfPages: number) {
 
     values.value.numberOfPages.value = String(minNumberOfPages);
 
-    values.value.projectType.error ? values.value.projectType.error = false : null;
-    values.value.numberOfPages.error ? values.value.numberOfPages.error = false : null;
+    if (values.value.projectType.error) {
+        values.value.projectType.error = false;
+    }
+
+    if (values.value.numberOfPages.error) {
+        values.value.numberOfPages.error = false;
+    }
 }
 
 function calculate() {

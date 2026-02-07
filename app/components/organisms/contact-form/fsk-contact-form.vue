@@ -3,7 +3,9 @@
         class="form"
         @submit.prevent="handleForm"
     >
-        <h2 class="footer__form-title" v-html="title"/>
+        <h2 class="footer__form-title">
+            {{ title }}
+        </h2>
 
         <FskInputField
             is="input"

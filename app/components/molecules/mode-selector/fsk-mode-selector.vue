@@ -13,8 +13,8 @@
             >
                 <Transition name="fade">
                     <Icon
-                        :name="`tabler:${icon}`"
                         :key="icon"
+                        :name="`tabler:${icon}`"
                         size="20"
                         class="mode-selector__icon"
                     />
@@ -25,9 +25,7 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-    inDropdown?: boolean;
-}
+import type { Props } from './fsk-mode-selector.types';
 
 defineProps<Props>();
 

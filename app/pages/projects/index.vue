@@ -1,15 +1,15 @@
 <template>
-    <FskSinglePageHeader
-        title="Projects"
-    />
+    <div>
+        <FskSinglePageHeader
+            title="Projects"
+        />
 
-    {{ projects }}
-
-    <FskCardCollection
-        :cards="projects"
-        :style="{ margin: 'var(--spacing)' }"
-        path-name="projects"
-    />
+        <FskCardCollection
+            :cards="projects"
+            :style="{ margin: 'var(--spacing)' }"
+            path-name="projects"
+        />
+    </div>
 </template>
 
 <script setup lang="ts">

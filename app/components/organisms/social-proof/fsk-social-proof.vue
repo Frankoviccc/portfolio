@@ -4,9 +4,11 @@
             {{ title }}
         </h2>
 
-        <div class="social-proof__icons">
+        <div
+            v-if="icons"
+            class="social-proof__icons"
+        >
             <FskIconContainer
-                v-if="icons"
                 v-for="(item, index) in icons"
                 :key="index"
                 :to="item.to"

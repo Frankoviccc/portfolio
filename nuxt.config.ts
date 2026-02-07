@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxt/eslint'
   ],
 
   runtimeConfig: {
@@ -33,7 +34,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    //@ts-ignore
     plugins: [svgLoader()],
   },
 

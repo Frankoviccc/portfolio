@@ -22,7 +22,7 @@ import instagram from "@/assets/icons/instagram.svg";
 import copylink from "@/assets/icons/copy-link.svg";
 import tailwind from "@/assets/icons/tailwind.svg";
 
-export const iconMap: Record<string, string | Component> = {
+export const iconMap: Record<string, Component | string> = {
     vue,
     nuxt,
     javascript,
@@ -48,6 +48,9 @@ export const iconMap: Record<string, string | Component> = {
     tailwind
 }
 
-export const getIcon = (name: string): string | Component | null => {
-    return iconMap[name] || null
+export const getIcon = (name: string | null): Component | string | null => {
+    if (!name) {
+        return null;
+    }
+    return iconMap[name] || null;
 }

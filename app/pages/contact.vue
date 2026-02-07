@@ -1,35 +1,38 @@
 <template>
-    <FskSinglePageHeader :title="contact.title"/>
+    <div>
+        <FskSinglePageHeader :title="contact.title"/>
 
-    <FskLayout
-        direction="row"
-        layout="quarter-three"
-        collapse="lg"
-        :style="{ margin: 'var(--spacing)' }"
-    >
-        <FskText
-            ref="textEl"
-            :text="contact.text"
-        />
+        <FskLayout
+            direction="row"
+            layout="quarter-three"
+            collapse="lg"
+            :style="{ margin: 'var(--spacing)' }"
+        >
+            <FskText
+                ref="textEl"
+                :text="contact.text"
+            />
 
-        <NuxtPicture
-            v-if="contact.image"
-            :src="contact.image.src"
-            :alt="contact.image.alt"
-            :style="{ maxHeight: imageMaxHeight }"
-            sizes="100vw md:75vw"
-            format="avif,webp"
-            class="picture bento"
-        />
-    </FskLayout>
+            <NuxtPicture
+                v-if="contact.image"
+                :src="contact.image.src"
+                :alt="contact.image.alt"
+                :style="{ maxHeight: imageMaxHeight }"
+                sizes="100vw md:75vw"
+                format="avif,webp"
+                class="picture bento"
+            />
+        </FskLayout>
+    </div>
 </template>
 
 <script setup lang="ts">
+import type { ComponentPublicInstance } from 'vue'
 const { locale } = useI18n()
 const contact = (await import(`~/assets/data/${locale.value}/contact.json`)).default
 
 
-const textEl = ref<any>(null)
+const textEl = ref<ComponentPublicInstance | null>(null)
 const textElHeight = ref<number>(0)
 
 const imageMaxHeight = computed(() => `${textElHeight.value}px`)
