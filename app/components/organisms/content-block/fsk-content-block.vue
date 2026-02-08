@@ -10,7 +10,7 @@
             :class="[
                 'content-block__inner bento',
                 {
-                    'content-block__inner--no-text': !text,
+                    'content-block__inner--no-text': !text && !$slots.text,
                 }
             ]"
         >
