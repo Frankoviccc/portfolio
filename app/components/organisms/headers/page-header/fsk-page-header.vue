@@ -61,8 +61,10 @@
             <NuxtPicture
                 :src="image.src"
                 :alt="image.alt"
-                loading="eager"
-                fetchpriority="high"
+                :img-attrs="{
+                    loading: 'eager',
+                    fetchpriority: 'high'
+                }"
                 sizes="xs:530px sm:750px md:500px lg:590px xl:785px xxl:50vw"
                 format="avif,webp"
                 class="page-header__image"
