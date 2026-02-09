@@ -16,7 +16,7 @@
             left: 50%;
             top: 50%;
             width: 25px;
-            height: 215%;
+            height: calc(100% + 100cqw);
             background: #42B883;
             animation: rotate 4s linear infinite;
             transform-origin: center center;

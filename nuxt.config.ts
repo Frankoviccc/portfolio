@@ -45,13 +45,15 @@ export default defineNuxtConfig({
         display: 'swap',
         name: 'Casanova',
         provider: 'local',
-        src: '/fonts/CasanovaScotia.woff2'
+        src: '/fonts/CasanovaScotia.woff2',
+        preload: true,
       },
       {
         display: 'swap',
         name: 'Manrope',
         provider: 'google',
         weights: [400, 600],
+        preload: true,
       }
     ],
   },

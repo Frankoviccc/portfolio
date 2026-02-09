@@ -44,5 +44,5 @@ export default defineCachedEventHandler(async (event) => {
         })
     }
 }, {
-    maxAge: 60 * 60 * 24 * 30,
+    maxAge: process.env.NODE_ENV === 'development' ? 0 : 60 * 60 * 24 * 30,
 })

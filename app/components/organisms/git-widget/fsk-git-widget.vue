@@ -79,12 +79,13 @@ const endDate = new Date()
 const startDate = new Date()
 startDate.setFullYear(startDate.getFullYear() - 1)
 
-const data = await $fetch('/api/github', {
+const { data } = await useFetch('/api/github', {
     method: 'POST',
     body: {
         fromDate: startDate,
         toDate: endDate
-    }
+    },
+    key: 'github-contributions',
 })
 
 // Functie om datum te formatteren zonder hydration issues
@@ -106,7 +107,7 @@ const getContributionColor = (count) => {
 
 const weeks = computed(() => {
     // Pak alle weken van het kalenderjaar
-    const apiWeeks = (data?.data?.user?.contributionsCollection?.contributionCalendar?.weeks) || []
+    const apiWeeks = (data.value?.data?.user?.contributionsCollection?.contributionCalendar?.weeks) || []
 
     // Check of we de eerste week moeten aanvullen, eerste dag van de week is zondag
     // als 1 januari dus niet op die dag valt, moeten we empty cells toevoegen

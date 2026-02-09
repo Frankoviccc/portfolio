@@ -9,8 +9,6 @@
             :style="{ margin: 'var(--spacing)' }"
             path-name="blog"
         />
-
-        {{ blogPosts }}
     </div>
 </template>
 

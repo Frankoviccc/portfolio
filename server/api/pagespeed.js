@@ -14,14 +14,13 @@ export default defineCachedEventHandler(async (event) => {
         const params = new URLSearchParams({
             url: url,
             key: config.pagespeedKey,
-            strategy: 'mobile'
+            strategy: 'desktop'
         })
 
         params.append('category', 'performance')
         params.append('category', 'accessibility')
         params.append('category', 'seo')
         params.append('category', 'best-practices')
-
 
         const response = await $fetch (
             `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params}`
@@ -40,5 +39,5 @@ export default defineCachedEventHandler(async (event) => {
         })
     }
 }, {
-    maxAge: 60 * 60 * 24 * 30,
+    maxAge: process.env.NODE_ENV === 'development' ? 0 : 60 * 60 * 24 * 30,
 })
